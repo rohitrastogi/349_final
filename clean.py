@@ -3,7 +3,7 @@ import datetime
 import timeit
 
 
-test_file = './default.csv'
+test_file = './data/default.csv'
 
 dataframe = pd.read_csv(test_file)
 
@@ -96,10 +96,10 @@ def add_weekday(df):
 def main():
     print 'calling main ...' + '\n'
     filled = fill_columns(dataframe)
-    # rounded = round_time_down(filled)
-    # summed = sum_half_hour(rounded)
-    # quartered = add_quarter(summed)
-    # weekdayed = add_weekday(quartered)
-    filled.to_csv('cleaned.csv')
+    rounded = round_time_down(filled)
+    summed = sum_half_hour(rounded)
+    quartered = add_quarter(summed)
+    weekdayed = add_weekday(quartered)
+    weekdayed.to_csv('test_cleaned.csv')
 
 if __name__ == "__main__": main()
