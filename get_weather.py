@@ -3,7 +3,6 @@ import numpy as np
 import urllib2
 from bs4 import BeautifulSoup
 from datetime import datetime
-import re
 from copy import deepcopy
 
 #retrieves an ordered list of links for all days
@@ -51,8 +50,9 @@ def strip_ascii(text):
 
 def remove_units(df):
     df["Wind Speed"].replace("Calm", 0.0, inplace = True)
-    #replacing percent doesnt work
-    #df["Humidity"].replace('%', '', inplace = True).astype('float')/100
+    with_units = ["Temp","Dew Point", "Pressure", "Visibility", "Wind Speed"]
+    df[with_units] = df[with_units].replace(r'[^\d.-]+', '', regex = True)
+    df["Humidity"] = df["Humidity"].replace('%', '', regex = True).astype('float')/100
     return df
 
 #fills missing half hour weather data with data from the previous half hour
@@ -133,28 +133,27 @@ def scrape(header, months):
             #skip
             continue
         weather_df = pd.concat([weather_df, day_df])
-    weather_df = weather_df.reset_index(drop=True)
     cleaned_df = remove_units(weather_df)
-    cleaned_df.to_csv("weather.csv")
+    cleaned_df.to_csv("check.csv", index = False)
     return remove_units(cleaned_df)
 
 def main():
     month_range = [
-    (2015, 7)
-    # (2015, 8),
-    # (2015, 9),
-    # (2015, 10),
-    # (2015, 11),
-    # (2015, 12),
-    # (2016, 1),
-    # (2016, 2),
-    # (2016, 3),
-    # (2016, 4),
-    # (2016, 5),
-    # (2016, 6),
-    # (2016, 7),
-    # (2016, 8),
-    # (2016, 9)
+    (2015, 7),
+    (2015, 8),
+    (2015, 9),
+    (2015, 10),
+    (2015, 11),
+    (2015, 12),
+    (2016, 1),
+    (2016, 2),
+    (2016, 3),
+    (2016, 4),
+    (2016, 5),
+    (2016, 6),
+    (2016, 7),
+    (2016, 8),
+    (2016, 9)
 ]
 
     header = ["Time", "Temp", "Dew Point", "Humidity", "Pressure", "Visibility", "Wind Speed", "Conditions", "Year", "Month", "Day"]

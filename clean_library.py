@@ -99,6 +99,6 @@ def main():
     summed = sum_half_hour(rounded)
     quartered = add_quarter(summed)
     weekdayed = add_weekday(quartered)
-    #filled.to_csv('test.csv')
+    #filled.to_csv('test.csv', index = False)
 
 if __name__ == "__main__": main()
