@@ -1,11 +1,7 @@
 import pandas as pd
+import numpy as np
 import datetime
 import timeit
-
-
-test_file = './data/default.csv'
-
-dataframe = pd.read_csv(test_file)
 
 def fill_columns(df):
     start_time = timeit.default_timer()
@@ -19,8 +15,8 @@ def fill_columns(df):
 def round_time_down(df):
     start_time = timeit.default_timer()
     print 'rounding times...' + '\n'
-    df["Time"] = ""
-    for i, row in df.iterrows():
+    df["Time"] = np.nan
+    for i in df.iterrows():
         num_minutes = df.iloc[i]['Minute']
         num_hours = df.iloc[i]['Hour']
         if num_minutes < 30 and num_minutes >= 0:
@@ -47,7 +43,7 @@ def sum_half_hour(df):
 def add_quarter(df):
     start_time = timeit.default_timer()
     print 'adding quarters ...' + '\n'
-    df["Quarter"] = ""
+    df["Quarter"] = np.nan
     df = df.reset_index(drop=True)
     quarters = {
     'summer_15_start': (2015, 6, 22),
@@ -83,7 +79,7 @@ def add_quarter(df):
 def add_weekday(df):
     start_time = timeit.default_timer()
     print 'adding weekdays...' + '\n'
-    for i, row in df.iterrows():
+    for i in df.iterrows():
         year = df.iloc[i]['Year']
         month = df.iloc[i]['Month']
         day = df.iloc[i]['Day']
@@ -95,11 +91,14 @@ def add_weekday(df):
 
 def main():
     print 'calling main ...' + '\n'
+    test_file = './data/default.csv'
+    dataframe = pd.read_csv(test_file)
+
     filled = fill_columns(dataframe)
-    # rounded = round_time_down(filled)
-    # summed = sum_half_hour(rounded)
-    # quartered = add_quarter(summed)
-    # weekdayed = add_weekday(quartered)
-    filled.to_csv('test.csv')
+    rounded = round_time_down(filled)
+    summed = sum_half_hour(rounded)
+    quartered = add_quarter(summed)
+    weekdayed = add_weekday(quartered)
+    #filled.to_csv('test.csv')
 
 if __name__ == "__main__": main()
