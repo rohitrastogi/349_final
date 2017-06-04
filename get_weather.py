@@ -48,11 +48,16 @@ def strip_ascii(text):
     text = text.encode('ascii', 'ignore').decode('ascii').strip('\n\t')
     return text
 
-def remove_units(df):
+def clean_and_strip_units(df):
     df["Wind Speed"].replace("Calm", 0.0, inplace = True)
+    df["Conditions"].replace("Unknown", "", inplace = True)
+    df["Humidity"].replace("N/A%", "0.0%", inplace = True)
     with_units = ["Temp","Dew Point", "Pressure", "Visibility", "Wind Speed"]
     df[with_units] = df[with_units].replace(r'[^\d.-]+', '', regex = True)
-    df["Humidity"] = df["Humidity"].replace('%', '', regex = True).astype('float')/100
+    df["Humidity"] = df["Humidity"].replace('%', '', regex = True).astype('float')/float(100)
+    df["Humidity"].replace(0.0, "", inplace = True)
+    for col in list(df):
+        df[col].replace('-','', inplace = True)
     return df
 
 #fills missing half hour weather data with data from the previous half hour
@@ -133,9 +138,15 @@ def scrape(header, months):
             #skip
             continue
         weather_df = pd.concat([weather_df, day_df])
-    cleaned_df = remove_units(weather_df)
-    cleaned_df.to_csv("check.csv", index = False)
-    return remove_units(cleaned_df)
+    #weather_df =  weather_df.reset_index(drop = True)
+    return weather_df
+
+def remove_empty_attributes(df):
+    for col in list(df):
+        df[col].replace('', np.nan, inplace = True)
+    df = df.dropna()
+    return df
+
 
 def main():
     month_range = [
@@ -156,8 +167,17 @@ def main():
     (2016, 9)
 ]
 
-    header = ["Time", "Temp", "Dew Point", "Humidity", "Pressure", "Visibility", "Wind Speed", "Conditions", "Year", "Month", "Day"]
-    scrape(header, month_range)
+    # header = ["Time", "Temp", "Dew Point", "Humidity", "Pressure", "Visibility", "Wind Speed", "Conditions", "Year", "Month", "Day"]
+    # uncleaned = scrape(header, month_range)
+    # uncleaned.to_csv('uncleaned.csv', index = False)
+    # cleaned_zeros = clean_and_strip_units(uncleaned)
+    # cleaned_zeros.to_csv('weather_half_hour_zeros.csv', index = False)
+    # cleaned_no_zeros = remove_empty_attributes(cleaned_zeros)
+    # cleaned_no_zeros.to_csv('weather_half_hour_nozeros.csv', index = False)
+    test = pd.read_csv('uncleaned.csv')
+    cleaned_zeros = clean_and_strip_units(test)
+    cleaned_zeros.to_csv('weather_half_hour_zeros.csv', index = False)
+
 
 
 if __name__ == "__main__": main()

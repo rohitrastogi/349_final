@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import datetime as dt
 import timeit
 import matplotlib.pyplot as plt
@@ -95,23 +94,6 @@ def add_quarter(df):
     print 'add_quarter(): ' + str(end_time - start_time) + "\n"
     return df
 
-#0 = Monday...
-# need to catch bad day month combination
-def add_weekday(df):
-    start_time = timeit.default_timer()
-    print 'adding weekdays...' + '\n'
-    for i, row in df.iterrows():
-        year = df.iloc[i]['Year']
-        month = df.iloc[i]['Month']
-        day = df.iloc[i]['Day']
-        try:
-            weekday = dt.datetime(int(year), int(month), int(day)).weekday()
-            df.set_value(i, 'Day', weekday)
-        except ValueError:
-            print str(day) + "-" + str(month) + "-" + str(year) + "\n"
-    end_time = timeit.default_timer()
-    print 'add_weekday(): ' + str(end_time - start_time) + "\n"
-    return df
 
 def add_class(df):
     #starting at 25, 50, 75, 100 percentile
@@ -142,16 +124,19 @@ def remove_other(df):
 
 def main():
     print 'calling main ...' + '\n'
-    uncleaned_input = "before_class.csv"
+    uncleaned_input = 'data/lib/uncleaned_lib.csv'
     dataframe = pd.read_csv(uncleaned_input)
 
-    # filled = fill_columns(dataframe)
-    # rounded = round_time_down(dataframe)
-    # summed = sum_half_hour(rounded)
-    # quartered = add_quarter(summed)
-    # weekdayed = add_weekday(quartered)
-    # with_class = add_class(weekdayed)
-    # weekdayed.to_csv('output.csv', index = False)
+    filled = fill_columns(dataframe)
+    rounded = round_time_down(filled)
+    summed = sum_half_hour(rounded)
+    quartered = add_quarter(summed)
+    with_class = add_class(quartered)
+    removed_other = remove_other(with_class)
+
+    with_class.to_csv('cleaned_library_other', index = False)
+    removed_other.to_csv('cleaned_libary_noother', index = False)
+
 
     # get descriptive statistics
     # print dataframe['Total'].describe()
