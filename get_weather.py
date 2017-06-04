@@ -30,12 +30,15 @@ def get_links(months):
     return links
 
 #rounds times down from scraped table to the nearest half hour
-def round_time(time):
+def round_time(time, half):
     if int(time[3]) >= 3:
-        time = time[0:3] + "30"
+        if half:
+            time = time[0:2] + "30"
+        else:
+            time = str(int(time[0:2]) + 1) + "00"
     else:
-        time = time [0:3] + "00"
-    return time.replace(":","")
+        time = time[0:2] + "00"
+    return time
 
 #converts time from scraped table to military time consistent with library data
 def convert_to_military(time):
@@ -50,6 +53,7 @@ def strip_ascii(text):
 
 def clean_and_strip_units(df):
     df["Wind Speed"].replace("Calm", 0.0, inplace = True)
+    df["Wind Speed"].replace("-", '', inplace = True)
     df["Conditions"].replace("Unknown", "", inplace = True)
     df["Humidity"].replace("N/A%", "0.0%", inplace = True)
     with_units = ["Temp","Dew Point", "Pressure", "Visibility", "Wind Speed"]
@@ -84,7 +88,7 @@ def duplicate(weather):
     return dup_weather
 
 #scrapes weather table for each day link passed
-def scrape_day(url, header):
+def scrape_day(url, header, half):
     #setup
     html = urllib2.urlopen(url).read()
     soup = BeautifulSoup(html, "html.parser")
@@ -96,6 +100,7 @@ def scrape_day(url, header):
     day = url.split('/')[8]
 
     #check if there is data
+    #processing should be separate from scraping
     if len(soup.find_all('table')) == 5:
         print str(month) + "-" + str(day) + "-" + str(year) + "\n" #status check
         table = soup.find_all('table')[4]
@@ -103,7 +108,7 @@ def scrape_day(url, header):
         for hour in table.find_all('tr')[1:]:
             hour_weather = []
             temp_hour_weather = hour.find_all('td')
-            curr_time = round_time(convert_to_military(strip_ascii(temp_hour_weather[0].get_text())))
+            curr_time = round_time(convert_to_military(strip_ascii(temp_hour_weather[0].get_text())), half)
             if curr_time != prev_time:
                 hour_weather.append(curr_time)
                 prev_time = curr_time
@@ -120,7 +125,10 @@ def scrape_day(url, header):
                 day_weather.append(hour_weather)
 
         #add succesfully populated 2d array to dataframe
-        day_df = pd.DataFrame(duplicate(day_weather), columns = np.asarray(header[0:8]))
+        if half:
+            day_df = pd.DataFrame(duplicate(day_weather), columns = np.asarray(header[0:8]))
+        else:
+            day_df = pd.DataFrame(day_weather, columns = np.asarray(header[0:8]))
         day_df.set_value(0, 'Year', year)
         day_df.set_value(0, 'Month', month)
         day_df.set_value(0, 'Day', day)
@@ -130,10 +138,10 @@ def scrape_day(url, header):
         return day_df
 
 # adds date columns to each day's weather dataframe and concatenates all dataframes
-def scrape(header, months):
+def scrape(header, months, half):
     weather_df = pd.DataFrame(columns = np.asarray(header))
     for link in get_links(months):
-        day_df = scrape_day(link, header)
+        day_df = scrape_day(link, header, half)
         if day_df is None:
             #skip
             continue
@@ -167,17 +175,12 @@ def main():
     (2016, 9)
 ]
 
-    # header = ["Time", "Temp", "Dew Point", "Humidity", "Pressure", "Visibility", "Wind Speed", "Conditions", "Year", "Month", "Day"]
-    # uncleaned = scrape(header, month_range)
-    # uncleaned.to_csv('uncleaned.csv', index = False)
-    # cleaned_zeros = clean_and_strip_units(uncleaned)
-    # cleaned_zeros.to_csv('weather_half_hour_zeros.csv', index = False)
-    # cleaned_no_zeros = remove_empty_attributes(cleaned_zeros)
-    # cleaned_no_zeros.to_csv('weather_half_hour_nozeros.csv', index = False)
-    test = pd.read_csv('uncleaned.csv')
-    cleaned_zeros = clean_and_strip_units(test)
-    cleaned_zeros.to_csv('weather_half_hour_zeros.csv', index = False)
-
-
+    header = ["Time", "Temp", "Dew Point", "Humidity", "Pressure", "Visibility", "Wind Speed", "Conditions", "Year", "Month", "Day"]
+    uncleaned = scrape(header, month_range, False)
+    uncleaned.to_csv('uncleaned_weather_hour.csv', index = False)
+    cleaned_zeros = clean_and_strip_units(uncleaned)
+    cleaned_zeros.to_csv('weather_hour_zeros.csv', index = False)
+    cleaned_no_zeros = remove_empty_attributes(cleaned_zeros)
+    cleaned_no_zeros.to_csv('weather_hour_nozeros.csv', index = False)
 
 if __name__ == "__main__": main()

@@ -13,7 +13,8 @@ def fill_columns(df):
     print 'fill_columns(): ' + str(end_time - start_time) + "\n"
     return df
 
-def round_time_down(df):
+#half is boolean - if true, round half hour, if false, round full hour
+def round_time(df, half):
     start_time = timeit.default_timer()
     print 'rounding times...' + '\n'
     df["Time"] = ""
@@ -23,21 +24,24 @@ def round_time_down(df):
         if num_minutes < 30 and num_minutes >= 0:
             df.set_value(i, 'Time', str(int(num_hours)) +  "00")
         elif num_minutes < 60 and num_minutes >= 30:
-            df.set_value(i, 'Time', str(int(num_hours)) +  "30")
+            if half:
+                df.set_value(i, 'Time', str(int(num_hours)) +  "30")
+            else:
+                df.set_value(i, 'Time', str(int(num_hours) + 1) + "00")
     df = df.drop('Minute', axis = 1)
     df = df.drop('Hour', axis = 1)
     end_time = timeit.default_timer()
-    print 'round_time_down(): ' + str(end_time - start_time) + "\n"
+    print 'round_time(): ' + str(end_time - start_time) + "\n"
     return df
 
-def sum_half_hour(df):
+def sum_on_time(df):
     start_time = timeit.default_timer()
     print 'summing totals...' + '\n'
     df['Total'] =  df.groupby(['Day', 'Time', 'Month', 'Year'])['Number'].transform(sum)
     df = df.drop('Number', axis = 1)
     df = df.drop_duplicates()
     end_time = timeit.default_timer()
-    print 'sum_half_hour(): ' + str(end_time - start_time) + "\n"
+    print 'sum_on_time(): ' + str(end_time - start_time) + "\n"
     return df
 
 #subject to change
@@ -100,9 +104,17 @@ def add_class(df):
     start_time = timeit.default_timer()
     print 'adding class...' + '\n'
     df['Class'] = ""
-    empty = 16
-    not_busy = 51
-    moderately_busy = 125
+
+    # half-hour quartiles
+    # empty = 16
+    # not_busy = 51
+    # moderately_busy = 125
+
+    # hour quartiles
+    empty = 24
+    not_busy = 86
+    moderately_busy = 242
+    really_busy = 740
     for i, row in df.iterrows():
         total = df.iloc[i]['Total']
         if total <= empty:
@@ -128,21 +140,20 @@ def main():
     dataframe = pd.read_csv(uncleaned_input)
 
     filled = fill_columns(dataframe)
-    rounded = round_time_down(filled)
-    summed = sum_half_hour(rounded)
+    rounded = round_time(filled, False)
+    summed = sum_on_time(rounded)
     quartered = add_quarter(summed)
     with_class = add_class(quartered)
     removed_other = remove_other(with_class)
 
-    with_class.to_csv('cleaned_library_other', index = False)
-    removed_other.to_csv('cleaned_libary_noother', index = False)
-
+    with_class.to_csv('cleaned_library_hour_other.csv', index = False)
+    removed_other.to_csv('cleaned_library_hour_noother.csv', index = False)
 
     # get descriptive statistics
-    # print dataframe['Total'].describe()
+    # print quartered['Total'].describe()
 
     # show boxplot
-    # dataframe.boxplot(column = 'Total')
+    # quartered.boxplot(column = 'Total')
     # plt.show()
 
 if __name__ == "__main__": main()

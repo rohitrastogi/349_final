@@ -2,13 +2,6 @@ import pandas as pd
 import timeit
 import datetime as dt
 
-#read csvs
-weather_csv = 'data/weather/weather_half_hour_nozeros.csv'
-lib_csv = 'data/lib/cleaned_library_other.csv'
-weather_pd = pd.read_csv(weather_csv)
-lib_pd = pd.read_csv(lib_csv)
-
-
 #lib should be outer
 def join_pds(outer, inner):
     start_time = timeit.default_timer()
@@ -18,7 +11,7 @@ def join_pds(outer, inner):
     joined = joined.reset_index(level = ['Time', 'Day', 'Month', 'Year'])
     end_time = timeit.default_timer()
     print 'join_pds(): ' + str(end_time - start_time) + "\n"
-    return joined
+    return move_class_right(joined)
 
 #0 = Monday...
 # need to catch bad day month combination
@@ -39,8 +32,19 @@ def add_weekday(df):
     print 'add_weekday(): ' + str(end_time - start_time) + "\n"
     return df
 
+def move_class_right(df):
+    cols = list(df.columns.values)
+    cols.pop(cols.index('Class'))
+    df = df[cols + ['Class']]
+    return df
 
 def main():
+    #read csvs
+    weather_csv = 'data/weather/weather_half_nozeros.csv'
+    lib_csv = 'data/lib/cleaned_library_half_other.csv'
+    weather_pd = pd.read_csv(weather_csv)
+    lib_pd = pd.read_csv(lib_csv)
+
     joined = join_pds(lib_pd, weather_pd)
     weekdayed = add_weekday(joined)
     weekdayed.to_csv('joined.csv', index = False)
