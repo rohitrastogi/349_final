@@ -1,0 +1,60 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     no_zero_other_class_at_end
+Instances:    12646
+Attributes:   13
+              Time
+              Day
+              Year
+              Quarter
+              Quarter Progress
+              Temp
+              Dew Point
+              Humidity
+              Pressure
+              Visibility
+              Wind Speed
+              Conditions
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 2.97 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       10189               80.5709 %
+Incorrectly Classified Instances      2457               19.4291 %
+Kappa statistic                          0.7409
+Mean absolute error                      0.1408
+Root mean squared error                  0.2637
+Relative absolute error                 37.5357 %
+Root relative squared error             60.8926 %
+Total Number of Instances            12646     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.889    0.039    0.884      0.889    0.886      0.848    0.983     0.953     Empty
+                 0.766    0.075    0.770      0.766    0.768      0.693    0.940     0.817     Not Busy
+                 0.713    0.090    0.728      0.713    0.721      0.628    0.918     0.785     Moderately Busy
+                 0.854    0.055    0.837      0.854    0.845      0.793    0.974     0.923     Busy
+Weighted Avg.    0.806    0.065    0.805      0.806    0.805      0.741    0.954     0.870     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2837  326   27    1 |    a = Empty
+  356 2391  366    7 |    b = Not Busy
+   15  383 2273  515 |    c = Moderately Busy
+    2    4  455 2688 |    d = Busy
+

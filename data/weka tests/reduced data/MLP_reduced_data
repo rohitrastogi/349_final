@@ -1,0 +1,141 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     no_zero_other_class_at_end-weka.filters.unsupervised.attribute.Remove-V-R1-2,4,13
+Instances:    12646
+Attributes:   4
+              Time
+              Day
+              Quarter
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -7.637267625470312
+    Node 4    3.9729499488160647
+    Node 5    6.718462341162689
+    Node 6    1.6331910476851852
+    Node 7    2.1199829506426138
+    Node 8    4.504013312439208
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -1.0118854530142198
+    Node 4    3.235532199479109
+    Node 5    0.705955220467546
+    Node 6    0.2240352748797823
+    Node 7    -2.0522474594483198
+    Node 8    -3.081950694592317
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    0.06156486692854189
+    Node 4    -0.23236482780125076
+    Node 5    -1.3231147525346296
+    Node 6    -2.0007648426559537
+    Node 7    -0.3780259159120042
+    Node 8    -1.6815259274913958
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -1.826425192284157
+    Node 4    -17.61194977765273
+    Node 5    -10.076248571205495
+    Node 6    1.0703445196069497
+    Node 7    2.3288410131033115
+    Node 8    4.064354893411841
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -9.286380231106376
+    Attrib Time    30.92661804451559
+    Attrib Day    1.434397364060067
+    Attrib Quarter=Winter    5.318215972516779
+    Attrib Quarter=Spring    5.366731283509643
+    Attrib Quarter=Fall    5.141175778180276
+    Attrib Quarter=Other    8.434202909519588
+    Attrib Quarter=Summer    3.3884658807084476
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    1.8605672080632318
+    Attrib Time    -41.84980409481938
+    Attrib Day    1.5209262380128066
+    Attrib Quarter=Winter    -10.297944872905394
+    Attrib Quarter=Spring    -9.7886320486978
+    Attrib Quarter=Fall    -10.007455713443353
+    Attrib Quarter=Other    7.92037301589049
+    Attrib Quarter=Summer    16.54620176955811
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -2.7126967188288154
+    Attrib Time    -21.00948493369496
+    Attrib Day    -9.855941000513427
+    Attrib Quarter=Winter    8.189731044436204
+    Attrib Quarter=Spring    -2.173393404851906
+    Attrib Quarter=Fall    8.599902671602365
+    Attrib Quarter=Other    -2.742253721271171
+    Attrib Quarter=Summer    -3.746167603070022
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -2.80896184034394
+    Attrib Time    -27.832772307240454
+    Attrib Day    -31.725529970374144
+    Attrib Quarter=Winter    13.307322539361719
+    Attrib Quarter=Spring    13.29099076218359
+    Attrib Quarter=Fall    12.840366036017695
+    Attrib Quarter=Other    -15.44139626579318
+    Attrib Quarter=Summer    -15.559236976528647
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -8.838594357337248
+    Attrib Time    33.41870191903499
+    Attrib Day    6.493121475354708
+    Attrib Quarter=Winter    2.3177822042871914
+    Attrib Quarter=Spring    2.3571800416552517
+    Attrib Quarter=Fall    2.5657415172328317
+    Attrib Quarter=Other    10.078389225063733
+    Attrib Quarter=Summer    9.040364408118704
+Class Empty
+    Input
+    Node 0
+Class Not Busy
+    Input
+    Node 1
+Class Moderately Busy
+    Input
+    Node 2
+Class Busy
+    Input
+    Node 3
+
+
+Time taken to build model: 9.83 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        7770               61.4424 %
+Incorrectly Classified Instances      4876               38.5576 %
+Kappa statistic                          0.4857
+Mean absolute error                      0.2465
+Root mean squared error                  0.3554
+Relative absolute error                 65.7235 %
+Root relative squared error             82.0811 %
+Total Number of Instances            12646     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.743    0.077    0.766      0.743    0.754      0.673    0.910     0.805     Empty
+                 0.456    0.134    0.527      0.456    0.489      0.339    0.772     0.498     Not Busy
+                 0.577    0.221    0.468      0.577    0.517      0.334    0.763     0.459     Moderately Busy
+                 0.679    0.083    0.731      0.679    0.704      0.612    0.897     0.762     Busy
+Weighted Avg.    0.614    0.129    0.623      0.614    0.617      0.490    0.836     0.632     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2371  515  269   36 |    a = Empty
+  578 1422  951  169 |    b = Not Busy
+  132  635 1838  581 |    c = Moderately Busy
+   14  126  870 2139 |    d = Busy
+

@@ -1,0 +1,49 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     no_zero_other_class_at_end-weka.filters.unsupervised.attribute.Remove-V-R1-2,4,13
+Instances:    12646
+Attributes:   4
+              Time
+              Day
+              Quarter
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        9414               74.4425 %
+Incorrectly Classified Instances      3232               25.5575 %
+Kappa statistic                          0.6593
+Mean absolute error                      0.1727
+Root mean squared error                  0.3129
+Relative absolute error                 46.0451 %
+Root relative squared error             72.2515 %
+Total Number of Instances            12646     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.820    0.064    0.811      0.820    0.816      0.753    0.938     0.868     Empty
+                 0.716    0.114    0.673      0.716    0.694      0.590    0.864     0.660     Not Busy
+                 0.631    0.099    0.683      0.631    0.656      0.547    0.852     0.681     Moderately Busy
+                 0.810    0.064    0.809      0.810    0.810      0.746    0.934     0.804     Busy
+Weighted Avg.    0.744    0.085    0.744      0.744    0.744      0.659    0.897     0.754     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2618  439  113   21 |    a = Empty
+  443 2234  339  104 |    b = Not Busy
+  159  538 2010  479 |    c = Moderately Busy
+    7  109  481 2552 |    d = Busy
+
