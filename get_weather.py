@@ -119,7 +119,7 @@ def scrape_day(url, header):
         day_df.set_value(0, 'Year', year)
         day_df.set_value(0, 'Month', month)
         day_df.set_value(0, 'Day', day)
-        day_df.drop_duplicates()
+        day_df = day_df.drop_duplicates()
         fill = ['Year', 'Month', 'Day']
         day_df[fill] = day_df[fill].ffill()
         return day_df
