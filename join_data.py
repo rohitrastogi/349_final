@@ -16,7 +16,6 @@ def join_pds(outer, inner):
     indexed_inner = inner.set_index(['Time', 'Day', 'Month', 'Year'])
     joined = indexed_outer.join(indexed_inner, how = 'inner', lsuffix = '_l', rsuffix = '_r')
     joined = joined.reset_index(level = ['Time', 'Day', 'Month', 'Year'])
-    joined = joined.drop('Month', axis = 1)
     end_time = timeit.default_timer()
     print 'join_pds(): ' + str(end_time - start_time) + "\n"
     return joined
@@ -35,6 +34,7 @@ def add_weekday(df):
             df.set_value(i, 'Day', weekday)
         except ValueError:
             print str(day) + "-" + str(month) + "-" + str(year) + "\n"
+    df = df.drop('Month', axis = 1)
     end_time = timeit.default_timer()
     print 'add_weekday(): ' + str(end_time - start_time) + "\n"
     return df
@@ -42,7 +42,8 @@ def add_weekday(df):
 
 def main():
     joined = join_pds(lib_pd, weather_pd)
-    joined.to_csv("joined.csv", index = False)
+    weekdayed = add_weekday(joined)
+    weekdayed.to_csv('joined.csv', index = False)
 
 
 if __name__ == "__main__": main()
