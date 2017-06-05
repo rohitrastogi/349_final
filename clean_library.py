@@ -111,14 +111,14 @@ def add_class(df):
     # moderately_busy = 125
 
     # hour quartiles
-    # empty = 24
-    # not_busy = 86
-    # moderately_busy = 242
+    empty = 24
+    not_busy = 86
+    moderately_busy = 242
 
     # half-hour arbitrary
-    empty = 50
-    not_busy = 100
-    moderately_busy = 150
+    # empty = 50
+    # not_busy = 100
+    # moderately_busy = 150
 
     for i, row in df.iterrows():
         total = df.iloc[i]['Total']
@@ -145,14 +145,14 @@ def main():
     dataframe = pd.read_csv(uncleaned_input)
 
     filled = fill_columns(dataframe)
-    rounded = round_time(filled, True)
+    rounded = round_time(filled, False)
     summed = sum_on_time(rounded)
     quartered = add_quarter(summed)
     with_class = add_class(quartered)
     removed_other = remove_other(with_class)
 
-    with_class.to_csv('w_other.csv', index = False)
-    removed_other.to_csv('no_other.csv', index = False)
+    with_class.to_csv('hour.csv', index = False)
+    #removed_other.to_csv('no_other.csv', index = False)
 
     # get descriptive statistics
     # print quartered['Total'].describe()

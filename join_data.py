@@ -40,8 +40,8 @@ def move_class_right(df):
 
 def main():
     #read csvs
-    weather_csv = 'data/weather/half.csv'
-    lib_csv = 'data/lib/arbitrary.csv'
+    weather_csv = 'data/weather/hour.csv'
+    lib_csv = 'data/lib/hour.csv'
     weather_pd = pd.read_csv(weather_csv)
     lib_pd = pd.read_csv(lib_csv)
 
