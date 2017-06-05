@@ -177,10 +177,10 @@ def main():
 
     header = ["Time", "Temp", "Dew Point", "Humidity", "Pressure", "Visibility", "Wind Speed", "Conditions", "Year", "Month", "Day"]
     uncleaned = scrape(header, month_range, False)
-    uncleaned.to_csv('uncleaned_weather_hour.csv', index = False)
+    uncleaned.to_csv('uncleaned_weather_half.csv', index = False)
     cleaned_zeros = clean_and_strip_units(uncleaned)
-    cleaned_zeros.to_csv('weather_hour_zeros.csv', index = False)
+    #cleaned_zeros.to_csv('weather_hour_zeros.csv', index = False)
     cleaned_no_zeros = remove_empty_attributes(cleaned_zeros)
-    cleaned_no_zeros.to_csv('weather_hour_nozeros.csv', index = False)
+    cleaned_no_zeros.to_csv('hour.csv', index = False)
 
 if __name__ == "__main__": main()

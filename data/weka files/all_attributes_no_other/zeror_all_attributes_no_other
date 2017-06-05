@@ -1,0 +1,56 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.ZeroR 
+Relation:     no_other
+Instances:    11027
+Attributes:   13
+              Time
+              Day
+              Year
+              Quarter
+              Quarter Progress
+              Temp
+              Dew Point
+              Humidity
+              Pressure
+              Visibility
+              Wind Speed
+              Conditions
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: Busy
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3018               27.3692 %
+Incorrectly Classified Instances      8009               72.6308 %
+Kappa statistic                          0     
+Mean absolute error                      0.3742
+Root mean squared error                  0.4325
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances            11027     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.499     0.241     Empty
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.499     0.221     Not Busy
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.264     Moderately Busy
+                 1.000    1.000    0.274      1.000    0.430      0.000    0.500     0.274     Busy
+Weighted Avg.    0.274    0.274    0.075      0.274    0.118      0.000    0.500     0.252     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+    0    0    0 2663 |    a = Empty
+    0    0    0 2436 |    b = Not Busy
+    0    0    0 2910 |    c = Moderately Busy
+    0    0    0 3018 |    d = Busy
+

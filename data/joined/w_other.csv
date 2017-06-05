@@ -824,7 +824,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 200,3.0,2015.0,Fall,0.521739130435,37.0,28.0,0.7,29.52,10.0,16.1,Partly Cloudy,Empty
 200,4.0,2015.0,Fall,0.532608695652,39.0,35.1,0.86,30.03,10.0,0.0,Clear,Empty
 200,1.0,2016.0,Spring,0.851351351351,66.0,55.9,0.7,30.0,10.0,0.0,Scattered Clouds,Empty
-230,1.0,2016.0,Winter,0.76,28.0,25.0,0.88,29.94,2.0,-,Light Snow,Empty
 230,2.0,2016.0,Spring,0.864864864865,63.0,61.0,0.93,29.94,10.0,3.5,Light Rain,Empty
 230,3.0,2015.0,Fall,0.217391304348,54.0,41.0,0.62,30.29,10.0,11.5,Overcast,Empty
 230,1.0,2015.0,Fall,0.880434782609,42.1,42.1,1.0,29.82,1.5,4.6,Heavy Rain,Empty
@@ -3789,7 +3788,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 1030,1.0,2016.0,Winter,0.106666666667,9.0,-2.0,0.61,30.02,10.0,18.4,Clear,Busy
 1030,4.0,2016.0,Winter,0.52,19.9,8.1,0.6,30.2,10.0,20.7,Overcast,Busy
 1030,5.0,2016.0,Winter,0.906666666667,53.1,45.0,0.74,30.2,6.0,6.9,Haze,Moderately Busy
-1030,1.0,2016.0,Spring,0.189189189189,42.1,21.0,0.43,30.4,10.0,-,Clear,Busy
 1030,3.0,2016.0,Spring,0.594594594595,64.9,62.1,0.9,29.93,6.0,9.2,Overcast,Busy
 1030,6.0,2015.0,Summer,0.37037037037,73.9,66.0,0.76,30.01,10.0,4.6,Overcast,Empty
 1030,1.0,2016.0,Summer,0.407407407407,84.9,70.0,0.61,29.78,10.0,15.0,Clear,Moderately Busy
@@ -3802,7 +3800,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 1030,2.0,2016.0,Winter,0.12,9.0,1.0,0.7,30.1,10.0,13.8,Overcast,Busy
 1030,5.0,2016.0,Winter,0.533333333333,10.9,-6.0,0.47,30.65,10.0,11.5,Clear,Not Busy
 1030,6.0,2016.0,Winter,0.92,46.0,43.0,0.89,29.85,7.0,13.8,Light Rain,Moderately Busy
-1030,2.0,2016.0,Spring,0.202702702703,48.9,28.9,0.46,30.35,10.0,-,Scattered Clouds,Busy
 1030,4.0,2016.0,Spring,0.608108108108,61.0,42.1,0.5,30.01,10.0,12.7,Clear,Busy
 1030,0.0,2016.0,Other,0.0,75.0,48.9,0.4,30.04,10.0,5.8,Mostly Cloudy,Not Busy
 1030,0.0,2015.0,Summer,0.388888888889,75.0,66.9,0.76,29.73,10.0,15.0,Partly Cloudy,Not Busy
@@ -3813,7 +3810,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 1030,4.0,2015.0,Fall,0.684782608696,43.0,26.1,0.51,30.04,10.0,21.9,Scattered Clouds,Busy
 1030,3.0,2016.0,Winter,0.133333333333,37.9,28.0,0.68,29.7,10.0,9.2,Clear,Busy
 1030,6.0,2016.0,Winter,0.546666666667,17.1,5.0,0.59,30.32,10.0,17.3,Overcast,Not Busy
-1030,3.0,2016.0,Spring,0.216216216216,53.1,28.0,0.38,30.32,10.0,-,Clear,Busy
 1030,5.0,2016.0,Spring,0.621621621622,44.1,30.9,0.6,30.01,10.0,16.1,Overcast,Not Busy
 1030,1.0,2016.0,Other,0.0,78.1,63.0,0.6,29.9,10.0,8.1,Clear,Not Busy
 1030,1.0,2015.0,Summer,0.407407407407,80.1,64.9,0.6,29.65,10.0,12.7,Scattered Clouds,Not Busy
@@ -4179,7 +4175,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 1100,1.0,2016.0,Winter,0.106666666667,9.0,-2.0,0.61,30.02,10.0,18.4,Clear,Busy
 1100,4.0,2016.0,Winter,0.52,19.9,8.1,0.6,30.2,10.0,20.7,Overcast,Busy
 1100,5.0,2016.0,Winter,0.906666666667,53.1,45.0,0.74,30.2,6.0,6.9,Haze,Moderately Busy
-1100,1.0,2016.0,Spring,0.189189189189,42.1,21.0,0.43,30.4,10.0,-,Clear,Moderately Busy
 1100,3.0,2016.0,Spring,0.594594594595,64.9,62.1,0.9,29.93,6.0,9.2,Overcast,Moderately Busy
 1100,6.0,2015.0,Summer,0.37037037037,73.9,66.0,0.76,30.01,10.0,4.6,Overcast,Empty
 1100,1.0,2016.0,Summer,0.407407407407,84.9,70.0,0.61,29.78,10.0,15.0,Clear,Not Busy
@@ -4192,7 +4187,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 1100,2.0,2016.0,Winter,0.12,10.0,1.9,0.7,30.06,10.0,11.5,Overcast,Moderately Busy
 1100,5.0,2016.0,Winter,0.533333333333,10.9,-6.0,0.47,30.65,10.0,11.5,Clear,Moderately Busy
 1100,6.0,2016.0,Winter,0.92,45.0,43.0,0.93,29.83,5.0,9.2,Light Rain,Moderately Busy
-1100,2.0,2016.0,Spring,0.202702702703,48.9,28.9,0.46,30.35,10.0,-,Scattered Clouds,Moderately Busy
 1100,4.0,2016.0,Spring,0.608108108108,61.0,42.1,0.5,30.01,10.0,12.7,Clear,Moderately Busy
 1100,0.0,2016.0,Other,0.0,75.0,48.9,0.4,30.04,10.0,5.8,Mostly Cloudy,Not Busy
 1100,0.0,2015.0,Summer,0.388888888889,75.0,66.9,0.76,29.73,10.0,15.0,Partly Cloudy,Not Busy
@@ -4203,7 +4197,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 1100,4.0,2015.0,Fall,0.684782608696,43.0,26.1,0.51,30.04,10.0,21.9,Scattered Clouds,Busy
 1100,3.0,2016.0,Winter,0.133333333333,37.9,28.0,0.68,29.7,10.0,9.2,Clear,Busy
 1100,6.0,2016.0,Winter,0.546666666667,17.1,5.0,0.59,30.32,10.0,17.3,Overcast,Not Busy
-1100,3.0,2016.0,Spring,0.216216216216,53.1,28.0,0.38,30.32,10.0,-,Clear,Moderately Busy
 1100,5.0,2016.0,Spring,0.621621621622,44.1,30.9,0.6,30.01,10.0,16.1,Overcast,Not Busy
 1100,1.0,2016.0,Other,0.0,78.1,63.0,0.6,29.9,10.0,8.1,Clear,Not Busy
 1100,1.0,2015.0,Summer,0.407407407407,80.1,64.9,0.6,29.65,10.0,12.7,Scattered Clouds,Not Busy
@@ -5384,7 +5377,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 1230,4.0,2015.0,Summer,0.981481481481,84.9,66.9,0.55,30.09,10.0,6.9,Clear,Moderately Busy
 1230,0.0,2015.0,Fall,0.0326086956522,78.1,54.0,0.43,30.04,10.0,17.3,Clear,Moderately Busy
 1230,2.0,2016.0,Other,0.0,72.0,55.0,0.55,30.27,10.0,9.2,Clear,Not Busy
-1230,2.0,2015.0,Fall,0.358695652174,57.9,37.9,0.47,30.03,10.0,-,Clear,Busy
 1230,5.0,2015.0,Fall,0.695652173913,52.0,27.0,0.38,30.21,10.0,17.3,Clear,Moderately Busy
 1230,0.0,2015.0,Other,0.0,50.0,45.0,0.83,29.23,10.0,11.5,Overcast,Not Busy
 1230,4.0,2016.0,Winter,0.146666666667,37.9,30.9,0.76,29.4,10.0,8.1,Clear,Busy
@@ -5445,7 +5437,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 1230,4.0,2016.0,Winter,0.613333333333,57.9,39.0,0.49,29.49,10.0,24.2,Partly Cloudy,Busy
 1230,5.0,2016.0,Winter,1.0,39.9,30.9,0.7,30.2,10.0,5.8,Overcast,Empty
 1230,1.0,2016.0,Spring,0.283783783784,54.0,43.0,0.66,30.26,10.0,17.3,Clear,Busy
-1230,3.0,2016.0,Spring,0.689189189189,66.0,30.9,0.27,30.23,10.0,-,Clear,Busy
 1230,6.0,2015.0,Summer,0.5,82.9,66.9,0.58,29.91,10.0,9.2,Partly Cloudy,Empty
 1230,1.0,2016.0,Summer,0.537037037037,84.9,62.1,0.46,30.22,10.0,5.8,Clear,Busy
 1230,2.0,2015.0,Other,0.0,73.9,53.1,0.48,29.72,10.0,17.3,Clear,Moderately Busy
@@ -5778,7 +5769,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 1300,4.0,2015.0,Summer,0.981481481481,84.9,66.9,0.55,30.09,10.0,6.9,Clear,Not Busy
 1300,0.0,2015.0,Fall,0.0326086956522,78.1,54.0,0.43,30.04,10.0,17.3,Clear,Not Busy
 1300,2.0,2016.0,Other,0.0,72.0,55.0,0.55,30.27,10.0,9.2,Clear,Not Busy
-1300,2.0,2015.0,Fall,0.358695652174,57.9,37.9,0.47,30.03,10.0,-,Clear,Busy
 1300,5.0,2015.0,Fall,0.695652173913,52.0,27.0,0.38,30.21,10.0,17.3,Clear,Moderately Busy
 1300,0.0,2015.0,Other,0.0,48.0,44.1,0.86,29.25,7.0,15.0,Light Rain,Moderately Busy
 1300,4.0,2016.0,Winter,0.146666666667,37.0,30.9,0.79,29.39,10.0,10.4,Mostly Cloudy,Busy
@@ -5839,7 +5829,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 1300,4.0,2016.0,Winter,0.613333333333,57.9,39.0,0.49,29.49,10.0,24.2,Partly Cloudy,Busy
 1300,5.0,2016.0,Winter,1.0,39.9,30.9,0.7,30.2,10.0,5.8,Overcast,Empty
 1300,1.0,2016.0,Spring,0.283783783784,54.0,43.0,0.66,30.26,10.0,17.3,Clear,Busy
-1300,3.0,2016.0,Spring,0.689189189189,66.0,30.9,0.27,30.23,10.0,-,Clear,Busy
 1300,6.0,2015.0,Summer,0.5,82.9,66.9,0.58,29.91,10.0,9.2,Partly Cloudy,Not Busy
 1300,1.0,2016.0,Summer,0.537037037037,84.9,62.1,0.46,30.22,10.0,5.8,Clear,Busy
 1300,2.0,2015.0,Other,0.0,73.9,53.1,0.48,29.72,10.0,17.3,Clear,Moderately Busy
@@ -11468,7 +11457,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 2130,0.0,2016.0,Spring,0.459459459459,45.0,36.0,0.71,30.04,10.0,0.0,Clear,Moderately Busy
 2130,3.0,2016.0,Spring,0.878378378378,62.1,55.9,0.8,30.05,10.0,3.5,Clear,Moderately Busy
 2130,0.0,2015.0,Fall,0.565217391304,57.9,46.0,0.65,30.01,10.0,6.9,Clear,Moderately Busy
-2130,2.0,2015.0,Fall,0.891304347826,30.9,26.1,0.82,30.04,10.0,-,Clear,Moderately Busy
 2130,2.0,2016.0,Winter,0.4,30.0,21.9,0.72,30.04,10.0,13.8,Overcast,Moderately Busy
 2130,3.0,2016.0,Winter,0.786666666667,30.0,19.0,0.64,30.17,10.0,5.8,Overcast,Moderately Busy
 2130,6.0,2016.0,Spring,0.0675675675676,46.9,37.0,0.68,29.65,10.0,18.4,Clear,Not Busy
@@ -11741,7 +11729,6 @@ Time,Day,Year,Quarter,Quarter Progress,Temp,Dew Point,Humidity,Pressure,Visibili
 2200,0.0,2016.0,Spring,0.459459459459,45.0,36.0,0.71,30.04,10.0,0.0,Clear,Moderately Busy
 2200,3.0,2016.0,Spring,0.878378378378,62.1,55.9,0.8,30.05,10.0,3.5,Clear,Moderately Busy
 2200,0.0,2015.0,Fall,0.565217391304,57.9,46.0,0.65,30.01,10.0,6.9,Clear,Moderately Busy
-2200,2.0,2015.0,Fall,0.891304347826,30.9,26.1,0.82,30.04,10.0,-,Clear,Moderately Busy
 2200,2.0,2016.0,Winter,0.4,30.0,21.9,0.72,30.04,10.0,13.8,Overcast,Moderately Busy
 2200,3.0,2016.0,Winter,0.786666666667,30.0,19.0,0.64,30.17,10.0,5.8,Overcast,Not Busy
 2200,6.0,2016.0,Spring,0.0675675675676,46.9,37.0,0.68,29.65,10.0,18.4,Clear,Not Busy
