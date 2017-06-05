@@ -1,0 +1,1578 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     no_other-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    11027
+Attributes:   4
+              Time
+              Day
+              Quarter
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+Quarter = Winter
+|   Day < 3.5
+|   |   Day < 2.5
+|   |   |   Time < 765
+|   |   |   |   Time < 15
+|   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   Day < 0.5 : Not Busy (12/3)
+|   |   |   |   |   |   Day >= 0.5 : Not Busy (12/2)
+|   |   |   |   |   Day >= 1.5 : Not Busy (12/5)
+|   |   |   |   Time >= 15
+|   |   |   |   |   Time < 115
+|   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   Time < 65 : Empty (10/1)
+|   |   |   |   |   |   |   Time >= 65 : Empty (9/0)
+|   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   Day < 1.5 : Empty (18/2)
+|   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   Time < 65 : Empty (11/2)
+|   |   |   |   |   |   |   |   Time >= 65 : Empty (11/1)
+|   |   |   |   |   Time >= 115
+|   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   Time < 715 : Empty (37/0)
+|   |   |   |   |   |   |   Time >= 715 : Empty (10/1)
+|   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   Time < 715 : Empty (47/0)
+|   |   |   |   |   |   |   |   Time >= 715 : Empty (11/1)
+|   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   Time < 715 : Empty (51/0)
+|   |   |   |   |   |   |   |   Time >= 715 : Empty (11/1)
+|   |   |   Time >= 765
+|   |   |   |   Time < 2115
+|   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   Time < 815 : Not Busy (10/1)
+|   |   |   |   |   |   Time >= 815
+|   |   |   |   |   |   |   Time < 1565
+|   |   |   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   |   |   Time < 1015
+|   |   |   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 865 : Busy (10/1)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 865 : Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 915 : Busy (10/0)
+|   |   |   |   |   |   |   |   |   |   Time >= 965 : Busy (10/2)
+|   |   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   |   Time < 1065 : Busy (9/0)
+|   |   |   |   |   |   |   |   |   |   Time >= 1065 : Busy (9/1)
+|   |   |   |   |   |   |   |   Time >= 1115
+|   |   |   |   |   |   |   |   |   Time < 1515 : Busy (79/0)
+|   |   |   |   |   |   |   |   |   Time >= 1515 : Busy (10/1)
+|   |   |   |   |   |   |   Time >= 1565
+|   |   |   |   |   |   |   |   Time < 1715
+|   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (11/6)
+|   |   |   |   |   |   |   |   |   Time >= 1615
+|   |   |   |   |   |   |   |   |   |   Time < 1665 : Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1665 : Moderately Busy (10/4)
+|   |   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   |   Time < 1865
+|   |   |   |   |   |   |   |   |   |   Time < 1765 : Busy (10/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 1765 : Busy (20/4)
+|   |   |   |   |   |   |   |   |   Time >= 1865
+|   |   |   |   |   |   |   |   |   |   Time < 2015 : Busy (30/6)
+|   |   |   |   |   |   |   |   |   |   Time >= 2015
+|   |   |   |   |   |   |   |   |   |   |   Time < 2065 : Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 2065 : Busy (9/4)
+|   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   Time < 815 : Not Busy (22/4)
+|   |   |   |   |   |   Time >= 815
+|   |   |   |   |   |   |   Time < 1565
+|   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   |   |   |   Time < 1015
+|   |   |   |   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 865 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 865 : Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 915 : Busy (11/0)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 965 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Busy (11/0)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1065 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   Time >= 1115 : Busy (99/0)
+|   |   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   |   Time < 1015
+|   |   |   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   |   |   Time < 865 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 865 : Busy (11/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 915
+|   |   |   |   |   |   |   |   |   |   |   Time < 965 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 965 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Busy (10/0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1065 : Busy (10/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1115 : Busy (88/0)
+|   |   |   |   |   |   |   |   |   |   Time >= 1515 : Busy (11/1)
+|   |   |   |   |   |   |   Time >= 1565
+|   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   Time < 2065
+|   |   |   |   |   |   |   |   |   |   Time < 1715
+|   |   |   |   |   |   |   |   |   |   |   Time < 1665
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1615 : Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1665 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   |   |   |   Time < 1765 : Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1765
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1915 : Busy (33/6)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1915
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 2015
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1965 : Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1965 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 2015 : Busy (11/3)
+|   |   |   |   |   |   |   |   |   Time >= 2065 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   |   Time < 2015
+|   |   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1615
+|   |   |   |   |   |   |   |   |   |   |   Time < 1715
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1665 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1665 : Moderately Busy (11/5)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1965
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1865
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1765 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1765
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1815 : Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1815 : Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1865 : Busy (22/4)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1965 : Busy (11/4)
+|   |   |   |   |   |   |   |   |   Time >= 2015
+|   |   |   |   |   |   |   |   |   |   Time < 2065 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 2065 : Moderately Busy (11/3)
+|   |   |   |   Time >= 2115
+|   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   Time < 2215 : Moderately Busy (18/2)
+|   |   |   |   |   |   Time >= 2215
+|   |   |   |   |   |   |   Time < 2315
+|   |   |   |   |   |   |   |   Time < 2265 : Not Busy (9/3)
+|   |   |   |   |   |   |   |   Time >= 2265 : Not Busy (9/2)
+|   |   |   |   |   |   |   Time >= 2315 : Not Busy (9/2)
+|   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   Time < 2215
+|   |   |   |   |   |   |   Time < 2165
+|   |   |   |   |   |   |   |   Day < 1.5 : Moderately Busy (11/1)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   Time >= 2165
+|   |   |   |   |   |   |   |   Day < 1.5 : Moderately Busy (11/3)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Moderately Busy (11/2)
+|   |   |   |   |   |   Time >= 2215
+|   |   |   |   |   |   |   Time < 2265
+|   |   |   |   |   |   |   |   Day < 1.5 : Not Busy (11/6)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Not Busy (11/4)
+|   |   |   |   |   |   |   Time >= 2265
+|   |   |   |   |   |   |   |   Time < 2315
+|   |   |   |   |   |   |   |   |   Day < 1.5 : Not Busy (11/3)
+|   |   |   |   |   |   |   |   |   Day >= 1.5 : Not Busy (11/1)
+|   |   |   |   |   |   |   |   Time >= 2315
+|   |   |   |   |   |   |   |   |   Day < 1.5 : Not Busy (11/3)
+|   |   |   |   |   |   |   |   |   Day >= 1.5 : Not Busy (11/2)
+|   |   Day >= 2.5
+|   |   |   Time < 765
+|   |   |   |   Time < 15 : Not Busy (12/4)
+|   |   |   |   Time >= 15
+|   |   |   |   |   Time < 665
+|   |   |   |   |   |   Time < 65 : Empty (10/2)
+|   |   |   |   |   |   Time >= 65 : Empty (55/0)
+|   |   |   |   |   Time >= 665
+|   |   |   |   |   |   Time < 715 : Empty (9/1)
+|   |   |   |   |   |   Time >= 715 : Empty (11/2)
+|   |   |   Time >= 765
+|   |   |   |   Time < 2015
+|   |   |   |   |   Time < 1565
+|   |   |   |   |   |   Time < 815 : Not Busy (11/2)
+|   |   |   |   |   |   Time >= 815
+|   |   |   |   |   |   |   Time < 1015
+|   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   |   Time < 865 : Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 865 : Busy (11/5)
+|   |   |   |   |   |   |   |   |   Time >= 915 : Busy (11/2)
+|   |   |   |   |   |   |   |   Time >= 965 : Moderately Busy (11/1)
+|   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   Time < 1165 : Busy (33/3)
+|   |   |   |   |   |   |   |   Time >= 1165
+|   |   |   |   |   |   |   |   |   Time < 1415 : Busy (55/0)
+|   |   |   |   |   |   |   |   |   Time >= 1415 : Busy (33/3)
+|   |   |   |   |   Time >= 1565
+|   |   |   |   |   |   Time < 1915
+|   |   |   |   |   |   |   Time < 1865
+|   |   |   |   |   |   |   |   Time < 1715
+|   |   |   |   |   |   |   |   |   Time < 1665
+|   |   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1615 : Moderately Busy (11/5)
+|   |   |   |   |   |   |   |   |   Time >= 1665 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   |   Time >= 1715 : Moderately Busy (33/15)
+|   |   |   |   |   |   |   Time >= 1865 : Moderately Busy (11/2)
+|   |   |   |   |   |   Time >= 1915
+|   |   |   |   |   |   |   Time < 1965 : Moderately Busy (11/3)
+|   |   |   |   |   |   |   Time >= 1965 : Moderately Busy (11/2)
+|   |   |   |   Time >= 2015
+|   |   |   |   |   Time < 2165
+|   |   |   |   |   |   Time < 2065 : Moderately Busy (11/2)
+|   |   |   |   |   |   Time >= 2065
+|   |   |   |   |   |   |   Time < 2115 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   Time >= 2115 : Not Busy (11/5)
+|   |   |   |   |   Time >= 2165
+|   |   |   |   |   |   Time < 2215 : Not Busy (11/3)
+|   |   |   |   |   |   Time >= 2215
+|   |   |   |   |   |   |   Time < 2265 : Not Busy (11/2)
+|   |   |   |   |   |   |   Time >= 2265
+|   |   |   |   |   |   |   |   Time < 2315 : Not Busy (11/4)
+|   |   |   |   |   |   |   |   Time >= 2315 : Not Busy (11/5)
+|   Day >= 3.5
+|   |   Day < 5.5
+|   |   |   Time < 815
+|   |   |   |   Time < 765
+|   |   |   |   |   Time < 15
+|   |   |   |   |   |   Day < 4.5 : Empty (11/5)
+|   |   |   |   |   |   Day >= 4.5 : Empty (1/0)
+|   |   |   |   |   Time >= 15
+|   |   |   |   |   |   Time < 715 : Empty (86/0)
+|   |   |   |   |   |   Time >= 715
+|   |   |   |   |   |   |   Day < 4.5 : Empty (11/2)
+|   |   |   |   |   |   |   Day >= 4.5 : Empty (1/0)
+|   |   |   |   Time >= 765
+|   |   |   |   |   Day < 4.5 : Not Busy (11/1)
+|   |   |   |   |   Day >= 4.5 : Empty (10/0)
+|   |   |   Time >= 815
+|   |   |   |   Time < 1965
+|   |   |   |   |   Time < 1565
+|   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   Time < 865
+|   |   |   |   |   |   |   |   |   Day < 4.5 : Busy (11/4)
+|   |   |   |   |   |   |   |   |   Day >= 4.5 : Not Busy (10/2)
+|   |   |   |   |   |   |   |   Time >= 865
+|   |   |   |   |   |   |   |   |   Day < 4.5 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   |   |   Day >= 4.5 : Not Busy (9/4)
+|   |   |   |   |   |   |   Time >= 915
+|   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   Day < 4.5 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   Day >= 4.5 : Not Busy (10/2)
+|   |   |   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   |   |   |   Time < 1015 : Moderately Busy (11/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1065 : Busy (11/3)
+|   |   |   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   |   |   Time < 1015 : Not Busy (10/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Not Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1065 : Not Busy (10/5)
+|   |   |   |   |   |   Time >= 1115
+|   |   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   |   Time < 1365 : Busy (55/5)
+|   |   |   |   |   |   |   |   |   Time >= 1365
+|   |   |   |   |   |   |   |   |   |   Time < 1415 : Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 1415
+|   |   |   |   |   |   |   |   |   |   |   Time < 1465 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1465 : Busy (11/4)
+|   |   |   |   |   |   |   |   Time >= 1515 : Moderately Busy (11/3)
+|   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   Time < 1165 : Moderately Busy (10/4)
+|   |   |   |   |   |   |   |   Time >= 1165
+|   |   |   |   |   |   |   |   |   Time < 1365
+|   |   |   |   |   |   |   |   |   |   Time < 1215 : Moderately Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   |   |   Time < 1315 : Moderately Busy (22/6)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1315 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   |   |   Time >= 1365
+|   |   |   |   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   |   |   |   Time < 1465
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1415 : Moderately Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1415 : Moderately Busy (10/3)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1465 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   |   |   |   Time >= 1515 : Moderately Busy (10/2)
+|   |   |   |   |   Time >= 1565
+|   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   Time < 1665
+|   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   Time >= 1615 : Moderately Busy (11/3)
+|   |   |   |   |   |   |   Time >= 1665
+|   |   |   |   |   |   |   |   Time < 1865
+|   |   |   |   |   |   |   |   |   Time < 1715 : Not Busy (11/5)
+|   |   |   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   |   |   Time < 1815
+|   |   |   |   |   |   |   |   |   |   |   Time < 1765 : Not Busy (10/3)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1765 : Not Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1815 : Not Busy (9/2)
+|   |   |   |   |   |   |   |   Time >= 1865
+|   |   |   |   |   |   |   |   |   Time < 1915 : Not Busy (9/1)
+|   |   |   |   |   |   |   |   |   Time >= 1915 : Not Busy (9/2)
+|   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   Time < 1815
+|   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   |   Time >= 1615
+|   |   |   |   |   |   |   |   |   Time < 1715
+|   |   |   |   |   |   |   |   |   |   Time < 1665 : Moderately Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1665 : Not Busy (10/5)
+|   |   |   |   |   |   |   |   |   Time >= 1715 : Moderately Busy (20/8)
+|   |   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   |   Time < 1865 : Moderately Busy (10/5)
+|   |   |   |   |   |   |   |   Time >= 1865
+|   |   |   |   |   |   |   |   |   Time < 1915 : Not Busy (10/5)
+|   |   |   |   |   |   |   |   |   Time >= 1915 : Not Busy (10/5)
+|   |   |   |   Time >= 1965
+|   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   Time < 2115
+|   |   |   |   |   |   |   Time < 2065
+|   |   |   |   |   |   |   |   Time < 2015 : Not Busy (9/3)
+|   |   |   |   |   |   |   |   Time >= 2015 : Not Busy (9/2)
+|   |   |   |   |   |   |   Time >= 2065 : Not Busy (9/4)
+|   |   |   |   |   |   Time >= 2115
+|   |   |   |   |   |   |   Time < 2215 : Empty (18/4)
+|   |   |   |   |   |   |   Time >= 2215 : Empty (27/3)
+|   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   Time < 2115
+|   |   |   |   |   |   |   Time < 2015 : Not Busy (10/4)
+|   |   |   |   |   |   |   Time >= 2015
+|   |   |   |   |   |   |   |   Time < 2065 : Not Busy (10/4)
+|   |   |   |   |   |   |   |   Time >= 2065 : Not Busy (10/4)
+|   |   |   |   |   |   Time >= 2115
+|   |   |   |   |   |   |   Time < 2265
+|   |   |   |   |   |   |   |   Time < 2165 : Empty (10/4)
+|   |   |   |   |   |   |   |   Time >= 2165 : Empty (20/6)
+|   |   |   |   |   |   |   Time >= 2265
+|   |   |   |   |   |   |   |   Time < 2315 : Empty (10/1)
+|   |   |   |   |   |   |   |   Time >= 2315 : Empty (8/1)
+|   |   Day >= 5.5
+|   |   |   Time < 965
+|   |   |   |   Time < 65 : Not Busy (4/0)
+|   |   |   |   Time >= 65
+|   |   |   |   |   Time < 865 : Empty (13/0)
+|   |   |   |   |   Time >= 865
+|   |   |   |   |   |   Time < 915 : Empty (3/1)
+|   |   |   |   |   |   Time >= 915 : Empty (10/1)
+|   |   |   Time >= 965
+|   |   |   |   Time < 2215
+|   |   |   |   |   Time < 1165
+|   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   Time < 1015 : Moderately Busy (10/3)
+|   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   Time < 1065 : Not Busy (10/2)
+|   |   |   |   |   |   |   |   Time >= 1065 : Moderately Busy (10/4)
+|   |   |   |   |   |   Time >= 1115 : Moderately Busy (10/3)
+|   |   |   |   |   Time >= 1165
+|   |   |   |   |   |   Time < 2065
+|   |   |   |   |   |   |   Time < 1615
+|   |   |   |   |   |   |   |   Time < 1215 : Moderately Busy (10/2)
+|   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   |   |   Time < 1415
+|   |   |   |   |   |   |   |   |   |   |   Time < 1265 : Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1265 : Busy (30/9)
+|   |   |   |   |   |   |   |   |   |   Time >= 1415 : Busy (20/8)
+|   |   |   |   |   |   |   |   |   Time >= 1515 : Moderately Busy (20/10)
+|   |   |   |   |   |   |   Time >= 1615
+|   |   |   |   |   |   |   |   Time < 1715
+|   |   |   |   |   |   |   |   |   Time < 1665 : Moderately Busy (10/4)
+|   |   |   |   |   |   |   |   |   Time >= 1665 : Moderately Busy (10/2)
+|   |   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   |   Time < 1915
+|   |   |   |   |   |   |   |   |   |   Time < 1815
+|   |   |   |   |   |   |   |   |   |   |   Time < 1765 : Moderately Busy (10/5)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1765 : Moderately Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   |   |   |   |   Time < 1865 : Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1865 : Busy (10/3)
+|   |   |   |   |   |   |   |   |   Time >= 1915
+|   |   |   |   |   |   |   |   |   |   Time < 2015 : Busy (20/8)
+|   |   |   |   |   |   |   |   |   |   Time >= 2015 : Moderately Busy (10/4)
+|   |   |   |   |   |   Time >= 2065
+|   |   |   |   |   |   |   Time < 2115 : Moderately Busy (10/4)
+|   |   |   |   |   |   |   Time >= 2115
+|   |   |   |   |   |   |   |   Time < 2165 : Moderately Busy (10/2)
+|   |   |   |   |   |   |   |   Time >= 2165 : Moderately Busy (10/4)
+|   |   |   |   Time >= 2215 : Not Busy (30/9)
+Quarter = Spring
+|   Day < 3.5
+|   |   Time < 765
+|   |   |   Time < 15
+|   |   |   |   Day < 0.5 : Empty (10/5)
+|   |   |   |   Day >= 0.5
+|   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   Day < 1.5 : Not Busy (12/3)
+|   |   |   |   |   |   Day >= 1.5 : Not Busy (12/2)
+|   |   |   |   |   Day >= 2.5 : Not Busy (14/4)
+|   |   |   Time >= 15
+|   |   |   |   Time < 715
+|   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   Time < 165 : Empty (30/3)
+|   |   |   |   |   |   |   Time >= 165 : Empty (25/0)
+|   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   Time < 65
+|   |   |   |   |   |   |   |   Day < 1.5 : Empty (10/1)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Empty (11/1)
+|   |   |   |   |   |   |   Time >= 65
+|   |   |   |   |   |   |   |   Time < 665 : Empty (99/0)
+|   |   |   |   |   |   |   |   Time >= 665
+|   |   |   |   |   |   |   |   |   Day < 1.5 : Empty (11/1)
+|   |   |   |   |   |   |   |   |   Day >= 1.5 : Empty (8/0)
+|   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   Time < 65 : Empty (10/2)
+|   |   |   |   |   |   Time >= 65
+|   |   |   |   |   |   |   Time < 665
+|   |   |   |   |   |   |   |   Time < 165
+|   |   |   |   |   |   |   |   |   Time < 115 : Empty (10/0)
+|   |   |   |   |   |   |   |   |   Time >= 115 : Empty (10/1)
+|   |   |   |   |   |   |   |   Time >= 165 : Empty (36/0)
+|   |   |   |   |   |   |   Time >= 665 : Empty (9/1)
+|   |   |   |   Time >= 715
+|   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   Day < 0.5 : Empty (9/2)
+|   |   |   |   |   |   Day >= 0.5 : Empty (11/3)
+|   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   Day < 2.5 : Empty (11/0)
+|   |   |   |   |   |   Day >= 2.5 : Empty (11/2)
+|   |   Time >= 765
+|   |   |   Time < 2115
+|   |   |   |   Time < 815
+|   |   |   |   |   Day < 0.5 : Not Busy (9/2)
+|   |   |   |   |   Day >= 0.5 : Not Busy (33/6)
+|   |   |   |   Time >= 815
+|   |   |   |   |   Time < 1565
+|   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   |   Time < 1065
+|   |   |   |   |   |   |   |   |   Time < 1015
+|   |   |   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 865 : Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 865 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 915 : Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 965 : Moderately Busy (10/2)
+|   |   |   |   |   |   |   |   |   Time >= 1015 : Busy (10/1)
+|   |   |   |   |   |   |   |   Time >= 1065 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   Time < 1015
+|   |   |   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 865 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 865
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 915 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 915 : Moderately Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 865 : Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 865 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 915 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 965 : Moderately Busy (22/0)
+|   |   |   |   |   |   |   |   |   Day >= 2.5 : Moderately Busy (44/0)
+|   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1065 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1065 : Moderately Busy (10/0)
+|   |   |   |   |   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   |   |   |   |   Time < 1065 : Busy (9/1)
+|   |   |   |   |   |   |   |   |   |   Time >= 1065 : Moderately Busy (10/1)
+|   |   |   |   |   |   Time >= 1115
+|   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   |   |   Time < 1365
+|   |   |   |   |   |   |   |   |   |   |   Time < 1165
+|   |   |   |   |   |   |   |   |   |   |   |   Day < 0.5 : Busy (10/1)
+|   |   |   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1165
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1265 : Busy (42/0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1265
+|   |   |   |   |   |   |   |   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1315 : Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1315 : Busy (10/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1315 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1315 : Busy (11/0)
+|   |   |   |   |   |   |   |   |   |   Time >= 1365
+|   |   |   |   |   |   |   |   |   |   |   Time < 1465
+|   |   |   |   |   |   |   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1415 : Busy (10/3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1415 : Busy (10/1)
+|   |   |   |   |   |   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1415 : Busy (11/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1415 : Busy (11/5)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1465
+|   |   |   |   |   |   |   |   |   |   |   |   Day < 0.5 : Busy (10/1)
+|   |   |   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   Time >= 1515
+|   |   |   |   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (10/5)
+|   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Busy (11/5)
+|   |   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   |   |   Time < 1465 : Busy (73/0)
+|   |   |   |   |   |   |   |   |   |   Time >= 1465 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   Time >= 1515 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   |   |   Time < 1165 : Busy (11/4)
+|   |   |   |   |   |   |   |   Time >= 1165
+|   |   |   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   |   |   Time < 1265
+|   |   |   |   |   |   |   |   |   |   |   Time < 1215 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1215 : Busy (9/1)
+|   |   |   |   |   |   |   |   |   |   Time >= 1265
+|   |   |   |   |   |   |   |   |   |   |   Time < 1315 : Busy (9/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1315
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1415 : Busy (22/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1415
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1465 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1465 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   Time >= 1515 : Busy (11/3)
+|   |   |   |   |   Time >= 1565
+|   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   |   Time < 1765
+|   |   |   |   |   |   |   |   |   Time < 1665
+|   |   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 1615 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   |   |   Time >= 1665 : Moderately Busy (20/4)
+|   |   |   |   |   |   |   |   Time >= 1765
+|   |   |   |   |   |   |   |   |   Time < 1965
+|   |   |   |   |   |   |   |   |   |   Time < 1815 : Moderately Busy (10/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   |   |   |   |   Time < 1915
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1865 : Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1865 : Busy (10/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1915 : Busy (10/0)
+|   |   |   |   |   |   |   |   |   Time >= 1965
+|   |   |   |   |   |   |   |   |   |   Time < 2065
+|   |   |   |   |   |   |   |   |   |   |   Time < 2015 : Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 2015 : Moderately Busy (10/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 2065 : Moderately Busy (10/4)
+|   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   Time < 1765
+|   |   |   |   |   |   |   |   |   |   Time < 1715
+|   |   |   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1615
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1665 : Moderately Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1665 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   |   |   |   Time >= 1715 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   |   Time >= 1765
+|   |   |   |   |   |   |   |   |   |   Time < 1965
+|   |   |   |   |   |   |   |   |   |   |   Time < 1815 : Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1865 : Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1865
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1915 : Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1915 : Busy (11/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 1965
+|   |   |   |   |   |   |   |   |   |   |   Time < 2015 : Moderately Busy (11/6)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 2015 : Moderately Busy (22/8)
+|   |   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   |   |   Time >= 1615
+|   |   |   |   |   |   |   |   |   |   Time < 2015
+|   |   |   |   |   |   |   |   |   |   |   Time < 1915
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1865
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1715
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1665 : Moderately Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1665 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1715 : Moderately Busy (33/12)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1865 : Moderately Busy (11/6)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1915 : Moderately Busy (22/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 2015
+|   |   |   |   |   |   |   |   |   |   |   Time < 2065 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 2065 : Moderately Busy (11/3)
+|   |   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   |   Time < 2015
+|   |   |   |   |   |   |   |   Time < 1815
+|   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (11/1)
+|   |   |   |   |   |   |   |   |   Time >= 1615
+|   |   |   |   |   |   |   |   |   |   Time < 1715 : Moderately Busy (22/0)
+|   |   |   |   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   |   |   |   Time < 1765 : Moderately Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1765 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   |   |   Time < 1965
+|   |   |   |   |   |   |   |   |   |   Time < 1865 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 1865 : Moderately Busy (22/2)
+|   |   |   |   |   |   |   |   |   Time >= 1965 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   Time >= 2015
+|   |   |   |   |   |   |   |   Time < 2065 : Moderately Busy (11/1)
+|   |   |   |   |   |   |   |   Time >= 2065 : Moderately Busy (11/3)
+|   |   |   Time >= 2115
+|   |   |   |   Time < 2215
+|   |   |   |   |   Time < 2165
+|   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   Day >= 0.5 : Moderately Busy (22/4)
+|   |   |   |   |   |   Day >= 2.5 : Moderately Busy (11/5)
+|   |   |   |   |   Time >= 2165
+|   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   Day < 1.5 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Moderately Busy (11/3)
+|   |   |   |   |   |   Day >= 2.5 : Not Busy (11/6)
+|   |   |   |   Time >= 2215
+|   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   Time < 2265
+|   |   |   |   |   |   |   Day < 0.5 : Not Busy (10/5)
+|   |   |   |   |   |   |   Day >= 0.5 : Not Busy (22/10)
+|   |   |   |   |   |   Time >= 2265
+|   |   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   |   Time < 2315 : Not Busy (10/1)
+|   |   |   |   |   |   |   |   Time >= 2315 : Not Busy (10/1)
+|   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   Day < 1.5 : Not Busy (22/6)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Not Busy (22/4)
+|   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   Time < 2265 : Not Busy (11/2)
+|   |   |   |   |   |   Time >= 2265
+|   |   |   |   |   |   |   Time < 2315 : Not Busy (11/1)
+|   |   |   |   |   |   |   Time >= 2315 : Not Busy (11/5)
+|   Day >= 3.5
+|   |   Time < 815
+|   |   |   Time < 15
+|   |   |   |   Day < 4.5 : Not Busy (12/4)
+|   |   |   |   Day >= 4.5 : Not Busy (2/0)
+|   |   |   Time >= 15
+|   |   |   |   Time < 765
+|   |   |   |   |   Time < 65
+|   |   |   |   |   |   Day < 5.5
+|   |   |   |   |   |   |   Day < 4.5 : Empty (11/2)
+|   |   |   |   |   |   |   Day >= 4.5 : Empty (1/0)
+|   |   |   |   |   |   Day >= 5.5 : Not Busy (1/0)
+|   |   |   |   |   Time >= 65
+|   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   Time < 715 : Empty (57/0)
+|   |   |   |   |   |   |   Time >= 715 : Empty (11/2)
+|   |   |   |   |   |   Day >= 4.5 : Empty (24/0)
+|   |   |   |   Time >= 765
+|   |   |   |   |   Day < 4.5 : Not Busy (11/2)
+|   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   Day < 5.5 : Empty (10/1)
+|   |   |   |   |   |   Day >= 5.5 : Empty (3/0)
+|   |   Time >= 815
+|   |   |   Time < 2065
+|   |   |   |   Day < 5.5
+|   |   |   |   |   Time < 1615
+|   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   Time < 1465
+|   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   Time < 865 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   |   Time >= 865 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   |   Time >= 915
+|   |   |   |   |   |   |   |   |   Time < 1215
+|   |   |   |   |   |   |   |   |   |   Time < 965 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   |   |   |   |   Time < 1015 : Moderately Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1065
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1115 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1115
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1165 : Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1165 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   |   Time < 1365
+|   |   |   |   |   |   |   |   |   |   |   Time < 1265 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1265
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1315 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1315 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   Time >= 1365
+|   |   |   |   |   |   |   |   |   |   |   Time < 1415 : Busy (11/5)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1415 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   Time >= 1465
+|   |   |   |   |   |   |   |   Time < 1515 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   Time >= 1515
+|   |   |   |   |   |   |   |   |   Time < 1565 : Moderately Busy (11/1)
+|   |   |   |   |   |   |   |   |   Time >= 1565 : Moderately Busy (11/3)
+|   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   Time < 1165
+|   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   |   Time < 865 : Empty (10/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 865 : Not Busy (10/4)
+|   |   |   |   |   |   |   |   |   Time >= 915 : Not Busy (11/2)
+|   |   |   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   |   |   |   Time < 1015 : Not Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Not Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1065 : Not Busy (11/2)
+|   |   |   |   |   |   |   |   |   Time >= 1115 : Not Busy (11/3)
+|   |   |   |   |   |   |   Time >= 1165
+|   |   |   |   |   |   |   |   Time < 1215 : Not Busy (11/4)
+|   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   Time < 1415
+|   |   |   |   |   |   |   |   |   |   Time < 1265 : Moderately Busy (11/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 1265 : Moderately Busy (33/9)
+|   |   |   |   |   |   |   |   |   Time >= 1415
+|   |   |   |   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   |   |   |   Time < 1465 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1465 : Moderately Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 1515 : Moderately Busy (20/8)
+|   |   |   |   |   Time >= 1615
+|   |   |   |   |   |   Time < 1865
+|   |   |   |   |   |   |   Time < 1665
+|   |   |   |   |   |   |   |   Day < 4.5 : Moderately Busy (11/5)
+|   |   |   |   |   |   |   |   Day >= 4.5 : Not Busy (10/2)
+|   |   |   |   |   |   |   Time >= 1665
+|   |   |   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   |   |   Time < 1715 : Not Busy (11/2)
+|   |   |   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   |   |   Time < 1815 : Not Busy (22/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1815 : Not Busy (10/1)
+|   |   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   |   Time < 1715 : Not Busy (11/3)
+|   |   |   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   |   |   Time < 1815 : Not Busy (20/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1815 : Not Busy (10/4)
+|   |   |   |   |   |   Time >= 1865
+|   |   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   |   Time < 1915 : Not Busy (10/1)
+|   |   |   |   |   |   |   |   Time >= 1915
+|   |   |   |   |   |   |   |   |   Time < 1965 : Not Busy (10/2)
+|   |   |   |   |   |   |   |   |   Time >= 1965 : Not Busy (20/6)
+|   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   Time < 1915 : Not Busy (10/6)
+|   |   |   |   |   |   |   |   Time >= 1915
+|   |   |   |   |   |   |   |   |   Time < 1965 : Not Busy (10/2)
+|   |   |   |   |   |   |   |   |   Time >= 1965
+|   |   |   |   |   |   |   |   |   |   Time < 2015 : Not Busy (10/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 2015 : Not Busy (10/2)
+|   |   |   |   Day >= 5.5
+|   |   |   |   |   Time < 1115
+|   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   Time < 865 : Empty (2/1)
+|   |   |   |   |   |   |   |   Time >= 865 : Empty (3/1)
+|   |   |   |   |   |   |   Time >= 915 : Empty (10/1)
+|   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   Time < 1015 : Moderately Busy (10/3)
+|   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   Time < 1065 : Not Busy (10/1)
+|   |   |   |   |   |   |   |   Time >= 1065 : Not Busy (10/3)
+|   |   |   |   |   Time >= 1115
+|   |   |   |   |   |   Time < 1815
+|   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   Time < 1265
+|   |   |   |   |   |   |   |   |   Time < 1165 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   |   |   Time >= 1165 : Moderately Busy (20/4)
+|   |   |   |   |   |   |   |   Time >= 1265
+|   |   |   |   |   |   |   |   |   Time < 1415
+|   |   |   |   |   |   |   |   |   |   Time < 1315 : Moderately Busy (10/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1315
+|   |   |   |   |   |   |   |   |   |   |   Time < 1365 : Busy (10/3)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1365 : Moderately Busy (10/5)
+|   |   |   |   |   |   |   |   |   Time >= 1415
+|   |   |   |   |   |   |   |   |   |   Time < 1465 : Moderately Busy (10/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 1465 : Moderately Busy (10/4)
+|   |   |   |   |   |   |   Time >= 1515
+|   |   |   |   |   |   |   |   Time < 1765
+|   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (20/2)
+|   |   |   |   |   |   |   |   |   Time >= 1615
+|   |   |   |   |   |   |   |   |   |   Time < 1715 : Moderately Busy (20/0)
+|   |   |   |   |   |   |   |   |   |   Time >= 1715 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   |   Time >= 1765 : Moderately Busy (10/2)
+|   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   Time < 2015
+|   |   |   |   |   |   |   |   Time < 1865 : Busy (10/4)
+|   |   |   |   |   |   |   |   Time >= 1865
+|   |   |   |   |   |   |   |   |   Time < 1965 : Moderately Busy (20/8)
+|   |   |   |   |   |   |   |   |   Time >= 1965 : Moderately Busy (10/5)
+|   |   |   |   |   |   |   Time >= 2015 : Moderately Busy (10/1)
+|   |   |   Time >= 2065
+|   |   |   |   Day < 5.5
+|   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   Time < 2115 : Not Busy (10/5)
+|   |   |   |   |   |   Time >= 2115
+|   |   |   |   |   |   |   Time < 2165 : Empty (10/2)
+|   |   |   |   |   |   |   Time >= 2165
+|   |   |   |   |   |   |   |   Time < 2215 : Empty (10/2)
+|   |   |   |   |   |   |   |   Time >= 2215 : Empty (30/3)
+|   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   Time < 2165
+|   |   |   |   |   |   |   Time < 2115 : Not Busy (10/4)
+|   |   |   |   |   |   |   Time >= 2115 : Empty (10/5)
+|   |   |   |   |   |   Time >= 2165
+|   |   |   |   |   |   |   Time < 2215 : Empty (10/3)
+|   |   |   |   |   |   |   Time >= 2215
+|   |   |   |   |   |   |   |   Time < 2315 : Empty (20/2)
+|   |   |   |   |   |   |   |   Time >= 2315 : Empty (9/1)
+|   |   |   |   Day >= 5.5
+|   |   |   |   |   Time < 2215
+|   |   |   |   |   |   Time < 2115 : Moderately Busy (10/1)
+|   |   |   |   |   |   Time >= 2115
+|   |   |   |   |   |   |   Time < 2165 : Moderately Busy (10/4)
+|   |   |   |   |   |   |   Time >= 2165 : Moderately Busy (10/3)
+|   |   |   |   |   Time >= 2215
+|   |   |   |   |   |   Time < 2315
+|   |   |   |   |   |   |   Time < 2265 : Not Busy (10/3)
+|   |   |   |   |   |   |   Time >= 2265 : Not Busy (10/3)
+|   |   |   |   |   |   Time >= 2315 : Not Busy (10/3)
+Quarter = Fall
+|   Day < 3.5
+|   |   Time < 765
+|   |   |   Day < 2.5
+|   |   |   |   Time < 15
+|   |   |   |   |   Day < 0.5 : Not Busy (12/4)
+|   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   Day < 1.5 : Not Busy (14/6)
+|   |   |   |   |   |   Day >= 1.5 : Not Busy (14/5)
+|   |   |   |   Time >= 15
+|   |   |   |   |   Time < 715
+|   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   Time < 215
+|   |   |   |   |   |   |   |   Time < 115
+|   |   |   |   |   |   |   |   |   Time < 65 : Empty (11/2)
+|   |   |   |   |   |   |   |   |   Time >= 65 : Empty (9/1)
+|   |   |   |   |   |   |   |   Time >= 115
+|   |   |   |   |   |   |   |   |   Time < 165 : Empty (11/0)
+|   |   |   |   |   |   |   |   |   Time >= 165 : Empty (8/1)
+|   |   |   |   |   |   |   Time >= 215 : Empty (32/0)
+|   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   Time < 115
+|   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   Time < 65 : Empty (11/1)
+|   |   |   |   |   |   |   |   |   Time >= 65 : Empty (12/1)
+|   |   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   |   Time < 65 : Empty (12/2)
+|   |   |   |   |   |   |   |   |   Time >= 65 : Empty (11/1)
+|   |   |   |   |   |   |   Time >= 115 : Empty (115/0)
+|   |   |   |   |   Time >= 715
+|   |   |   |   |   |   Day < 0.5 : Empty (13/1)
+|   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   Day < 1.5 : Empty (13/3)
+|   |   |   |   |   |   |   Day >= 1.5 : Empty (13/2)
+|   |   |   Day >= 2.5
+|   |   |   |   Time < 65
+|   |   |   |   |   Time < 15 : Not Busy (11/5)
+|   |   |   |   |   Time >= 15 : Empty (11/4)
+|   |   |   |   Time >= 65
+|   |   |   |   |   Time < 715 : Empty (62/0)
+|   |   |   |   |   Time >= 715 : Empty (12/1)
+|   |   Time >= 765
+|   |   |   Time < 2115
+|   |   |   |   Time < 815
+|   |   |   |   |   Day < 2.5 : Not Busy (39/3)
+|   |   |   |   |   Day >= 2.5 : Not Busy (13/3)
+|   |   |   |   Time >= 815
+|   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   Time < 1565
+|   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   |   Time < 865 : Busy (13/1)
+|   |   |   |   |   |   |   |   |   |   Time >= 865 : Busy (13/3)
+|   |   |   |   |   |   |   |   |   Time >= 915
+|   |   |   |   |   |   |   |   |   |   Time < 1215 : Busy (78/6)
+|   |   |   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   |   |   Time < 1265 : Busy (13/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1265 : Busy (78/6)
+|   |   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   |   Time < 965 : Busy (39/3)
+|   |   |   |   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   |   |   |   Time < 1015 : Busy (13/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1265
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1215 : Busy (52/4)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1215 : Busy (13/1)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1265 : Busy (65/5)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1515 : Busy (13/2)
+|   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   Time < 865 : Busy (13/3)
+|   |   |   |   |   |   |   |   |   Time >= 865
+|   |   |   |   |   |   |   |   |   |   Time < 915 : Busy (13/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 915 : Busy (13/2)
+|   |   |   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   |   |   Time < 1365
+|   |   |   |   |   |   |   |   |   |   |   Time < 1015 : Busy (13/3)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Busy (13/1)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1065
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1215 : Busy (39/6)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1315 : Busy (24/4)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1315 : Busy (13/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 1365
+|   |   |   |   |   |   |   |   |   |   |   Time < 1415 : Busy (13/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1415 : Busy (26/4)
+|   |   |   |   |   |   |   |   |   Time >= 1515 : Busy (13/2)
+|   |   |   |   |   |   Time >= 1565
+|   |   |   |   |   |   |   Time < 2015
+|   |   |   |   |   |   |   |   Time < 1765
+|   |   |   |   |   |   |   |   |   Time < 1665
+|   |   |   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1615 : Busy (13/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1615 : Busy (13/2)
+|   |   |   |   |   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1615 : Busy (13/5)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1615 : Busy (13/4)
+|   |   |   |   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   Time < 1615 : Busy (13/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1615 : Busy (13/5)
+|   |   |   |   |   |   |   |   |   Time >= 1665
+|   |   |   |   |   |   |   |   |   |   Time < 1715
+|   |   |   |   |   |   |   |   |   |   |   Day < 0.5 : Busy (13/5)
+|   |   |   |   |   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   Day < 1.5 : Busy (12/5)
+|   |   |   |   |   |   |   |   |   |   |   |   Day >= 1.5 : Busy (12/6)
+|   |   |   |   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   Day < 0.5 : Busy (12/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Busy (12/3)
+|   |   |   |   |   |   |   |   |   |   |   Day >= 1.5 : Busy (11/4)
+|   |   |   |   |   |   |   |   Time >= 1765
+|   |   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   |   Time < 1915
+|   |   |   |   |   |   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1815 : Busy (12/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1865 : Busy (13/2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1865 : Busy (12/1)
+|   |   |   |   |   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1815 : Busy (13/3)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1815 : Busy (24/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1915
+|   |   |   |   |   |   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1965 : Busy (12/1)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1965 : Busy (12/2)
+|   |   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Busy (24/4)
+|   |   |   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   |   |   Time < 1965
+|   |   |   |   |   |   |   |   |   |   |   Time < 1815 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1915 : Busy (24/4)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1915 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   Time >= 1965 : Busy (11/3)
+|   |   |   |   |   |   |   Time >= 2015
+|   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   Day < 0.5 : Busy (24/8)
+|   |   |   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   |   |   Time < 2065 : Busy (12/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 2065 : Moderately Busy (12/7)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Moderately Busy (22/10)
+|   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   Time < 1565
+|   |   |   |   |   |   |   Time < 1165
+|   |   |   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   |   Time < 865 : Busy (12/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 865 : Busy (24/4)
+|   |   |   |   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   |   |   |   Time < 1015 : Busy (12/6)
+|   |   |   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1065 : Busy (11/3)
+|   |   |   |   |   |   |   |   Time >= 1115 : Busy (11/1)
+|   |   |   |   |   |   |   Time >= 1165
+|   |   |   |   |   |   |   |   Time < 1415
+|   |   |   |   |   |   |   |   |   Time < 1215 : Busy (11/1)
+|   |   |   |   |   |   |   |   |   Time >= 1215 : Busy (48/4)
+|   |   |   |   |   |   |   |   Time >= 1415 : Busy (36/6)
+|   |   |   |   |   |   Time >= 1565
+|   |   |   |   |   |   |   Time < 1915
+|   |   |   |   |   |   |   |   Time < 1665
+|   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (12/6)
+|   |   |   |   |   |   |   |   |   Time >= 1615 : Busy (12/3)
+|   |   |   |   |   |   |   |   Time >= 1665
+|   |   |   |   |   |   |   |   |   Time < 1815
+|   |   |   |   |   |   |   |   |   |   Time < 1765
+|   |   |   |   |   |   |   |   |   |   |   Time < 1715 : Moderately Busy (12/6)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1715 : Moderately Busy (12/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 1765 : Moderately Busy (12/4)
+|   |   |   |   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   |   |   |   Time < 1865 : Moderately Busy (11/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 1865 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   Time >= 1915
+|   |   |   |   |   |   |   |   Time < 2065
+|   |   |   |   |   |   |   |   |   Time < 1965 : Moderately Busy (11/0)
+|   |   |   |   |   |   |   |   |   Time >= 1965
+|   |   |   |   |   |   |   |   |   |   Time < 2015 : Moderately Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 2015 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   Time >= 2065 : Moderately Busy (11/2)
+|   |   |   Time >= 2115
+|   |   |   |   Time < 2215
+|   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   Time < 2165 : Moderately Busy (12/2)
+|   |   |   |   |   |   Time >= 2165 : Moderately Busy (12/1)
+|   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   Time < 2165
+|   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   Day < 1.5 : Moderately Busy (12/2)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Moderately Busy (10/1)
+|   |   |   |   |   |   |   Day >= 2.5 : Moderately Busy (11/4)
+|   |   |   |   |   |   Time >= 2165
+|   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   Day < 1.5 : Moderately Busy (12/3)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Moderately Busy (10/3)
+|   |   |   |   |   |   |   Day >= 2.5 : Not Busy (11/4)
+|   |   |   |   Time >= 2215
+|   |   |   |   |   Time < 2265
+|   |   |   |   |   |   Day < 1.5 : Moderately Busy (24/10)
+|   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   Day < 2.5 : Not Busy (11/3)
+|   |   |   |   |   |   |   Day >= 2.5 : Not Busy (11/1)
+|   |   |   |   |   Time >= 2265
+|   |   |   |   |   |   Time < 2315
+|   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   Day < 0.5 : Not Busy (12/4)
+|   |   |   |   |   |   |   |   |   Day >= 0.5 : Not Busy (12/5)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Not Busy (11/2)
+|   |   |   |   |   |   |   Day >= 2.5 : Not Busy (11/3)
+|   |   |   |   |   |   Time >= 2315
+|   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   Day < 0.5 : Not Busy (12/2)
+|   |   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   |   Day < 1.5 : Not Busy (12/3)
+|   |   |   |   |   |   |   |   |   Day >= 1.5 : Not Busy (11/2)
+|   |   |   |   |   |   |   Day >= 2.5 : Not Busy (11/2)
+|   Day >= 3.5
+|   |   Time < 815
+|   |   |   Time < 765
+|   |   |   |   Day < 5.5
+|   |   |   |   |   Time < 15
+|   |   |   |   |   |   Day < 4.5 : Empty (14/6)
+|   |   |   |   |   |   Day >= 4.5 : Not Busy (1/0)
+|   |   |   |   |   Time >= 15
+|   |   |   |   |   |   Time < 715
+|   |   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   |   Time < 115
+|   |   |   |   |   |   |   |   |   Time < 65 : Empty (10/1)
+|   |   |   |   |   |   |   |   |   Time >= 65 : Empty (11/1)
+|   |   |   |   |   |   |   |   Time >= 115 : Empty (59/0)
+|   |   |   |   |   |   |   Day >= 4.5 : Empty (10/0)
+|   |   |   |   |   |   Time >= 715
+|   |   |   |   |   |   |   Day < 4.5 : Empty (13/2)
+|   |   |   |   |   |   |   Day >= 4.5 : Empty (3/0)
+|   |   |   |   Day >= 5.5
+|   |   |   |   |   Time < 115
+|   |   |   |   |   |   Time < 15 : Moderately Busy (2/0)
+|   |   |   |   |   |   Time >= 15 : Not Busy (2/0)
+|   |   |   |   |   Time >= 115 : Empty (11/0)
+|   |   |   Time >= 765
+|   |   |   |   Day < 4.5 : Not Busy (13/2)
+|   |   |   |   Day >= 4.5
+|   |   |   |   |   Day < 5.5 : Empty (10/1)
+|   |   |   |   |   Day >= 5.5 : Empty (2/0)
+|   |   Time >= 815
+|   |   |   Time < 2115
+|   |   |   |   Time < 965
+|   |   |   |   |   Time < 915
+|   |   |   |   |   |   Time < 865
+|   |   |   |   |   |   |   Day < 4.5 : Busy (13/4)
+|   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   Day < 5.5 : Empty (12/4)
+|   |   |   |   |   |   |   |   Day >= 5.5 : Empty (2/1)
+|   |   |   |   |   |   Time >= 865
+|   |   |   |   |   |   |   Day < 4.5 : Moderately Busy (13/3)
+|   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   Day < 5.5 : Not Busy (11/5)
+|   |   |   |   |   |   |   |   Day >= 5.5 : Empty (6/1)
+|   |   |   |   |   Time >= 915
+|   |   |   |   |   |   Day < 4.5 : Busy (13/3)
+|   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   Day < 5.5 : Not Busy (14/6)
+|   |   |   |   |   |   |   Day >= 5.5 : Empty (12/1)
+|   |   |   |   Time >= 965
+|   |   |   |   |   Time < 1665
+|   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   Time < 1065
+|   |   |   |   |   |   |   |   Time < 1015
+|   |   |   |   |   |   |   |   |   Day < 4.5 : Busy (13/3)
+|   |   |   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   |   |   Day < 5.5 : Not Busy (14/4)
+|   |   |   |   |   |   |   |   |   |   Day >= 5.5 : Moderately Busy (12/2)
+|   |   |   |   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   |   |   |   Day < 4.5 : Busy (13/3)
+|   |   |   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   |   |   Day < 5.5 : Not Busy (14/4)
+|   |   |   |   |   |   |   |   |   |   Day >= 5.5 : Moderately Busy (12/6)
+|   |   |   |   |   |   |   Time >= 1065
+|   |   |   |   |   |   |   |   Day < 4.5 : Busy (13/5)
+|   |   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   |   Day < 5.5 : Not Busy (14/7)
+|   |   |   |   |   |   |   |   |   Day >= 5.5 : Moderately Busy (12/2)
+|   |   |   |   |   |   Time >= 1115
+|   |   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   |   |   Time < 1415
+|   |   |   |   |   |   |   |   |   |   Time < 1315
+|   |   |   |   |   |   |   |   |   |   |   Time < 1265
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1215
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1165 : Busy (13/3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1165 : Busy (13/4)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1215 : Busy (13/3)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1265 : Busy (13/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1315 : Busy (26/6)
+|   |   |   |   |   |   |   |   |   Time >= 1415
+|   |   |   |   |   |   |   |   |   |   Time < 1465 : Busy (14/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 1465 : Busy (13/7)
+|   |   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   |   Day < 5.5
+|   |   |   |   |   |   |   |   |   |   Time < 1215
+|   |   |   |   |   |   |   |   |   |   |   Time < 1165 : Not Busy (14/9)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1165 : Moderately Busy (14/7)
+|   |   |   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   |   |   Time < 1365 : Moderately Busy (42/18)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1365
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1415 : Moderately Busy (12/3)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1415 : Moderately Busy (22/6)
+|   |   |   |   |   |   |   |   |   Day >= 5.5
+|   |   |   |   |   |   |   |   |   |   Time < 1265
+|   |   |   |   |   |   |   |   |   |   |   Time < 1215
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1165 : Moderately Busy (12/3)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1165 : Moderately Busy (12/5)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1215 : Moderately Busy (12/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1265
+|   |   |   |   |   |   |   |   |   |   |   Time < 1365
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1315 : Busy (12/3)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1315 : Busy (12/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1365
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1415 : Busy (12/4)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1415
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1465 : Busy (12/5)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1465 : Busy (12/6)
+|   |   |   |   |   |   |   Time >= 1515
+|   |   |   |   |   |   |   |   Day < 5.5
+|   |   |   |   |   |   |   |   |   Time < 1615
+|   |   |   |   |   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   |   |   |   |   Time < 1565 : Moderately Busy (13/5)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1565 : Moderately Busy (13/4)
+|   |   |   |   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   |   |   |   Time < 1565 : Moderately Busy (12/6)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1565 : Moderately Busy (11/4)
+|   |   |   |   |   |   |   |   |   Time >= 1615
+|   |   |   |   |   |   |   |   |   |   Day < 4.5 : Moderately Busy (13/3)
+|   |   |   |   |   |   |   |   |   |   Day >= 4.5 : Not Busy (12/6)
+|   |   |   |   |   |   |   |   Day >= 5.5
+|   |   |   |   |   |   |   |   |   Time < 1565 : Moderately Busy (12/7)
+|   |   |   |   |   |   |   |   |   Time >= 1565
+|   |   |   |   |   |   |   |   |   |   Time < 1615 : Moderately Busy (12/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1615 : Moderately Busy (12/3)
+|   |   |   |   |   Time >= 1665
+|   |   |   |   |   |   Day < 5.5
+|   |   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   |   Time < 1965
+|   |   |   |   |   |   |   |   |   Time < 1715 : Moderately Busy (11/5)
+|   |   |   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   |   |   Time < 1865
+|   |   |   |   |   |   |   |   |   |   |   Time < 1815
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1765 : Not Busy (10/3)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1765 : Not Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1815 : Not Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 1865
+|   |   |   |   |   |   |   |   |   |   |   Time < 1915 : Not Busy (10/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1915 : Not Busy (10/1)
+|   |   |   |   |   |   |   |   Time >= 1965
+|   |   |   |   |   |   |   |   |   Time < 2065 : Not Busy (20/6)
+|   |   |   |   |   |   |   |   |   Time >= 2065 : Empty (9/5)
+|   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   Time < 2015
+|   |   |   |   |   |   |   |   |   Time < 1765 : Not Busy (20/8)
+|   |   |   |   |   |   |   |   |   Time >= 1765
+|   |   |   |   |   |   |   |   |   |   Time < 1815 : Not Busy (10/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   |   |   |   |   Time < 1865 : Not Busy (11/5)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1865
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1915 : Moderately Busy (10/5)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1915
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time < 1965 : Not Busy (10/6)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time >= 1965 : Not Busy (10/5)
+|   |   |   |   |   |   |   |   Time >= 2015
+|   |   |   |   |   |   |   |   |   Time < 2065 : Empty (10/6)
+|   |   |   |   |   |   |   |   |   Time >= 2065 : Not Busy (10/2)
+|   |   |   |   |   |   Day >= 5.5
+|   |   |   |   |   |   |   Time < 1765
+|   |   |   |   |   |   |   |   Time < 1715 : Moderately Busy (12/3)
+|   |   |   |   |   |   |   |   Time >= 1715 : Moderately Busy (12/6)
+|   |   |   |   |   |   |   Time >= 1765
+|   |   |   |   |   |   |   |   Time < 2015
+|   |   |   |   |   |   |   |   |   Time < 1965 : Busy (44/8)
+|   |   |   |   |   |   |   |   |   Time >= 1965 : Busy (11/3)
+|   |   |   |   |   |   |   |   Time >= 2015
+|   |   |   |   |   |   |   |   |   Time < 2065 : Moderately Busy (11/6)
+|   |   |   |   |   |   |   |   |   Time >= 2065 : Moderately Busy (11/5)
+|   |   |   Time >= 2115
+|   |   |   |   Time < 2215
+|   |   |   |   |   Day < 5.5
+|   |   |   |   |   |   Time < 2165
+|   |   |   |   |   |   |   Day < 4.5 : Empty (9/3)
+|   |   |   |   |   |   |   Day >= 4.5 : Empty (10/5)
+|   |   |   |   |   |   Time >= 2165
+|   |   |   |   |   |   |   Day < 4.5 : Empty (9/1)
+|   |   |   |   |   |   |   Day >= 4.5 : Empty (10/3)
+|   |   |   |   |   Day >= 5.5
+|   |   |   |   |   |   Time < 2165 : Moderately Busy (11/1)
+|   |   |   |   |   |   Time >= 2165 : Moderately Busy (11/2)
+|   |   |   |   Time >= 2215
+|   |   |   |   |   Day < 5.5
+|   |   |   |   |   |   Time < 2315
+|   |   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   |   Time < 2265 : Empty (9/1)
+|   |   |   |   |   |   |   |   Time >= 2265 : Empty (8/1)
+|   |   |   |   |   |   |   Day >= 4.5
+|   |   |   |   |   |   |   |   Time < 2265 : Empty (10/2)
+|   |   |   |   |   |   |   |   Time >= 2265 : Empty (8/1)
+|   |   |   |   |   |   Time >= 2315
+|   |   |   |   |   |   |   Day < 4.5 : Empty (8/1)
+|   |   |   |   |   |   |   Day >= 4.5 : Empty (9/1)
+|   |   |   |   |   Day >= 5.5
+|   |   |   |   |   |   Time < 2315
+|   |   |   |   |   |   |   Time < 2265 : Not Busy (11/3)
+|   |   |   |   |   |   |   Time >= 2265 : Not Busy (10/1)
+|   |   |   |   |   |   Time >= 2315 : Not Busy (10/4)
+Quarter = Summer
+|   Time < 1665
+|   |   Day < 4.5
+|   |   |   Time < 765
+|   |   |   |   Day < 3.5
+|   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   Time < 715 : Empty (25/0)
+|   |   |   |   |   |   Time >= 715
+|   |   |   |   |   |   |   Day < 0.5 : Empty (10/3)
+|   |   |   |   |   |   |   Day >= 0.5 : Empty (12/4)
+|   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   Day < 2.5 : Empty (30/0)
+|   |   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   |   Time < 715 : Empty (12/0)
+|   |   |   |   |   |   |   Time >= 715 : Empty (13/1)
+|   |   |   |   Day >= 3.5
+|   |   |   |   |   Time < 715 : Empty (13/0)
+|   |   |   |   |   Time >= 715 : Empty (12/5)
+|   |   |   Time >= 765
+|   |   |   |   Time < 1465
+|   |   |   |   |   Time < 1165
+|   |   |   |   |   |   Day < 3.5
+|   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   Time < 815
+|   |   |   |   |   |   |   |   |   |   Day < 0.5 : Not Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Not Busy (12/4)
+|   |   |   |   |   |   |   |   |   Time >= 815
+|   |   |   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   |   |   Time < 865
+|   |   |   |   |   |   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Moderately Busy (12/5)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 865
+|   |   |   |   |   |   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (11/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Moderately Busy (12/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 915
+|   |   |   |   |   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (11/5)
+|   |   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Moderately Busy (12/4)
+|   |   |   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   |   |   Day < 0.5
+|   |   |   |   |   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   |   |   |   |   Time < 1015 : Not Busy (11/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1015 : Not Busy (22/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1115 : Not Busy (11/4)
+|   |   |   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Not Busy (24/6)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1065 : Not Busy (12/1)
+|   |   |   |   |   |   |   |   |   |   Time >= 1115 : Not Busy (12/4)
+|   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   |   Time < 815 : Not Busy (13/1)
+|   |   |   |   |   |   |   |   |   |   Time >= 815
+|   |   |   |   |   |   |   |   |   |   |   Time < 865 : Moderately Busy (13/2)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 865 : Moderately Busy (13/0)
+|   |   |   |   |   |   |   |   |   Time >= 915
+|   |   |   |   |   |   |   |   |   |   Time < 965 : Not Busy (13/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1065 : Not Busy (26/2)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1065 : Not Busy (13/0)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1115 : Not Busy (13/2)
+|   |   |   |   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   |   Time < 815 : Not Busy (13/0)
+|   |   |   |   |   |   |   |   |   |   Time >= 815
+|   |   |   |   |   |   |   |   |   |   |   Time < 915 : Moderately Busy (26/0)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 915 : Not Busy (13/6)
+|   |   |   |   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   |   |   |   Time < 1115 : Not Busy (39/0)
+|   |   |   |   |   |   |   |   |   |   Time >= 1115 : Not Busy (13/1)
+|   |   |   |   |   |   Day >= 3.5
+|   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   Time < 815 : Not Busy (12/5)
+|   |   |   |   |   |   |   |   Time >= 815
+|   |   |   |   |   |   |   |   |   Time < 865 : Moderately Busy (12/5)
+|   |   |   |   |   |   |   |   |   Time >= 865 : Moderately Busy (12/3)
+|   |   |   |   |   |   |   Time >= 915
+|   |   |   |   |   |   |   |   Time < 1115
+|   |   |   |   |   |   |   |   |   Time < 1065
+|   |   |   |   |   |   |   |   |   |   Time < 965 : Not Busy (12/6)
+|   |   |   |   |   |   |   |   |   |   Time >= 965
+|   |   |   |   |   |   |   |   |   |   |   Time < 1015 : Not Busy (12/5)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1015 : Not Busy (12/6)
+|   |   |   |   |   |   |   |   |   Time >= 1065 : Not Busy (12/5)
+|   |   |   |   |   |   |   |   Time >= 1115 : Not Busy (12/4)
+|   |   |   |   |   Time >= 1165
+|   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   Time < 1365
+|   |   |   |   |   |   |   |   Time < 1215
+|   |   |   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (11/3)
+|   |   |   |   |   |   |   |   |   Day >= 0.5 : Moderately Busy (12/3)
+|   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   Time < 1315
+|   |   |   |   |   |   |   |   |   |   Time < 1265
+|   |   |   |   |   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (11/1)
+|   |   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Moderately Busy (12/2)
+|   |   |   |   |   |   |   |   |   |   Time >= 1265
+|   |   |   |   |   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (11/3)
+|   |   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Moderately Busy (12/3)
+|   |   |   |   |   |   |   |   |   Time >= 1315
+|   |   |   |   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (12/3)
+|   |   |   |   |   |   |   |   |   |   Day >= 0.5 : Moderately Busy (12/2)
+|   |   |   |   |   |   |   Time >= 1365
+|   |   |   |   |   |   |   |   Time < 1415
+|   |   |   |   |   |   |   |   |   Day < 0.5 : Moderately Busy (12/2)
+|   |   |   |   |   |   |   |   |   Day >= 0.5 : Moderately Busy (12/3)
+|   |   |   |   |   |   |   |   Time >= 1415 : Not Busy (24/10)
+|   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   Day < 3.5
+|   |   |   |   |   |   |   |   Time < 1365
+|   |   |   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   |   |   Time < 1315
+|   |   |   |   |   |   |   |   |   |   |   Time < 1215 : Moderately Busy (13/4)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1265 : Moderately Busy (13/0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1265 : Moderately Busy (13/1)
+|   |   |   |   |   |   |   |   |   |   Time >= 1315 : Moderately Busy (13/5)
+|   |   |   |   |   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   |   |   |   |   Time < 1215 : Not Busy (13/4)
+|   |   |   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   |   |   Time < 1265 : Moderately Busy (13/3)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1265
+|   |   |   |   |   |   |   |   |   |   |   |   Time < 1315 : Moderately Busy (13/0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time >= 1315 : Moderately Busy (13/2)
+|   |   |   |   |   |   |   |   Time >= 1365
+|   |   |   |   |   |   |   |   |   Time < 1415
+|   |   |   |   |   |   |   |   |   |   Day < 2.5 : Moderately Busy (13/6)
+|   |   |   |   |   |   |   |   |   |   Day >= 2.5 : Not Busy (13/5)
+|   |   |   |   |   |   |   |   |   Time >= 1415
+|   |   |   |   |   |   |   |   |   |   Day < 2.5 : Not Busy (13/3)
+|   |   |   |   |   |   |   |   |   |   Day >= 2.5 : Not Busy (13/2)
+|   |   |   |   |   |   |   Day >= 3.5
+|   |   |   |   |   |   |   |   Time < 1315
+|   |   |   |   |   |   |   |   |   Time < 1215 : Not Busy (12/6)
+|   |   |   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   |   |   Time < 1265 : Moderately Busy (12/3)
+|   |   |   |   |   |   |   |   |   |   Time >= 1265 : Moderately Busy (12/6)
+|   |   |   |   |   |   |   |   Time >= 1315
+|   |   |   |   |   |   |   |   |   Time < 1415 : Moderately Busy (24/8)
+|   |   |   |   |   |   |   |   |   Time >= 1415 : Not Busy (12/5)
+|   |   |   |   Time >= 1465
+|   |   |   |   |   Time < 1565
+|   |   |   |   |   |   Time < 1515
+|   |   |   |   |   |   |   Day < 1.5 : Not Busy (24/8)
+|   |   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   |   Day < 3.5
+|   |   |   |   |   |   |   |   |   Day < 2.5 : Not Busy (13/2)
+|   |   |   |   |   |   |   |   |   Day >= 2.5 : Not Busy (13/1)
+|   |   |   |   |   |   |   |   Day >= 3.5 : Not Busy (12/4)
+|   |   |   |   |   |   Time >= 1515
+|   |   |   |   |   |   |   Day < 0.5 : Not Busy (12/2)
+|   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   |   Day < 1.5 : Not Busy (12/1)
+|   |   |   |   |   |   |   |   |   Day >= 1.5 : Not Busy (13/1)
+|   |   |   |   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   |   |   |   Day < 3.5 : Not Busy (13/0)
+|   |   |   |   |   |   |   |   |   Day >= 3.5 : Not Busy (12/1)
+|   |   |   |   |   Time >= 1565
+|   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   Day < 0.5 : Not Busy (24/4)
+|   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   |   |   Time < 1615 : Not Busy (12/1)
+|   |   |   |   |   |   |   |   |   Time >= 1615 : Not Busy (12/0)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Not Busy (26/0)
+|   |   |   |   |   |   Day >= 2.5
+|   |   |   |   |   |   |   Day < 3.5 : Not Busy (26/2)
+|   |   |   |   |   |   |   Day >= 3.5
+|   |   |   |   |   |   |   |   Time < 1615 : Not Busy (12/3)
+|   |   |   |   |   |   |   |   Time >= 1615 : Not Busy (12/3)
+|   |   Day >= 4.5
+|   |   |   Time < 1465
+|   |   |   |   Time < 765 : Empty (25/0)
+|   |   |   |   Time >= 765
+|   |   |   |   |   Time < 1015
+|   |   |   |   |   |   Time < 815
+|   |   |   |   |   |   |   Day < 5.5 : Empty (12/5)
+|   |   |   |   |   |   |   Day >= 5.5 : Not Busy (7/2)
+|   |   |   |   |   |   Time >= 815
+|   |   |   |   |   |   |   Time < 865
+|   |   |   |   |   |   |   |   Day < 5.5 : Empty (11/5)
+|   |   |   |   |   |   |   |   Day >= 5.5 : Moderately Busy (5/1)
+|   |   |   |   |   |   |   Time >= 865
+|   |   |   |   |   |   |   |   Time < 915
+|   |   |   |   |   |   |   |   |   Day < 5.5 : Empty (12/5)
+|   |   |   |   |   |   |   |   |   Day >= 5.5 : Moderately Busy (7/3)
+|   |   |   |   |   |   |   |   Time >= 915
+|   |   |   |   |   |   |   |   |   Time < 965
+|   |   |   |   |   |   |   |   |   |   Day < 5.5 : Empty (12/5)
+|   |   |   |   |   |   |   |   |   |   Day >= 5.5 : Empty (12/5)
+|   |   |   |   |   |   |   |   |   Time >= 965 : Empty (24/10)
+|   |   |   |   |   Time >= 1015
+|   |   |   |   |   |   Day < 5.5
+|   |   |   |   |   |   |   Time < 1215
+|   |   |   |   |   |   |   |   Time < 1065 : Empty (12/5)
+|   |   |   |   |   |   |   |   Time >= 1065
+|   |   |   |   |   |   |   |   |   Time < 1115 : Empty (12/6)
+|   |   |   |   |   |   |   |   |   Time >= 1115
+|   |   |   |   |   |   |   |   |   |   Time < 1165 : Empty (12/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 1165 : Empty (12/6)
+|   |   |   |   |   |   |   Time >= 1215
+|   |   |   |   |   |   |   |   Time < 1365
+|   |   |   |   |   |   |   |   |   Time < 1265 : Empty (12/7)
+|   |   |   |   |   |   |   |   |   Time >= 1265
+|   |   |   |   |   |   |   |   |   |   Time < 1315 : Empty (12/6)
+|   |   |   |   |   |   |   |   |   |   Time >= 1315 : Empty (12/7)
+|   |   |   |   |   |   |   |   Time >= 1365
+|   |   |   |   |   |   |   |   |   Time < 1415 : Empty (12/5)
+|   |   |   |   |   |   |   |   |   Time >= 1415 : Empty (12/5)
+|   |   |   |   |   |   Day >= 5.5
+|   |   |   |   |   |   |   Time < 1165 : Empty (36/15)
+|   |   |   |   |   |   |   Time >= 1165
+|   |   |   |   |   |   |   |   Time < 1415
+|   |   |   |   |   |   |   |   |   Time < 1265
+|   |   |   |   |   |   |   |   |   |   Time < 1215 : Empty (12/5)
+|   |   |   |   |   |   |   |   |   |   Time >= 1215 : Empty (12/6)
+|   |   |   |   |   |   |   |   |   Time >= 1265
+|   |   |   |   |   |   |   |   |   |   Time < 1365
+|   |   |   |   |   |   |   |   |   |   |   Time < 1315 : Moderately Busy (12/7)
+|   |   |   |   |   |   |   |   |   |   |   Time >= 1315 : Not Busy (12/7)
+|   |   |   |   |   |   |   |   |   |   Time >= 1365 : Empty (12/6)
+|   |   |   |   |   |   |   |   Time >= 1415 : Not Busy (12/6)
+|   |   |   Time >= 1465
+|   |   |   |   Day < 5.5
+|   |   |   |   |   Time < 1615 : Empty (36/15)
+|   |   |   |   |   Time >= 1615 : Empty (12/3)
+|   |   |   |   Day >= 5.5
+|   |   |   |   |   Time < 1615 : Not Busy (36/15)
+|   |   |   |   |   Time >= 1615 : Empty (12/4)
+|   Time >= 1665
+|   |   Time < 1865
+|   |   |   Day < 3.5
+|   |   |   |   Day < 2.5
+|   |   |   |   |   Time < 1765
+|   |   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   |   Time < 1715
+|   |   |   |   |   |   |   |   Day < 0.5 : Not Busy (12/1)
+|   |   |   |   |   |   |   |   Day >= 0.5 : Not Busy (12/2)
+|   |   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   |   Day < 0.5 : Not Busy (11/3)
+|   |   |   |   |   |   |   |   Day >= 0.5 : Not Busy (11/2)
+|   |   |   |   |   |   Day >= 1.5
+|   |   |   |   |   |   |   Time < 1715 : Not Busy (13/3)
+|   |   |   |   |   |   |   Time >= 1715 : Not Busy (13/4)
+|   |   |   |   |   Time >= 1765
+|   |   |   |   |   |   Time < 1815
+|   |   |   |   |   |   |   Day < 0.5 : Empty (11/5)
+|   |   |   |   |   |   |   Day >= 0.5
+|   |   |   |   |   |   |   |   Day < 1.5 : Empty (12/4)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Empty (13/5)
+|   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   Day < 1.5 : Empty (22/6)
+|   |   |   |   |   |   |   Day >= 1.5 : Not Busy (13/6)
+|   |   |   |   Day >= 2.5
+|   |   |   |   |   Time < 1815
+|   |   |   |   |   |   Time < 1715 : Not Busy (13/4)
+|   |   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   |   Time < 1765 : Empty (13/6)
+|   |   |   |   |   |   |   Time >= 1765 : Not Busy (13/6)
+|   |   |   |   |   Time >= 1815 : Empty (13/1)
+|   |   |   Day >= 3.5
+|   |   |   |   Day < 5.5
+|   |   |   |   |   Time < 1715
+|   |   |   |   |   |   Day < 4.5 : Empty (7/3)
+|   |   |   |   |   |   Day >= 4.5 : Empty (5/1)
+|   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   Time < 1815
+|   |   |   |   |   |   |   Day < 4.5
+|   |   |   |   |   |   |   |   Time < 1765 : Empty (7/1)
+|   |   |   |   |   |   |   |   Time >= 1765 : Empty (2/0)
+|   |   |   |   |   |   |   Day >= 4.5 : Empty (8/0)
+|   |   |   |   |   |   Time >= 1815
+|   |   |   |   |   |   |   Day < 4.5 : Empty (3/0)
+|   |   |   |   |   |   |   Day >= 4.5 : Empty (3/1)
+|   |   |   |   Day >= 5.5
+|   |   |   |   |   Time < 1715 : Empty (12/0)
+|   |   |   |   |   Time >= 1715
+|   |   |   |   |   |   Time < 1765 : Empty (12/1)
+|   |   |   |   |   |   Time >= 1765 : Empty (4/0)
+|   |   Time >= 1865
+|   |   |   Time < 1965
+|   |   |   |   Day < 0.5
+|   |   |   |   |   Time < 1915 : Empty (11/2)
+|   |   |   |   |   Time >= 1915 : Empty (12/4)
+|   |   |   |   Day >= 0.5
+|   |   |   |   |   Day < 3.5
+|   |   |   |   |   |   Time < 1915
+|   |   |   |   |   |   |   Day < 2.5 : Empty (24/0)
+|   |   |   |   |   |   |   Day >= 2.5 : Empty (13/3)
+|   |   |   |   |   |   Time >= 1915
+|   |   |   |   |   |   |   Day < 2.5
+|   |   |   |   |   |   |   |   Day < 1.5 : Empty (11/2)
+|   |   |   |   |   |   |   |   Day >= 1.5 : Empty (13/2)
+|   |   |   |   |   |   |   Day >= 2.5 : Empty (13/0)
+|   |   |   |   |   Day >= 3.5 : Empty (14/0)
+|   |   |   Time >= 1965
+|   |   |   |   Time < 2015
+|   |   |   |   |   Day < 1.5
+|   |   |   |   |   |   Day < 0.5 : Empty (12/0)
+|   |   |   |   |   |   Day >= 0.5 : Empty (11/1)
+|   |   |   |   |   Day >= 1.5 : Empty (33/0)
+|   |   |   |   Time >= 2015 : Empty (145/0)
+
+Size of the tree : 1527
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        8441               76.5485 %
+Incorrectly Classified Instances      2586               23.4515 %
+Kappa statistic                          0.6866
+Mean absolute error                      0.1598
+Root mean squared error                  0.2985
+Relative absolute error                 42.7133 %
+Root relative squared error             69.0238 %
+Total Number of Instances            11027     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.864    0.051    0.844      0.864    0.854      0.807    0.953     0.888     Empty
+                 0.690    0.083    0.701      0.690    0.696      0.610    0.877     0.670     Not Busy
+                 0.661    0.104    0.694      0.661    0.677      0.566    0.864     0.693     Moderately Busy
+                 0.840    0.075    0.809      0.840    0.824      0.757    0.946     0.832     Busy
+Weighted Avg.    0.765    0.079    0.763      0.765    0.764      0.686    0.911     0.773     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2300  271   71   21 |    a = Empty
+  348 1682  304  102 |    b = Not Busy
+   76  435 1924  475 |    c = Moderately Busy
+    0   11  472 2535 |    d = Busy
+

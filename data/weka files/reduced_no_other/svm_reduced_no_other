@@ -1,0 +1,148 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     no_other-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    11027
+Attributes:   4
+              Time
+              Day
+              Quarter
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: Empty, Not Busy
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         2.333  * (normalized) Time
+ +      -0.0037 * (normalized) Day
+ +      -0.1322 * (normalized) Quarter=Winter
+ +      -0.1011 * (normalized) Quarter=Spring
+ +      -0.1324 * (normalized) Quarter=Fall
+ +       0.3657 * (normalized) Quarter=Summer
+ -       1.097 
+
+Number of kernel evaluations: 3177718 (71.17% cached)
+
+Classifier for classes: Empty, Moderately Busy
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         2.9693 * (normalized) Time
+ +       0.2548 * (normalized) Day
+ +       0.4019 * (normalized) Quarter=Winter
+ +       0.576  * (normalized) Quarter=Spring
+ +       0.193  * (normalized) Quarter=Fall
+ +      -1.1709 * (normalized) Quarter=Summer
+ -       1.7415
+
+Number of kernel evaluations: 5478229 (63.952% cached)
+
+Classifier for classes: Empty, Busy
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         4.6594 * (normalized) Time
+ +      -1.2006 * (normalized) Day
+ +       1.0798 * (normalized) Quarter=Winter
+ +       0.8203 * (normalized) Quarter=Spring
+ +       1.0199 * (normalized) Quarter=Fall
+ +      -2.9199 * (normalized) Quarter=Summer
+ -       2.0796
+
+Number of kernel evaluations: 5020973 (60.078% cached)
+
+Classifier for classes: Not Busy, Moderately Busy
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0006 * (normalized) Time
+ +      -0      * (normalized) Day
+ +       0.4997 * (normalized) Quarter=Winter
+ +       0.5007 * (normalized) Quarter=Spring
+ +       0.4999 * (normalized) Quarter=Fall
+ +      -1.5003 * (normalized) Quarter=Summer
+ +       0.4994
+
+Number of kernel evaluations: 2959832 (50.283% cached)
+
+Classifier for classes: Not Busy, Busy
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -1.4684 * (normalized) Time
+ +      -1.7031 * (normalized) Day
+ +       0.843  * (normalized) Quarter=Winter
+ +       0.3895 * (normalized) Quarter=Spring
+ +       0.7675 * (normalized) Quarter=Fall
+ +      -2      * (normalized) Quarter=Summer
+ +       1.701 
+
+Number of kernel evaluations: 3746159 (64.365% cached)
+
+Classifier for classes: Moderately Busy, Busy
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -3.6667 * (normalized) Time
+ +      -2.2188 * (normalized) Day
+ +       0.9518 * (normalized) Quarter=Winter
+ +       0.0469 * (normalized) Quarter=Spring
+ +       1.1578 * (normalized) Quarter=Fall
+ +      -2.1564 * (normalized) Quarter=Summer
+ +       2.8329
+
+Number of kernel evaluations: 3857318 (61.962% cached)
+
+
+
+Time taken to build model: 5.92 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        6035               54.7293 %
+Incorrectly Classified Instances      4992               45.2707 %
+Kappa statistic                          0.3923
+Mean absolute error                      0.3146
+Root mean squared error                  0.402 
+Relative absolute error                 84.0805 %
+Root relative squared error             92.9465 %
+Total Number of Instances            11027     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.521    0.058    0.742      0.521    0.612      0.529    0.816     0.588     Empty
+                 0.354    0.144    0.410      0.354    0.380      0.221    0.636     0.318     Not Busy
+                 0.512    0.248    0.425      0.512    0.465      0.250    0.664     0.369     Moderately Busy
+                 0.760    0.157    0.646      0.760    0.699      0.576    0.824     0.578     Busy
+Weighted Avg.    0.547    0.154    0.559      0.547    0.546      0.400    0.738     0.468     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 1388  673  411  191 |    a = Empty
+  335  862  951  288 |    b = Not Busy
+  116  527 1491  776 |    c = Moderately Busy
+   31   39  654 2294 |    d = Busy
+

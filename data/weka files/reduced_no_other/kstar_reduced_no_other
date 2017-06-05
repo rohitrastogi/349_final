@@ -1,0 +1,51 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.KStar -B 20 -M a
+Relation:     no_other-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    11027
+Attributes:   4
+              Time
+              Day
+              Quarter
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+KStar Beta Verion (0.1b).
+Copyright (c) 1995-97 by Len Trigg (trigg@cs.waikato.ac.nz).
+Java port to Weka by Abdelaziz Mahoui (am14@cs.waikato.ac.nz).
+
+KStar options : -B 20 -M a 
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        8178               74.1634 %
+Incorrectly Classified Instances      2849               25.8366 %
+Kappa statistic                          0.6539
+Mean absolute error                      0.2438
+Root mean squared error                  0.3232
+Relative absolute error                 65.1496 %
+Root relative squared error             74.7325 %
+Total Number of Instances            11027     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.865    0.057    0.828      0.865    0.846      0.796    0.960     0.892     Empty
+                 0.573    0.067    0.708      0.573    0.633      0.547    0.886     0.686     Not Busy
+                 0.685    0.130    0.654      0.685    0.669      0.547    0.872     0.681     Moderately Busy
+                 0.824    0.092    0.771      0.824    0.797      0.717    0.948     0.862     Busy
+Weighted Avg.    0.742    0.088    0.740      0.742    0.739      0.654    0.917     0.782     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2304  248   91   20 |    a = Empty
+  415 1395  445  181 |    b = Not Busy
+   64  317 1993  536 |    c = Moderately Busy
+    1   11  520 2486 |    d = Busy
+

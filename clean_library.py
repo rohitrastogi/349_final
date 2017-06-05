@@ -106,9 +106,9 @@ def add_class(df):
     df['Class'] = ""
 
     #half-hour quartiles
-    empty = 16
-    not_busy = 51
-    moderately_busy = 125
+    # empty = 16
+    # not_busy = 51
+    # moderately_busy = 125
 
     # hour quartiles
     # empty = 24
@@ -116,9 +116,9 @@ def add_class(df):
     # moderately_busy = 242
 
     # half-hour arbitrary
-    # empty = 50
-    # not_busy = 100
-    # moderately_busy = 150
+    empty = 50
+    not_busy = 100
+    moderately_busy = 150
 
     for i, row in df.iterrows():
         total = df.iloc[i]['Total']

@@ -1,0 +1,1760 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     w_other
+Instances:    12633
+Attributes:   13
+              Time
+              Day
+              Year
+              Quarter
+              Quarter Progress
+              Temp
+              Dew Point
+              Humidity
+              Pressure
+              Visibility
+              Wind Speed
+              Conditions
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Time <= 730
+|   Time <= 0
+|   |   Quarter Progress <= 0.271739: Empty (46.0/5.0)
+|   |   Quarter Progress > 0.271739
+|   |   |   Quarter Progress <= 0.907407
+|   |   |   |   Conditions = Partly Cloudy
+|   |   |   |   |   Visibility <= 9: Empty (2.0)
+|   |   |   |   |   Visibility > 9: Not Busy (3.0)
+|   |   |   |   Conditions = Light Snow: Not Busy (5.0)
+|   |   |   |   Conditions = Overcast
+|   |   |   |   |   Day <= 3
+|   |   |   |   |   |   Quarter Progress <= 0.866667: Not Busy (30.0)
+|   |   |   |   |   |   Quarter Progress > 0.866667
+|   |   |   |   |   |   |   Day <= 1: Empty (3.0)
+|   |   |   |   |   |   |   Day > 1: Not Busy (2.0)
+|   |   |   |   |   Day > 3
+|   |   |   |   |   |   Pressure <= 30.12: Empty (5.0)
+|   |   |   |   |   |   Pressure > 30.12: Not Busy (3.0/1.0)
+|   |   |   |   Conditions = Scattered Clouds: Not Busy (3.0)
+|   |   |   |   Conditions = Clear
+|   |   |   |   |   Pressure <= 29.99: Not Busy (16.0/1.0)
+|   |   |   |   |   Pressure > 29.99
+|   |   |   |   |   |   Quarter = Winter
+|   |   |   |   |   |   |   Temp <= 19.9: Empty (2.0)
+|   |   |   |   |   |   |   Temp > 19.9: Not Busy (6.0/2.0)
+|   |   |   |   |   |   Quarter = Spring
+|   |   |   |   |   |   |   Quarter Progress <= 0.662162: Not Busy (4.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.662162
+|   |   |   |   |   |   |   |   Humidity <= 0.76: Empty (4.0)
+|   |   |   |   |   |   |   |   Humidity > 0.76: Not Busy (2.0)
+|   |   |   |   |   |   Quarter = Fall
+|   |   |   |   |   |   |   Temp <= 39: Empty (5.0/1.0)
+|   |   |   |   |   |   |   Temp > 39
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.373333: Empty (2.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.373333: Not Busy (10.0/1.0)
+|   |   |   |   |   |   Quarter = Other: Not Busy (0.0)
+|   |   |   |   |   |   Quarter = Summer: Not Busy (0.0)
+|   |   |   |   Conditions = Fog: Empty (2.0/1.0)
+|   |   |   |   Conditions = Mostly Cloudy
+|   |   |   |   |   Quarter Progress <= 0.310811: Empty (2.0)
+|   |   |   |   |   Quarter Progress > 0.310811: Not Busy (6.0)
+|   |   |   |   Conditions = Light Rain
+|   |   |   |   |   Quarter Progress <= 0.537037: Empty (3.0)
+|   |   |   |   |   Quarter Progress > 0.537037: Not Busy (4.0)
+|   |   |   |   Conditions = Light Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   Conditions = Haze: Not Busy (0.0)
+|   |   |   |   Conditions = Rain: Not Busy (2.0)
+|   |   |   |   Conditions = Mist: Not Busy (0.0)
+|   |   |   |   Conditions = Heavy Rain: Not Busy (0.0)
+|   |   |   |   Conditions = Light Freezing Fog: Not Busy (0.0)
+|   |   |   |   Conditions = Heavy Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   Conditions = Light Freezing Rain: Not Busy (0.0)
+|   |   |   |   Conditions = Snow: Not Busy (0.0)
+|   |   |   |   Conditions = Heavy Snow: Not Busy (0.0)
+|   |   |   |   Conditions = Thunderstorm: Not Busy (0.0)
+|   |   |   |   Conditions = Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   Quarter Progress > 0.907407: Not Busy (27.0/3.0)
+|   Time > 0
+|   |   Quarter Progress <= 0.87037
+|   |   |   Temp <= 73.4: Empty (1125.0/17.0)
+|   |   |   Temp > 73.4
+|   |   |   |   Year <= 2015: Empty (10.0)
+|   |   |   |   Year > 2015
+|   |   |   |   |   Time <= 700: Empty (14.0)
+|   |   |   |   |   Time > 700
+|   |   |   |   |   |   Quarter = Winter: Empty (0.0)
+|   |   |   |   |   |   Quarter = Spring: Empty (0.0)
+|   |   |   |   |   |   Quarter = Fall: Empty (0.0)
+|   |   |   |   |   |   Quarter = Other: Empty (2.0)
+|   |   |   |   |   |   Quarter = Summer
+|   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   Humidity <= 0.64: Empty (2.0)
+|   |   |   |   |   |   |   |   Humidity > 0.64: Not Busy (7.0)
+|   |   |   |   |   |   |   Day > 1
+|   |   |   |   |   |   |   |   Temp <= 73.9: Not Busy (2.0)
+|   |   |   |   |   |   |   |   Temp > 73.9: Empty (8.0/1.0)
+|   |   Quarter Progress > 0.87037
+|   |   |   Time <= 100
+|   |   |   |   Time <= 30
+|   |   |   |   |   Quarter Progress <= 0.973333: Not Busy (26.0/6.0)
+|   |   |   |   |   Quarter Progress > 0.973333: Empty (4.0)
+|   |   |   |   Time > 30
+|   |   |   |   |   Quarter Progress <= 0.925926: Empty (13.0)
+|   |   |   |   |   Quarter Progress > 0.925926
+|   |   |   |   |   |   Year <= 2015: Not Busy (6.0/1.0)
+|   |   |   |   |   |   Year > 2015: Empty (10.0/3.0)
+|   |   |   Time > 100
+|   |   |   |   Time <= 700: Empty (327.0/6.0)
+|   |   |   |   Time > 700
+|   |   |   |   |   Day <= 4
+|   |   |   |   |   |   Quarter = Winter: Not Busy (7.0/1.0)
+|   |   |   |   |   |   Quarter = Spring
+|   |   |   |   |   |   |   Humidity <= 0.64: Empty (3.0/1.0)
+|   |   |   |   |   |   |   Humidity > 0.64: Not Busy (4.0)
+|   |   |   |   |   |   Quarter = Fall: Not Busy (9.0/1.0)
+|   |   |   |   |   |   Quarter = Other: Not Busy (0.0)
+|   |   |   |   |   |   Quarter = Summer: Empty (5.0)
+|   |   |   |   |   Day > 4: Empty (7.0)
+Time > 730
+|   Time <= 2100
+|   |   Quarter = Winter
+|   |   |   Time <= 800
+|   |   |   |   Day <= 4
+|   |   |   |   |   Quarter Progress <= 0.84: Not Busy (45.0)
+|   |   |   |   |   Quarter Progress > 0.84: Moderately Busy (9.0/1.0)
+|   |   |   |   Day > 4: Empty (11.0)
+|   |   |   Time > 800
+|   |   |   |   Day <= 3
+|   |   |   |   |   Time <= 1530
+|   |   |   |   |   |   Time <= 1000
+|   |   |   |   |   |   |   Quarter Progress <= 0.946667
+|   |   |   |   |   |   |   |   Time <= 930
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.84: Busy (108.0/11.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.84
+|   |   |   |   |   |   |   |   |   |   Time <= 900: Moderately Busy (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Time > 900: Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   |   |   |   Day <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.326087: Moderately Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.326087: Busy (7.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.706667: Moderately Busy (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.706667: Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   Day > 1: Busy (10.0/1.0)
+|   |   |   |   |   |   |   |   |   Day > 2: Moderately Busy (10.0/1.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.946667: Moderately Busy (8.0)
+|   |   |   |   |   |   Time > 1000
+|   |   |   |   |   |   |   Quarter Progress <= 0.946667: Busy (446.0/7.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.946667
+|   |   |   |   |   |   |   |   Dew Point <= 26.1: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   Dew Point > 26.1: Busy (19.0/2.0)
+|   |   |   |   |   Time > 1530
+|   |   |   |   |   |   Quarter Progress <= 0.189189
+|   |   |   |   |   |   |   Time <= 1830: Moderately Busy (49.0/5.0)
+|   |   |   |   |   |   |   Time > 1830
+|   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (5.0)
+|   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.08: Not Busy (11.0/1.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.08: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   Time <= 2030: Moderately Busy (13.0)
+|   |   |   |   |   |   |   |   |   Time > 2030: Not Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Moderately Busy (5.0)
+|   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   Quarter Progress > 0.189189
+|   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   Time <= 1700
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.75
+|   |   |   |   |   |   |   |   |   |   Time <= 1630
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1600
+|   |   |   |   |   |   |   |   |   |   |   |   Temp <= 36: Moderately Busy (14.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Temp > 36: Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1600: Busy (18.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Time > 1630
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 12.7: Moderately Busy (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed > 12.7: Busy (5.0/2.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.75: Busy (24.0/5.0)
+|   |   |   |   |   |   |   |   Time > 1700
+|   |   |   |   |   |   |   |   |   Time <= 2000: Busy (156.0/10.0)
+|   |   |   |   |   |   |   |   |   Time > 2000
+|   |   |   |   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   |   |   |   Time <= 2030
+|   |   |   |   |   |   |   |   |   |   |   |   Visibility <= 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.472973: Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.472973: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Visibility > 8: Busy (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 2030
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 28: Moderately Busy (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 28: Busy (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Day > 1
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.71: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.71: Moderately Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Clear: Moderately Busy (8.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   Day > 2
+|   |   |   |   |   |   |   |   Time <= 2000
+|   |   |   |   |   |   |   |   |   Pressure <= 30.05: Moderately Busy (22.0)
+|   |   |   |   |   |   |   |   |   Pressure > 30.05
+|   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.833333
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.57: Moderately Busy (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.57
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1630: Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1630: Moderately Busy (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.833333: Busy (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.546667
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1830
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.35
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1630: Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1630: Moderately Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 30.35: Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1830: Moderately Busy (6.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.546667: Moderately Busy (5.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Time > 2000
+|   |   |   |   |   |   |   |   |   Wind Speed <= 16.1: Moderately Busy (16.0/1.0)
+|   |   |   |   |   |   |   |   |   Wind Speed > 16.1: Not Busy (2.0)
+|   |   |   |   Day > 3
+|   |   |   |   |   Temp <= 19
+|   |   |   |   |   |   Visibility <= 9: Moderately Busy (22.0/1.0)
+|   |   |   |   |   |   Visibility > 9
+|   |   |   |   |   |   |   Time <= 930
+|   |   |   |   |   |   |   |   Day <= 5: Not Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   Day > 5: Empty (4.0)
+|   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   Wind Speed <= 6.9: Not Busy (12.0/1.0)
+|   |   |   |   |   |   |   |   Wind Speed > 6.9
+|   |   |   |   |   |   |   |   |   Temp <= 18
+|   |   |   |   |   |   |   |   |   |   Day <= 4: Not Busy (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1130
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.351852: Not Busy (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.351852
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1100: Not Busy (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1100: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1130
+|   |   |   |   |   |   |   |   |   |   |   |   Temp <= 1: Not Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Temp > 1: Moderately Busy (40.0/4.0)
+|   |   |   |   |   |   |   |   |   Temp > 18: Empty (2.0)
+|   |   |   |   |   Temp > 19
+|   |   |   |   |   |   Day <= 5
+|   |   |   |   |   |   |   Time <= 1600
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.98913
+|   |   |   |   |   |   |   |   |   Day <= 4
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.934783
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1500
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1000
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 900
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 830: Busy (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 830: Moderately Busy (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 900: Busy (20.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1000: Busy (100.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1500
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.84: Moderately Busy (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.84: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.934783
+|   |   |   |   |   |   |   |   |   |   |   Dew Point <= 32: Moderately Busy (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Dew Point > 32: Not Busy (4.0)
+|   |   |   |   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   |   |   |   Time <= 1100
+|   |   |   |   |   |   |   |   |   |   |   Dew Point <= 41
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 930: Not Busy (23.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 29.78: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 29.78: Not Busy (18.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   Dew Point > 41: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   Time > 1100
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.858696
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 29.67: Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure > 29.67: Moderately Busy (72.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.858696: Busy (10.0/1.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.98913: Empty (10.0/1.0)
+|   |   |   |   |   |   |   Time > 1600
+|   |   |   |   |   |   |   |   Dew Point <= 41
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.2
+|   |   |   |   |   |   |   |   |   |   Time <= 1900: Not Busy (24.0/5.0)
+|   |   |   |   |   |   |   |   |   |   Time > 1900: Empty (14.0/3.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.2
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.804348
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1900
+|   |   |   |   |   |   |   |   |   |   |   |   Day <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1630: Moderately Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1630: Not Busy (28.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 29.86: Moderately Busy (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 29.86
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 4.6: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 4.6: Not Busy (14.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1900: Not Busy (40.0/4.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.804348
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.934783
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 27: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 27: Moderately Busy (18.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.934783: Empty (2.0/1.0)
+|   |   |   |   |   |   |   |   Dew Point > 41
+|   |   |   |   |   |   |   |   |   Wind Speed <= 3.5: Busy (2.0)
+|   |   |   |   |   |   |   |   |   Wind Speed > 3.5
+|   |   |   |   |   |   |   |   |   |   Visibility <= 6: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   Visibility > 6
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1930: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1930: Moderately Busy (2.0)
+|   |   |   |   |   |   Day > 5
+|   |   |   |   |   |   |   Time <= 1100
+|   |   |   |   |   |   |   |   Time <= 930
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.87037: Empty (7.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.87037: Not Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   Time > 930: Moderately Busy (21.0/7.0)
+|   |   |   |   |   |   |   Time > 1100
+|   |   |   |   |   |   |   |   Humidity <= 0.91
+|   |   |   |   |   |   |   |   |   Time <= 1200: Moderately Busy (12.0/1.0)
+|   |   |   |   |   |   |   |   |   Time > 1200
+|   |   |   |   |   |   |   |   |   |   Time <= 2000
+|   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.55: Busy (12.0)
+|   |   |   |   |   |   |   |   |   |   |   Humidity > 0.55
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.546667: Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.546667
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 34: Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 34
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 37.9: Moderately Busy (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 37.9: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1730: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1730: Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 29.86: Moderately Busy (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 29.86: Busy (12.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.685185: Busy (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.685185
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1600: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1600: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Haze
+|   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 23: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 23: Busy (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Time > 2000: Moderately Busy (10.0/1.0)
+|   |   |   |   |   |   |   |   Humidity > 0.91: Busy (35.0/1.0)
+|   |   Quarter = Spring
+|   |   |   Time <= 800
+|   |   |   |   Day <= 4
+|   |   |   |   |   Quarter Progress <= 0.815217: Not Busy (43.0)
+|   |   |   |   |   Quarter Progress > 0.815217: Moderately Busy (10.0/1.0)
+|   |   |   |   Day > 4: Empty (13.0/1.0)
+|   |   |   Time > 800
+|   |   |   |   Day <= 3
+|   |   |   |   |   Time <= 1530
+|   |   |   |   |   |   Time <= 1100
+|   |   |   |   |   |   |   Time <= 1030
+|   |   |   |   |   |   |   |   Time <= 1000
+|   |   |   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   |   |   Time <= 930
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.8
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 900
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 830
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 41: Moderately Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 41: Busy (22.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 830: Moderately Busy (26.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 900
+|   |   |   |   |   |   |   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Day <= 0: Busy (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Day > 0: Moderately Busy (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Day > 1: Busy (9.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.8
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.84: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.84: Moderately Busy (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.43
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.695652: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.695652: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Humidity > 0.43: Moderately Busy (28.0)
+|   |   |   |   |   |   |   |   |   Day > 2: Moderately Busy (44.0)
+|   |   |   |   |   |   |   |   Time > 1000
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.810811: Busy (31.0/1.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.810811
+|   |   |   |   |   |   |   |   |   |   Humidity <= 0.48: Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Humidity > 0.48: Moderately Busy (4.0)
+|   |   |   |   |   |   |   Time > 1030
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.87037: Moderately Busy (35.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.87037
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.946667: Busy (3.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.946667: Moderately Busy (2.0)
+|   |   |   |   |   |   Time > 1100
+|   |   |   |   |   |   |   Time <= 1500
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.946667: Busy (320.0/24.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.946667
+|   |   |   |   |   |   |   |   |   Day <= 2: Busy (8.0/1.0)
+|   |   |   |   |   |   |   |   |   Day > 2: Moderately Busy (8.0)
+|   |   |   |   |   |   |   Time > 1500
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.297297
+|   |   |   |   |   |   |   |   |   Temp <= 43: Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Temp > 43: Moderately Busy (11.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.297297: Busy (29.0/8.0)
+|   |   |   |   |   Time > 1530
+|   |   |   |   |   |   Quarter Progress <= 0.148649
+|   |   |   |   |   |   |   Time <= 2000: Moderately Busy (63.0/4.0)
+|   |   |   |   |   |   |   Time > 2000
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.018519: Not Busy (4.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.018519
+|   |   |   |   |   |   |   |   |   Time <= 2030: Moderately Busy (5.0)
+|   |   |   |   |   |   |   |   |   Time > 2030
+|   |   |   |   |   |   |   |   |   |   Day <= 2: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   Day > 2: Not Busy (2.0)
+|   |   |   |   |   |   Quarter Progress > 0.148649
+|   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   Time <= 1730: Moderately Busy (108.0/19.0)
+|   |   |   |   |   |   |   |   Time > 1730
+|   |   |   |   |   |   |   |   |   Wind Speed <= 3.5
+|   |   |   |   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1930: Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1930
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 2030
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.364865: Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.364865: Moderately Busy (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 2030: Moderately Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Day > 1: Moderately Busy (12.0)
+|   |   |   |   |   |   |   |   |   Wind Speed > 3.5
+|   |   |   |   |   |   |   |   |   |   Day <= 1: Busy (107.0/29.0)
+|   |   |   |   |   |   |   |   |   |   Day > 1
+|   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.88
+|   |   |   |   |   |   |   |   |   |   |   |   Visibility <= 8: Busy (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Visibility > 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Busy (1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 43: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 43: Moderately Busy (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.77027: Busy (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.77027: Moderately Busy (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Humidity > 0.88: Moderately Busy (12.0)
+|   |   |   |   |   |   |   Day > 2: Moderately Busy (99.0/8.0)
+|   |   |   |   Day > 3
+|   |   |   |   |   Day <= 5
+|   |   |   |   |   |   Time <= 1600
+|   |   |   |   |   |   |   Day <= 4
+|   |   |   |   |   |   |   |   Time <= 1430
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.934783
+|   |   |   |   |   |   |   |   |   |   Time <= 900: Moderately Busy (20.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Time > 900
+|   |   |   |   |   |   |   |   |   |   |   Temp <= 75.9
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1400
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1200
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 930: Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1000: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1000
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1030: Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1030
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1100: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1100
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1130: Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1130: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1200: Busy (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1400: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Moderately Busy (1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.797297: Busy (38.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.797297: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1030: Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1030: Moderately Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Temp > 75.9: Busy (17.0/1.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.934783: Moderately Busy (13.0)
+|   |   |   |   |   |   |   |   Time > 1430
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.934783: Moderately Busy (30.0/3.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.934783: Not Busy (3.0)
+|   |   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   |   Time <= 1130
+|   |   |   |   |   |   |   |   |   Time <= 930: Not Busy (31.0/12.0)
+|   |   |   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.853333: Not Busy (36.0/3.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.853333
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.946667: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.946667: Not Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   Time > 1130
+|   |   |   |   |   |   |   |   |   Temp <= 88
+|   |   |   |   |   |   |   |   |   |   Humidity <= 0.3: Not Busy (8.0)
+|   |   |   |   |   |   |   |   |   |   Humidity > 0.3
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.853333
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1200
+|   |   |   |   |   |   |   |   |   |   |   |   |   Visibility <= 7: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Visibility > 7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.59: Not Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.59: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1200: Moderately Busy (64.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.853333
+|   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 6.9: Busy (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 6.9: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   Temp > 88: Empty (4.0)
+|   |   |   |   |   |   Time > 1600
+|   |   |   |   |   |   |   Quarter Progress <= 0.851351
+|   |   |   |   |   |   |   |   Time <= 1930
+|   |   |   |   |   |   |   |   |   Humidity <= 0.27
+|   |   |   |   |   |   |   |   |   |   Pressure <= 30.09: Not Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Pressure > 30.09: Empty (2.0)
+|   |   |   |   |   |   |   |   |   Humidity > 0.27
+|   |   |   |   |   |   |   |   |   |   Temp <= 44.1: Not Busy (38.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Temp > 44.1
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 9.2
+|   |   |   |   |   |   |   |   |   |   |   |   Day <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1630: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1630: Not Busy (26.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1730: Not Busy (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1730: Moderately Busy (11.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed > 9.2: Not Busy (35.0/6.0)
+|   |   |   |   |   |   |   |   Time > 1930
+|   |   |   |   |   |   |   |   |   Visibility <= 3: Empty (3.0)
+|   |   |   |   |   |   |   |   |   Visibility > 3
+|   |   |   |   |   |   |   |   |   |   Temp <= 55.4: Not Busy (35.0/5.0)
+|   |   |   |   |   |   |   |   |   |   Temp > 55.4
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.76087
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 2030
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.706667: Not Busy (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.706667: Empty (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 2030: Empty (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.76087: Not Busy (6.0/1.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.851351
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.945946: Moderately Busy (20.0/2.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.945946
+|   |   |   |   |   |   |   |   |   Time <= 1700: Not Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Time > 1700: Empty (2.0)
+|   |   |   |   |   Day > 5
+|   |   |   |   |   |   Time <= 1100
+|   |   |   |   |   |   |   Time <= 930
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.87037: Empty (12.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.87037: Not Busy (3.0/1.0)
+|   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   Time <= 1000
+|   |   |   |   |   |   |   |   |   Dew Point <= 30: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   Dew Point > 30: Moderately Busy (7.0)
+|   |   |   |   |   |   |   |   Time > 1000
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.87037: Not Busy (18.0/2.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.87037: Moderately Busy (2.0)
+|   |   |   |   |   |   Time > 1100
+|   |   |   |   |   |   |   Quarter Progress <= 0.87037
+|   |   |   |   |   |   |   |   Visibility <= 7: Moderately Busy (12.0)
+|   |   |   |   |   |   |   |   Visibility > 7
+|   |   |   |   |   |   |   |   |   Dew Point <= 42.1: Moderately Busy (92.0/11.0)
+|   |   |   |   |   |   |   |   |   Dew Point > 42.1
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.773333
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.52: Moderately Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.52: Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   |   |   |   Temp <= 46.9: Moderately Busy (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Temp > 46.9: Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.297297: Moderately Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.297297
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.07
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.37: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.37: Busy (10.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 30.07: Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.773333: Moderately Busy (20.0/1.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.87037
+|   |   |   |   |   |   |   |   Wind Speed <= 11.5
+|   |   |   |   |   |   |   |   |   Dew Point <= 50: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   Dew Point > 50: Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   Wind Speed > 11.5: Busy (14.0)
+|   |   Quarter = Fall
+|   |   |   Quarter Progress <= 0.097826
+|   |   |   |   Day <= 4
+|   |   |   |   |   Time <= 1600: Not Busy (102.0/11.0)
+|   |   |   |   |   Time > 1600: Empty (14.0/1.0)
+|   |   |   |   Day > 4
+|   |   |   |   |   Temp <= 69.1: Empty (43.0/1.0)
+|   |   |   |   |   Temp > 69.1: Not Busy (3.0/1.0)
+|   |   |   Quarter Progress > 0.097826
+|   |   |   |   Time <= 800
+|   |   |   |   |   Day <= 4
+|   |   |   |   |   |   Quarter Progress <= 0.893333: Not Busy (52.0/1.0)
+|   |   |   |   |   |   Quarter Progress > 0.893333: Moderately Busy (7.0)
+|   |   |   |   |   Day > 4: Empty (12.0/1.0)
+|   |   |   |   Time > 800
+|   |   |   |   |   Day <= 3
+|   |   |   |   |   |   Time <= 1530
+|   |   |   |   |   |   |   Quarter Progress <= 0.804348: Busy (564.0/12.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.804348
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.84: Moderately Busy (15.0/3.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.84
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.96: Busy (90.0/2.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.96
+|   |   |   |   |   |   |   |   |   |   Time <= 1000: Moderately Busy (8.0)
+|   |   |   |   |   |   |   |   |   |   Time > 1000
+|   |   |   |   |   |   |   |   |   |   |   Dew Point <= 41: Busy (19.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Dew Point > 41: Moderately Busy (3.0)
+|   |   |   |   |   |   Time > 1530
+|   |   |   |   |   |   |   Quarter Progress <= 0.163043
+|   |   |   |   |   |   |   |   Time <= 2000: Moderately Busy (36.0/2.0)
+|   |   |   |   |   |   |   |   Time > 2000
+|   |   |   |   |   |   |   |   |   Temp <= 59: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   Temp > 59
+|   |   |   |   |   |   |   |   |   |   Time <= 2030: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   Time > 2030: Not Busy (3.0/1.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.163043
+|   |   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   |   Pressure <= 30.17
+|   |   |   |   |   |   |   |   |   |   Time <= 2000
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1730
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1630
+|   |   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.89: Busy (54.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.89: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1630
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.228261: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.228261: Busy (52.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1730: Busy (136.0/3.0)
+|   |   |   |   |   |   |   |   |   |   Time > 2000
+|   |   |   |   |   |   |   |   |   |   |   Pressure <= 29.98: Moderately Busy (24.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   Pressure > 29.98
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.13: Busy (24.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure > 30.13
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 2030: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 2030: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   Pressure > 30.17
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.717391
+|   |   |   |   |   |   |   |   |   |   |   Day <= 1: Busy (28.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 1
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 44.1: Busy (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 44.1: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.717391
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1630: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1630: Empty (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   |   Visibility <= 8: Not Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Visibility > 8: Moderately Busy (9.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Day > 2
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.934783
+|   |   |   |   |   |   |   |   |   |   Time <= 1900
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.826087
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy
+|   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 13.8: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 13.8: Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast: Moderately Busy (16.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds
+|   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 55.9: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 55.9: Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.407407: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.407407
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 52: Busy (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 52
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 6.9: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 6.9: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Busy (12.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.826087: Busy (7.0)
+|   |   |   |   |   |   |   |   |   |   Time > 1900: Moderately Busy (36.0/5.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.934783: Moderately Busy (11.0/1.0)
+|   |   |   |   |   Day > 3
+|   |   |   |   |   |   Humidity <= 0.89
+|   |   |   |   |   |   |   Time <= 930
+|   |   |   |   |   |   |   |   Day <= 4
+|   |   |   |   |   |   |   |   |   Time <= 900
+|   |   |   |   |   |   |   |   |   |   Time <= 830: Busy (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Time > 830: Moderately Busy (11.0/1.0)
+|   |   |   |   |   |   |   |   |   Time > 900: Busy (11.0/1.0)
+|   |   |   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   |   |   Visibility <= 8: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   Visibility > 8
+|   |   |   |   |   |   |   |   |   |   Day <= 5
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast: Empty (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Clear: Not Busy (15.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Empty (1.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Day > 5: Empty (15.0)
+|   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   Day <= 5
+|   |   |   |   |   |   |   |   |   Time <= 1630
+|   |   |   |   |   |   |   |   |   |   Day <= 4
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.946667
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1500: Busy (111.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1500
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.836957: Moderately Busy (27.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.836957: Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.946667
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1500: Moderately Busy (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1500: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.52
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.804348
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1130
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 54: Not Busy (16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 54
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 6.9: Not Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 6.9: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1130
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 59: Moderately Busy (50.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 59: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 30.28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 11.5: Not Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 11.5: Moderately Busy (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.5: Not Busy (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.804348
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.4: Empty (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 30.4: Not Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Pressure > 30.52
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.76: Busy (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.76: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   Time > 1630
+|   |   |   |   |   |   |   |   |   |   Pressure <= 30.48
+|   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.04
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 46.9: Moderately Busy (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 46.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1730: Moderately Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1730: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.5: Empty (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Pressure > 30.04
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.42: Moderately Busy (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.42
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1900: Not Busy (57.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1900
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 5.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 36
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 4.6: Not Busy (14.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 4.6: Empty (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 36: Empty (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 5.8: Not Busy (19.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Pressure > 30.48
+|   |   |   |   |   |   |   |   |   |   |   Day <= 4: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 30.2: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 30.2: Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   Day > 5
+|   |   |   |   |   |   |   |   |   Time <= 1130
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.815217: Moderately Busy (36.0/4.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.815217
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.893333: Not Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.893333: Moderately Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   Time > 1130
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.815217
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.283784
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.86: Moderately Busy (30.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.86: Busy (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.283784
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1730
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1500
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1230: Moderately Busy (14.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1230: Busy (35.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1500
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast: Moderately Busy (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.48: Moderately Busy (25.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.48: Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1730
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 2000: Busy (35.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 2000
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.513514: Busy (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.513514: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.815217
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.893333
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.33: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure > 30.33: Moderately Busy (17.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.893333: Busy (17.0/1.0)
+|   |   |   |   |   |   Humidity > 0.89
+|   |   |   |   |   |   |   Quarter Progress <= 0.967391
+|   |   |   |   |   |   |   |   Wind Speed <= 12.7
+|   |   |   |   |   |   |   |   |   Pressure <= 30.45
+|   |   |   |   |   |   |   |   |   |   Day <= 5: Not Busy (50.0/9.0)
+|   |   |   |   |   |   |   |   |   |   Day > 5
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1430: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1430: Busy (2.0)
+|   |   |   |   |   |   |   |   |   Pressure > 30.45
+|   |   |   |   |   |   |   |   |   |   Day <= 4: Moderately Busy (7.0)
+|   |   |   |   |   |   |   |   |   |   Day > 4: Not Busy (2.0)
+|   |   |   |   |   |   |   |   Wind Speed > 12.7
+|   |   |   |   |   |   |   |   |   Time <= 1600: Moderately Busy (16.0)
+|   |   |   |   |   |   |   |   |   Time > 1600: Not Busy (3.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.967391: Empty (11.0)
+|   |   Quarter = Other
+|   |   |   Day <= 4
+|   |   |   |   Time <= 1600
+|   |   |   |   |   Humidity <= 0.35
+|   |   |   |   |   |   Temp <= 82.9
+|   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   Time <= 1530: Busy (27.0)
+|   |   |   |   |   |   |   |   Time > 1530: Moderately Busy (3.0/1.0)
+|   |   |   |   |   |   |   Day > 2: Empty (2.0)
+|   |   |   |   |   |   Temp > 82.9: Not Busy (8.0)
+|   |   |   |   |   Humidity > 0.35
+|   |   |   |   |   |   Dew Point <= 34
+|   |   |   |   |   |   |   Wind Speed <= 6.9: Not Busy (54.0/10.0)
+|   |   |   |   |   |   |   Wind Speed > 6.9
+|   |   |   |   |   |   |   |   Humidity <= 0.52: Not Busy (18.0)
+|   |   |   |   |   |   |   |   Humidity > 0.52
+|   |   |   |   |   |   |   |   |   Pressure <= 30.18
+|   |   |   |   |   |   |   |   |   |   Visibility <= 9: Empty (20.0/8.0)
+|   |   |   |   |   |   |   |   |   |   Visibility > 9
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 15: Not Busy (50.0/18.0)
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed > 15: Empty (12.0)
+|   |   |   |   |   |   |   |   |   Pressure > 30.18: Empty (8.0)
+|   |   |   |   |   |   Dew Point > 34
+|   |   |   |   |   |   |   Year <= 2015
+|   |   |   |   |   |   |   |   Pressure <= 29.45
+|   |   |   |   |   |   |   |   |   Day <= 1: Not Busy (17.0/2.0)
+|   |   |   |   |   |   |   |   |   Day > 1: Empty (14.0/5.0)
+|   |   |   |   |   |   |   |   Pressure > 29.45
+|   |   |   |   |   |   |   |   |   Temp <= 59: Not Busy (44.0/4.0)
+|   |   |   |   |   |   |   |   |   Temp > 59
+|   |   |   |   |   |   |   |   |   |   Time <= 900
+|   |   |   |   |   |   |   |   |   |   |   Time <= 800: Not Busy (16.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 800: Moderately Busy (36.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Time > 900
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1200: Not Busy (106.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1200
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1330
+|   |   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.41: Not Busy (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.41: Moderately Busy (48.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1330: Not Busy (88.0/6.0)
+|   |   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   |   Humidity <= 0.75
+|   |   |   |   |   |   |   |   |   Dew Point <= 51.8
+|   |   |   |   |   |   |   |   |   |   Pressure <= 30
+|   |   |   |   |   |   |   |   |   |   |   Pressure <= 29.76: Not Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Pressure > 29.76
+|   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 8.1: Moderately Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 8.1: Busy (18.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Pressure > 30
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 9.2
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.11: Not Busy (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure > 30.11: Moderately Busy (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed > 9.2: Not Busy (8.0/1.0)
+|   |   |   |   |   |   |   |   |   Dew Point > 51.8
+|   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy
+|   |   |   |   |   |   |   |   |   |   |   Day <= 1: Not Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 1
+|   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 17.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1230: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1230: Moderately Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 17.3: Empty (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   |   |   Temp <= 69.1: Not Busy (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Temp > 69.1
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 57.9: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 57.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 70: Not Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 70
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 12.7: Not Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 12.7: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 13.8
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.63
+|   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 86: Moderately Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 86: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.63
+|   |   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.68: Empty (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.68: Not Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed > 13.8: Empty (3.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.52
+|   |   |   |   |   |   |   |   |   |   |   |   Day <= 2: Not Busy (38.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Day > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 73.4: Not Busy (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 73.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 6.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 55.4: Empty (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 55.4: Not Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 6.9: Empty (6.0)
+|   |   |   |   |   |   |   |   |   |   |   Humidity > 0.52
+|   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 13.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 29.96: Not Busy (21.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 29.96
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 79
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 55.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 3.5: Empty (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 3.5: Not Busy (18.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 55.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.72
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 73.9: Empty (13.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 73.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 78.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 8.1: Busy (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 8.1: Empty (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 78.1: Empty (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.72: Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 79
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 72
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Day <= 2: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Day > 2: Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 72: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 13.8: Empty (8.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Not Busy (19.0/3.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Haze: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Mist: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   Humidity > 0.75
+|   |   |   |   |   |   |   |   |   Dew Point <= 41
+|   |   |   |   |   |   |   |   |   |   Time <= 830
+|   |   |   |   |   |   |   |   |   |   |   Time <= 800: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 800: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   Time > 830
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1500: Not Busy (24.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1500: Empty (2.0)
+|   |   |   |   |   |   |   |   |   Dew Point > 41
+|   |   |   |   |   |   |   |   |   |   Pressure <= 30.22
+|   |   |   |   |   |   |   |   |   |   |   Dew Point <= 66.9
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 800
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast: Not Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Clear: Moderately Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Moderately Busy (1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 800
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 29.93
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Day <= 2: Moderately Busy (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Day > 2: Not Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 29.93
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 55.9: Busy (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 55.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1200: Moderately Busy (34.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1200
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1430: Busy (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1430
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Day <= 3: Busy (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Day > 3: Moderately Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Dew Point > 66.9
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 68: Not Busy (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 68
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 800: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 800: Moderately Busy (16.0/4.0)
+|   |   |   |   |   |   |   |   |   |   Pressure > 30.22
+|   |   |   |   |   |   |   |   |   |   |   Temp <= 68: Empty (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Temp > 68: Busy (6.0)
+|   |   |   |   Time > 1600
+|   |   |   |   |   Humidity <= 0.34
+|   |   |   |   |   |   Dew Point <= 43
+|   |   |   |   |   |   |   Pressure <= 29.84: Busy (6.0/2.0)
+|   |   |   |   |   |   |   Pressure > 29.84: Moderately Busy (14.0)
+|   |   |   |   |   |   Dew Point > 43: Empty (4.0/2.0)
+|   |   |   |   |   Humidity > 0.34
+|   |   |   |   |   |   Year <= 2015: Empty (40.0/7.0)
+|   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   Conditions = Partly Cloudy
+|   |   |   |   |   |   |   |   Pressure <= 30.12: Empty (14.0/1.0)
+|   |   |   |   |   |   |   |   Pressure > 30.12: Not Busy (2.0)
+|   |   |   |   |   |   |   Conditions = Light Snow: Empty (2.0)
+|   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   Dew Point <= 57.2: Moderately Busy (15.0/1.0)
+|   |   |   |   |   |   |   |   Dew Point > 57.2
+|   |   |   |   |   |   |   |   |   Temp <= 69.8
+|   |   |   |   |   |   |   |   |   |   Pressure <= 30.08: Empty (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Pressure > 30.08: Not Busy (14.0/1.0)
+|   |   |   |   |   |   |   |   |   Temp > 69.8: Moderately Busy (2.0)
+|   |   |   |   |   |   |   Conditions = Scattered Clouds
+|   |   |   |   |   |   |   |   Temp <= 79: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   Temp > 79: Empty (5.0)
+|   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   Dew Point <= 61
+|   |   |   |   |   |   |   |   |   Humidity <= 0.75
+|   |   |   |   |   |   |   |   |   |   Dew Point <= 52
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1900
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.12: Empty (13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure > 30.12: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1900: Moderately Busy (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Dew Point > 52
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 5.8
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 54: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 54: Empty (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed > 5.8: Empty (22.0)
+|   |   |   |   |   |   |   |   |   Humidity > 0.75
+|   |   |   |   |   |   |   |   |   |   Wind Speed <= 3.5: Not Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   Wind Speed > 3.5
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1930: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1930: Empty (2.0)
+|   |   |   |   |   |   |   |   Dew Point > 61
+|   |   |   |   |   |   |   |   |   Dew Point <= 66.2: Moderately Busy (12.0)
+|   |   |   |   |   |   |   |   |   Dew Point > 66.2: Empty (2.0)
+|   |   |   |   |   |   |   Conditions = Fog: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Mostly Cloudy
+|   |   |   |   |   |   |   |   Day <= 1: Not Busy (3.0)
+|   |   |   |   |   |   |   |   Day > 1: Moderately Busy (5.0/1.0)
+|   |   |   |   |   |   |   Conditions = Light Rain
+|   |   |   |   |   |   |   |   Visibility <= 9: Empty (4.0)
+|   |   |   |   |   |   |   |   Visibility > 9: Not Busy (6.0/1.0)
+|   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Haze: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (2.0)
+|   |   |   |   |   |   |   Conditions = Mist: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Heavy Rain: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Light Freezing Fog: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Light Freezing Rain: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Snow: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Heavy Snow: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Thunderstorm: Empty (0.0)
+|   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Empty (0.0)
+|   |   |   Day > 4
+|   |   |   |   Dew Point <= 59: Empty (98.0/14.0)
+|   |   |   |   Dew Point > 59
+|   |   |   |   |   Year <= 2015: Empty (15.0)
+|   |   |   |   |   Year > 2015
+|   |   |   |   |   |   Time <= 930: Empty (9.0)
+|   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   Day <= 5
+|   |   |   |   |   |   |   |   Pressure <= 30.16: Not Busy (19.0/3.0)
+|   |   |   |   |   |   |   |   Pressure > 30.16
+|   |   |   |   |   |   |   |   |   Time <= 1130: Not Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   Time > 1130: Moderately Busy (7.0)
+|   |   |   |   |   |   |   Day > 5: Moderately Busy (23.0/5.0)
+|   |   Quarter = Summer
+|   |   |   Time <= 1630
+|   |   |   |   Day <= 4
+|   |   |   |   |   Time <= 1430
+|   |   |   |   |   |   Time <= 1130
+|   |   |   |   |   |   |   Time <= 930
+|   |   |   |   |   |   |   |   Time <= 800
+|   |   |   |   |   |   |   |   |   Year <= 2015: Not Busy (31.0)
+|   |   |   |   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.189189: Not Busy (9.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.189189
+|   |   |   |   |   |   |   |   |   |   |   Day <= 1: Moderately Busy (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 1
+|   |   |   |   |   |   |   |   |   |   |   |   Day <= 3: Not Busy (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Day > 3: Moderately Busy (5.0)
+|   |   |   |   |   |   |   |   Time > 800
+|   |   |   |   |   |   |   |   |   Time <= 900
+|   |   |   |   |   |   |   |   |   |   Year <= 2015: Moderately Busy (62.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   |   |   |   |   Temp <= 80.1
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.32: Moderately Busy (24.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.32: Busy (26.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   Temp > 80.1: Moderately Busy (10.0)
+|   |   |   |   |   |   |   |   |   Time > 900
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.152174: Not Busy (7.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.152174
+|   |   |   |   |   |   |   |   |   |   |   Year <= 2015
+|   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 9.2
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 30
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 29.97: Not Busy (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 29.97: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Pressure > 30: Not Busy (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 9.2
+|   |   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.74: Moderately Busy (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.74: Not Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.53: Not Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Humidity > 0.53: Moderately Busy (18.0/2.0)
+|   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   Year <= 2015: Not Busy (124.0/6.0)
+|   |   |   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.189189: Not Busy (36.0/1.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.189189
+|   |   |   |   |   |   |   |   |   |   Day <= 3
+|   |   |   |   |   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   Visibility <= 9: Not Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Visibility > 9
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1100
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 3.5: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Wind Speed > 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1030: Moderately Busy (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1030
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 81: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 81: Moderately Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1100: Moderately Busy (7.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 1: Not Busy (32.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Day > 3: Moderately Busy (20.0/2.0)
+|   |   |   |   |   |   Time > 1130
+|   |   |   |   |   |   |   Time <= 1330
+|   |   |   |   |   |   |   |   Time <= 1200
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.189189: Not Busy (11.0/1.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.189189
+|   |   |   |   |   |   |   |   |   |   Dew Point <= 55.9: Moderately Busy (14.0)
+|   |   |   |   |   |   |   |   |   |   Dew Point > 55.9
+|   |   |   |   |   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   Temp <= 75.9: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Temp > 75.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   Year <= 2015
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp <= 82.9: Moderately Busy (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Temp > 82.9: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Year > 2015: Moderately Busy (11.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 2: Not Busy (15.0/4.0)
+|   |   |   |   |   |   |   |   Time > 1200
+|   |   |   |   |   |   |   |   |   Year <= 2015: Moderately Busy (94.0/10.0)
+|   |   |   |   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   |   |   |   Temp <= 79
+|   |   |   |   |   |   |   |   |   |   |   Day <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1300
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1230
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Day <= 2: Moderately Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Day > 2: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1230: Moderately Busy (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1300: Not Busy (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 3
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.135135: Not Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.135135
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1300: Busy (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1300: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   Temp > 79
+|   |   |   |   |   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.203704: Moderately Busy (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.203704
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Busy (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Overcast: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1300
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1230: Moderately Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1230: Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1300: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Fog: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Moderately Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Haze: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Mist: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Snow: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 1: Moderately Busy (25.0/2.0)
+|   |   |   |   |   |   |   Time > 1330
+|   |   |   |   |   |   |   |   Time <= 1400
+|   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy
+|   |   |   |   |   |   |   |   |   |   Wind Speed <= 9.2
+|   |   |   |   |   |   |   |   |   |   |   Day <= 1: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 1
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 59: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 59: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   Wind Speed > 9.2: Moderately Busy (8.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Overcast: Moderately Busy (3.0)
+|   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Not Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   |   |   |   Temp <= 81
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 29.98: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure > 29.98: Moderately Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Temp > 81: Moderately Busy (9.0)
+|   |   |   |   |   |   |   |   |   |   Day > 2: Not Busy (11.0/4.0)
+|   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy
+|   |   |   |   |   |   |   |   |   |   Temp <= 73.9: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   |   Temp > 73.9: Moderately Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Rain
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.581081: Moderately Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.581081: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   Time > 1400
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.189189: Not Busy (11.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.189189
+|   |   |   |   |   |   |   |   |   |   Year <= 2015
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.675676
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.467391: Not Busy (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.467391: Moderately Busy (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.675676: Not Busy (13.0)
+|   |   |   |   |   |   |   |   |   |   Year > 2015: Moderately Busy (21.0/8.0)
+|   |   |   |   |   Time > 1430
+|   |   |   |   |   |   Year <= 2015: Not Busy (128.0/6.0)
+|   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   Time <= 1500
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.266667: Not Busy (11.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.266667
+|   |   |   |   |   |   |   |   |   Day <= 3
+|   |   |   |   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   |   |   |   Dew Point <= 68: Moderately Busy (9.0)
+|   |   |   |   |   |   |   |   |   |   |   Dew Point > 68: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   Day > 2: Not Busy (4.0)
+|   |   |   |   |   |   |   |   |   Day > 3: Moderately Busy (4.0)
+|   |   |   |   |   |   |   Time > 1500
+|   |   |   |   |   |   |   |   Pressure <= 30.19: Not Busy (88.0/12.0)
+|   |   |   |   |   |   |   |   Pressure > 30.19: Moderately Busy (2.0)
+|   |   |   |   Day > 4
+|   |   |   |   |   Year <= 2015: Empty (202.0/26.0)
+|   |   |   |   |   Year > 2015
+|   |   |   |   |   |   Quarter Progress <= 0.166667: Empty (32.0/1.0)
+|   |   |   |   |   |   Quarter Progress > 0.166667
+|   |   |   |   |   |   |   Time <= 1430
+|   |   |   |   |   |   |   |   Time <= 1200
+|   |   |   |   |   |   |   |   |   Time <= 1000
+|   |   |   |   |   |   |   |   |   |   Time <= 800: Not Busy (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Time > 800
+|   |   |   |   |   |   |   |   |   |   |   Humidity <= 0.53: Not Busy (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Humidity > 0.53: Moderately Busy (34.0/7.0)
+|   |   |   |   |   |   |   |   |   Time > 1000: Not Busy (40.0/5.0)
+|   |   |   |   |   |   |   |   Time > 1200
+|   |   |   |   |   |   |   |   |   Time <= 1330: Moderately Busy (30.0/1.0)
+|   |   |   |   |   |   |   |   |   Time > 1330
+|   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Overcast: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Not Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Clear: Not Busy (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Not Busy (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Haze: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Mist: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Time > 1430: Not Busy (40.0/4.0)
+|   |   |   Time > 1630
+|   |   |   |   Time <= 1830
+|   |   |   |   |   Day <= 3
+|   |   |   |   |   |   Time <= 1730
+|   |   |   |   |   |   |   Quarter Progress <= 0.815217
+|   |   |   |   |   |   |   |   Time <= 1700
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.037037: Empty (3.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.037037: Not Busy (42.0/3.0)
+|   |   |   |   |   |   |   |   Time > 1700
+|   |   |   |   |   |   |   |   |   Year <= 2015
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.72973: Not Busy (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.72973: Empty (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.6: Not Busy (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.6: Empty (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Day > 2: Empty (6.0/1.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.815217
+|   |   |   |   |   |   |   |   Humidity <= 0.48: Not Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   Humidity > 0.48: Empty (7.0/1.0)
+|   |   |   |   |   |   Time > 1730
+|   |   |   |   |   |   |   Year <= 2015
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.740741
+|   |   |   |   |   |   |   |   |   Time <= 1800
+|   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.222222: Empty (2.0)
+|   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.222222: Not Busy (16.0/2.0)
+|   |   |   |   |   |   |   |   |   Time > 1800
+|   |   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Empty (3.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Snow: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Overcast: Empty (1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Not Busy (1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   |   Day <= 2: Not Busy (7.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 2: Empty (4.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Fog: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Empty (1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Rain: Empty (1.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Haze: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Rain: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Mist: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Snow: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Empty (0.0)
+|   |   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Empty (0.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.740741: Empty (16.0/2.0)
+|   |   |   |   |   |   |   Year > 2015: Empty (45.0/11.0)
+|   |   |   |   |   Day > 3: Empty (63.0/7.0)
+|   |   |   |   Time > 1830: Empty (271.0/14.0)
+|   Time > 2100
+|   |   Day <= 3
+|   |   |   Quarter Progress <= 0.166667
+|   |   |   |   Time <= 2200
+|   |   |   |   |   Wind Speed <= 6.9
+|   |   |   |   |   |   Quarter = Winter: Not Busy (4.0/1.0)
+|   |   |   |   |   |   Quarter = Spring: Not Busy (4.0)
+|   |   |   |   |   |   Quarter = Fall
+|   |   |   |   |   |   |   Temp <= 57.9: Empty (2.0)
+|   |   |   |   |   |   |   Temp > 57.9: Not Busy (6.0)
+|   |   |   |   |   |   Quarter = Other
+|   |   |   |   |   |   |   Day <= 0: Empty (2.0)
+|   |   |   |   |   |   |   Day > 0: Not Busy (7.0/1.0)
+|   |   |   |   |   |   Quarter = Summer: Empty (5.0)
+|   |   |   |   |   Wind Speed > 6.9: Not Busy (28.0/7.0)
+|   |   |   |   Time > 2200
+|   |   |   |   |   Wind Speed <= 3.5: Empty (28.0/2.0)
+|   |   |   |   |   Wind Speed > 3.5
+|   |   |   |   |   |   Time <= 2300
+|   |   |   |   |   |   |   Conditions = Partly Cloudy: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Light Snow: Not Busy (2.0)
+|   |   |   |   |   |   |   Conditions = Overcast: Not Busy (11.0)
+|   |   |   |   |   |   |   Conditions = Scattered Clouds: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   |   Pressure <= 30.31: Not Busy (10.0/1.0)
+|   |   |   |   |   |   |   |   |   Pressure > 30.31: Empty (2.0)
+|   |   |   |   |   |   |   |   Day > 2: Empty (2.0)
+|   |   |   |   |   |   |   Conditions = Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Mostly Cloudy: Not Busy (2.0)
+|   |   |   |   |   |   |   Conditions = Light Rain: Empty (4.0/1.0)
+|   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Haze: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Mist: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Heavy Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Light Freezing Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Light Freezing Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Heavy Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Thunderstorm: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   Time > 2300
+|   |   |   |   |   |   |   Visibility <= 9: Not Busy (3.0)
+|   |   |   |   |   |   |   Visibility > 9: Empty (14.0/1.0)
+|   |   |   Quarter Progress > 0.166667
+|   |   |   |   Time <= 2200
+|   |   |   |   |   Temp <= 66.9
+|   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   Quarter = Winter: Moderately Busy (52.0/1.0)
+|   |   |   |   |   |   |   Quarter = Spring
+|   |   |   |   |   |   |   |   Dew Point <= 62.1: Moderately Busy (46.0)
+|   |   |   |   |   |   |   |   Dew Point > 62.1: Not Busy (2.0)
+|   |   |   |   |   |   |   Quarter = Fall: Moderately Busy (60.0/6.0)
+|   |   |   |   |   |   |   Quarter = Other: Moderately Busy (0.0)
+|   |   |   |   |   |   |   Quarter = Summer: Empty (5.0)
+|   |   |   |   |   |   Day > 2
+|   |   |   |   |   |   |   Conditions = Partly Cloudy: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Light Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   Humidity <= 0.75: Not Busy (14.0/3.0)
+|   |   |   |   |   |   |   |   Humidity > 0.75: Moderately Busy (8.0/1.0)
+|   |   |   |   |   |   |   Conditions = Scattered Clouds: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.923913
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.216216: Moderately Busy (2.0/1.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.216216
+|   |   |   |   |   |   |   |   |   |   Time <= 2130
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 3.5
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point <= 39.9: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Dew Point > 39.9: Moderately Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed > 3.5: Moderately Busy (6.0)
+|   |   |   |   |   |   |   |   |   |   Time > 2130
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed <= 6.9
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.297297: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.297297: Moderately Busy (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Wind Speed > 6.9: Not Busy (3.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.923913: Not Busy (4.0)
+|   |   |   |   |   |   |   Conditions = Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Mostly Cloudy: Not Busy (2.0)
+|   |   |   |   |   |   |   Conditions = Light Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Haze: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Rain: Empty (1.0)
+|   |   |   |   |   |   |   Conditions = Mist: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Heavy Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Light Freezing Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Light Freezing Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Heavy Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Thunderstorm: Not Busy (0.0)
+|   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   Temp > 66.9
+|   |   |   |   |   |   Quarter = Winter: Empty (0.0)
+|   |   |   |   |   |   Quarter = Spring: Moderately Busy (8.0)
+|   |   |   |   |   |   Quarter = Fall: Moderately Busy (2.0)
+|   |   |   |   |   |   Quarter = Other: Empty (0.0)
+|   |   |   |   |   |   Quarter = Summer: Empty (26.0)
+|   |   |   |   Time > 2200
+|   |   |   |   |   Day <= 2
+|   |   |   |   |   |   Time <= 2230
+|   |   |   |   |   |   |   Quarter Progress <= 0.27027: Not Busy (10.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.27027
+|   |   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Moderately Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Snow: Moderately Busy (1.0)
+|   |   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   |   Year <= 2015: Moderately Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress <= 0.432432: Moderately Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Quarter Progress > 0.432432: Not Busy (6.0)
+|   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   Visibility <= 6: Not Busy (2.0)
+|   |   |   |   |   |   |   |   |   |   Visibility > 6
+|   |   |   |   |   |   |   |   |   |   |   Year <= 2015: Moderately Busy (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Year > 2015
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure <= 30.13: Moderately Busy (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Pressure > 30.13: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   Conditions = Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Moderately Busy (5.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Rain: Not Busy (4.0/1.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Haze: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Mist: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Moderately Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Moderately Busy (1.0)
+|   |   |   |   |   |   |   |   Day > 1
+|   |   |   |   |   |   |   |   |   Conditions = Partly Cloudy: Not Busy (1.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Overcast
+|   |   |   |   |   |   |   |   |   |   Temp <= 46.9: Moderately Busy (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Temp > 46.9: Not Busy (4.0)
+|   |   |   |   |   |   |   |   |   Conditions = Scattered Clouds: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Clear
+|   |   |   |   |   |   |   |   |   |   Temp <= 46.9: Not Busy (4.0)
+|   |   |   |   |   |   |   |   |   |   Temp > 46.9: Moderately Busy (7.0/2.0)
+|   |   |   |   |   |   |   |   |   Conditions = Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Mostly Cloudy: Not Busy (3.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Rain: Moderately Busy (1.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Haze: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Mist: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Heavy Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Freezing Fog: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Heavy Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Light Freezing Rain: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Heavy Snow: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Thunderstorm: Not Busy (0.0)
+|   |   |   |   |   |   |   |   |   Conditions = Thunderstorms and Rain: Not Busy (0.0)
+|   |   |   |   |   |   Time > 2230
+|   |   |   |   |   |   |   Quarter Progress <= 0.851852: Not Busy (140.0/14.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.851852
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.956522: Moderately Busy (24.0/10.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.956522: Not Busy (6.0)
+|   |   |   |   |   Day > 2
+|   |   |   |   |   |   Visibility <= 5: Empty (4.0/1.0)
+|   |   |   |   |   |   Visibility > 5: Not Busy (80.0/10.0)
+|   |   Day > 3
+|   |   |   Day <= 5
+|   |   |   |   Quarter Progress <= 0.851852
+|   |   |   |   |   Time <= 2200
+|   |   |   |   |   |   Humidity <= 0.77
+|   |   |   |   |   |   |   Day <= 4: Empty (29.0/5.0)
+|   |   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   |   Wind Speed <= 9.2
+|   |   |   |   |   |   |   |   |   Pressure <= 29.99: Not Busy (6.0)
+|   |   |   |   |   |   |   |   |   Pressure > 29.99
+|   |   |   |   |   |   |   |   |   |   Time <= 2130
+|   |   |   |   |   |   |   |   |   |   |   Dew Point <= 28.4: Empty (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Dew Point > 28.4: Not Busy (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Time > 2130: Empty (13.0/3.0)
+|   |   |   |   |   |   |   |   Wind Speed > 9.2: Empty (8.0/1.0)
+|   |   |   |   |   |   Humidity > 0.77: Empty (43.0/1.0)
+|   |   |   |   |   Time > 2200: Empty (157.0/3.0)
+|   |   |   |   Quarter Progress > 0.851852
+|   |   |   |   |   Time <= 2300
+|   |   |   |   |   |   Day <= 4
+|   |   |   |   |   |   |   Time <= 2200: Moderately Busy (6.0/1.0)
+|   |   |   |   |   |   |   Time > 2200: Not Busy (6.0)
+|   |   |   |   |   |   Day > 4: Moderately Busy (12.0)
+|   |   |   |   |   Time > 2300: Not Busy (6.0)
+|   |   |   Day > 5
+|   |   |   |   Dew Point <= -5.1: Empty (8.0)
+|   |   |   |   Dew Point > -5.1
+|   |   |   |   |   Time <= 2200
+|   |   |   |   |   |   Quarter Progress <= 0.166667: Not Busy (9.0/1.0)
+|   |   |   |   |   |   Quarter Progress > 0.166667
+|   |   |   |   |   |   |   Quarter Progress <= 0.84: Moderately Busy (48.0/5.0)
+|   |   |   |   |   |   |   Quarter Progress > 0.84
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.880435: Not Busy (2.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.880435
+|   |   |   |   |   |   |   |   |   Time <= 2130: Moderately Busy (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Time > 2130: Busy (3.0/1.0)
+|   |   |   |   |   Time > 2200
+|   |   |   |   |   |   Quarter Progress <= 0.880435
+|   |   |   |   |   |   |   Time <= 2300: Not Busy (53.0/6.0)
+|   |   |   |   |   |   |   Time > 2300
+|   |   |   |   |   |   |   |   Quarter Progress <= 0.253333: Empty (5.0)
+|   |   |   |   |   |   |   |   Quarter Progress > 0.253333
+|   |   |   |   |   |   |   |   |   Quarter Progress <= 0.8: Not Busy (18.0)
+|   |   |   |   |   |   |   |   |   Quarter Progress > 0.8: Empty (3.0/1.0)
+|   |   |   |   |   |   Quarter Progress > 0.880435: Moderately Busy (9.0/1.0)
+
+Number of Leaves  : 	1076
+
+Size of the tree : 	1698
+
+
+Time taken to build model: 0.45 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       10501               83.1236 %
+Incorrectly Classified Instances      2132               16.8764 %
+Kappa statistic                          0.775 
+Mean absolute error                      0.1072
+Root mean squared error                  0.2655
+Relative absolute error                 28.6007 %
+Root relative squared error             61.3113 %
+Total Number of Instances            12633     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.897    0.034    0.899      0.897    0.898      0.864    0.965     0.885     Empty
+                 0.798    0.068    0.793      0.798    0.795      0.728    0.919     0.759     Not Busy
+                 0.747    0.075    0.770      0.747    0.758      0.679    0.895     0.746     Moderately Busy
+                 0.883    0.048    0.860      0.883    0.871      0.828    0.960     0.858     Busy
+Weighted Avg.    0.831    0.056    0.831      0.831    0.831      0.775    0.935     0.812     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2863  291   30    6 |    a = Empty
+  299 2489  323    9 |    b = Not Busy
+   17  353 2375  436 |    c = Moderately Busy
+    6    6  356 2774 |    d = Busy
+

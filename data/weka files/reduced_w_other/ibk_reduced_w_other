@@ -1,0 +1,49 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     w_other-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    12633
+Attributes:   4
+              Time
+              Day
+              Quarter
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        9380               74.25   %
+Incorrectly Classified Instances      3253               25.75   %
+Kappa statistic                          0.6567
+Mean absolute error                      0.1725
+Root mean squared error                  0.3126
+Relative absolute error                 46.0125 %
+Root relative squared error             72.2025 %
+Total Number of Instances            12633     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.822    0.064    0.813      0.822    0.818      0.756    0.937     0.866     Empty
+                 0.713    0.113    0.675      0.713    0.694      0.590    0.865     0.664     Not Busy
+                 0.632    0.103    0.675      0.632    0.653      0.542    0.851     0.679     Moderately Busy
+                 0.802    0.064    0.806      0.802    0.804      0.739    0.937     0.808     Busy
+Weighted Avg.    0.742    0.086    0.742      0.742    0.742      0.657    0.898     0.755     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2623  434  113   20 |    a = Empty
+  440 2226  350  104 |    b = Not Busy
+  157  529 2011  484 |    c = Moderately Busy
+    6  110  506 2520 |    d = Busy
+

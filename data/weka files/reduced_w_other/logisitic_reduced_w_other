@@ -1,0 +1,73 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     w_other-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    12633
+Attributes:   4
+              Time
+              Day
+              Quarter
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                            Class
+Variable                    Empty         Not Busy  Moderately Busy
+===================================================================
+Time                      -0.0013                0           0.0003
+Day                         0.361           0.2911           0.3057
+Quarter=Winter            -1.1859          -1.3196          -0.9539
+Quarter=Spring            -0.6955          -0.6461          -0.0333
+Quarter=Fall              -1.1318          -1.2294           -1.159
+Quarter=Other              1.1887           1.4637           0.5307
+Quarter=Summer             2.7821           2.7983           2.2596
+Intercept                  1.1364           -0.359          -0.7685
+
+
+Odds Ratios...
+                            Class
+Variable                    Empty         Not Busy  Moderately Busy
+===================================================================
+Time                       0.9987                1           1.0003
+Day                        1.4347           1.3378           1.3576
+Quarter=Winter             0.3055           0.2672           0.3852
+Quarter=Spring             0.4988           0.5241           0.9673
+Quarter=Fall               0.3224           0.2925           0.3138
+Quarter=Other              3.2827            4.322              1.7
+Quarter=Summer            16.1531          16.4166           9.5789
+
+
+Time taken to build model: 0.77 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        6110               48.3654 %
+Incorrectly Classified Instances      6523               51.6346 %
+Kappa statistic                          0.3115
+Mean absolute error                      0.3312
+Root mean squared error                  0.4061
+Relative absolute error                 88.3309 %
+Root relative squared error             93.7927 %
+Total Number of Instances            12633     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.516    0.182    0.490      0.516    0.503      0.329    0.724     0.527     Empty
+                 0.329    0.142    0.432      0.329    0.373      0.206    0.668     0.355     Not Busy
+                 0.376    0.164    0.435      0.376    0.404      0.223    0.667     0.358     Moderately Busy
+                 0.713    0.201    0.540      0.713    0.615      0.472    0.806     0.541     Busy
+Weighted Avg.    0.484    0.172    0.474      0.484    0.474      0.307    0.716     0.445     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 1647  825  305  413 |    a = Empty
+  906 1026  637  551 |    b = Not Busy
+  629  413 1196  943 |    c = Moderately Busy
+  179  113  609 2241 |    d = Busy
+

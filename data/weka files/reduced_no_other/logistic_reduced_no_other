@@ -1,0 +1,71 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     no_other-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    11027
+Attributes:   4
+              Time
+              Day
+              Quarter
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                            Class
+Variable                    Empty         Not Busy  Moderately Busy
+===================================================================
+Time                      -0.0014           0.0001           0.0003
+Day                        0.3557           0.3296           0.3141
+Quarter=Winter            -1.0078          -1.0994          -0.8794
+Quarter=Spring            -0.5187          -0.4166           0.0457
+Quarter=Fall              -0.9512          -1.0073          -1.0833
+Quarter=Summer             2.9918           3.0504           2.3481
+Intercept                  1.0661           -0.762          -0.8958
+
+
+Odds Ratios...
+                            Class
+Variable                    Empty         Not Busy  Moderately Busy
+===================================================================
+Time                       0.9986           1.0001           1.0003
+Day                        1.4272           1.3904           1.3691
+Quarter=Winter              0.365           0.3331            0.415
+Quarter=Spring             0.5953           0.6593           1.0467
+Quarter=Fall               0.3863           0.3652           0.3385
+Quarter=Summer            19.9219          21.1229          10.4661
+
+
+Time taken to build model: 0.55 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        5387               48.8528 %
+Incorrectly Classified Instances      5640               51.1472 %
+Kappa statistic                          0.3119
+Mean absolute error                      0.3293
+Root mean squared error                  0.4047
+Relative absolute error                 88.0014 %
+Root relative squared error             93.5579 %
+Total Number of Instances            11027     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.539    0.173    0.497      0.539    0.517      0.356    0.738     0.531     Empty
+                 0.202    0.091    0.387      0.202    0.265      0.144    0.655     0.320     Not Busy
+                 0.420    0.195    0.436      0.420    0.428      0.228    0.666     0.365     Moderately Busy
+                 0.742    0.228    0.551      0.742    0.632      0.474    0.801     0.562     Busy
+Weighted Avg.    0.489    0.176    0.471      0.489    0.469      0.308    0.718     0.449     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 1436  538  323  366 |    a = Empty
+  779  491  642  524 |    b = Not Busy
+  526  225 1222  937 |    c = Moderately Busy
+  146   16  618 2238 |    d = Busy
+

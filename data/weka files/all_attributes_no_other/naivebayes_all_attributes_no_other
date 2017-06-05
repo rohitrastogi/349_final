@@ -1,0 +1,152 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     no_other
+Instances:    11027
+Attributes:   13
+              Time
+              Day
+              Year
+              Quarter
+              Quarter Progress
+              Temp
+              Dew Point
+              Humidity
+              Pressure
+              Visibility
+              Wind Speed
+              Conditions
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                           Class
+Attribute                                  Empty        Not Busy Moderately Busy            Busy
+                                          (0.24)          (0.22)          (0.26)          (0.27)
+=================================================================================================
+Time
+  mean                                   992.3643       1445.7185       1524.9345        1398.795
+  std. dev.                              781.8301        621.2407         429.119        336.2294
+  weight sum                                 2663            2436            2910            3018
+  precision                               49.5745         49.5745         49.5745         49.5745
+
+Day
+  mean                                     3.0124          3.0673          3.1162          2.0981
+  std. dev.                                1.8676          1.8537          1.9811          1.7916
+  weight sum                                 2663            2436            2910            3018
+  precision                                     1               1               1               1
+
+Year
+  mean                                   2015.573       2015.5817       2015.7017       2015.5855
+  std. dev.                                0.4946          0.4933          0.4575          0.4926
+  weight sum                                 2663            2436            2910            3018
+  precision                                     1               1               1               1
+
+Quarter
+  Winter                                    582.0           455.0           695.0          1065.0
+  Spring                                    576.0           533.0          1036.0           666.0
+  Fall                                      708.0           577.0           654.0          1251.0
+  Summer                                    801.0           875.0           529.0            40.0
+  [total]                                  2667.0          2440.0          2914.0          3022.0
+
+Quarter Progress
+  mean                                     0.5258          0.4751          0.5103          0.5304
+  std. dev.                                0.2971          0.2817          0.2812          0.2653
+  weight sum                                 2663            2436            2910            3018
+  precision                                0.0035          0.0035          0.0035          0.0035
+
+Temp
+  mean                                    53.5873         57.4232         54.7275         49.5099
+  std. dev.                               19.7361         20.6653          18.944         17.0254
+  weight sum                                 2663            2436            2910            3018
+  precision                                0.7797          0.7797          0.7797          0.7797
+
+Dew Point
+  mean                                    44.2874         44.6041          41.246         36.5884
+  std. dev.                               17.3669         17.6908         16.6238         14.7366
+  weight sum                                 2663            2436            2910            3018
+  precision                                0.7759          0.7759          0.7759          0.7759
+
+Humidity
+  mean                                      0.733          0.6541          0.6363          0.6427
+  std. dev.                                0.1638          0.1783           0.181          0.1771
+  weight sum                                 2663            2436            2910            3018
+  precision                                0.0104          0.0104          0.0104          0.0104
+
+Pressure
+  mean                                    30.0096         30.0255         30.0185          30.017
+  std. dev.                                0.2135          0.2042          0.2263          0.2461
+  weight sum                                 2663            2436            2910            3018
+  precision                                0.0101          0.0101          0.0101          0.0101
+
+Visibility
+  mean                                     8.8875          9.1802          9.1147          9.1307
+  std. dev.                                2.3323          1.9981          2.0767          2.0103
+  weight sum                                 2663            2436            2910            3018
+  precision                                0.5824          0.5824          0.5824          0.5824
+
+Wind Speed
+  mean                                     7.0636          8.7525          9.2948         10.0293
+  std. dev.                                5.1212          5.3264          5.2388          5.5014
+  weight sum                                 2663            2436            2910            3018
+  precision                                1.3269          1.3269          1.3269          1.3269
+
+Conditions
+  Partly Cloudy                             171.0           179.0           190.0           187.0
+  Light Snow                                 57.0            43.0            58.0            68.0
+  Overcast                                  570.0           523.0           686.0           923.0
+  Scattered Clouds                          116.0           128.0           135.0           151.0
+  Clear                                    1422.0          1232.0          1383.0          1286.0
+  Fog                                        24.0             6.0             4.0             8.0
+  Mostly Cloudy                             133.0           208.0           274.0           243.0
+  Light Rain                                111.0            95.0           123.0           107.0
+  Light Thunderstorms and Rain               11.0             5.0             9.0             5.0
+  Haze                                       12.0             7.0            19.0            29.0
+  Rain                                       19.0            12.0            19.0            12.0
+  Mist                                        3.0             1.0             1.0             1.0
+  Heavy Rain                                  8.0             1.0             3.0             3.0
+  Light Freezing Fog                         10.0             2.0             2.0             1.0
+  Snow                                        3.0             8.0             8.0             4.0
+  Light Freezing Rain                         1.0             1.0             2.0             3.0
+  Heavy Snow                                  1.0             1.0             4.0             1.0
+  Thunderstorm                                4.0             2.0             3.0             2.0
+  Thunderstorms and Rain                      2.0             1.0             4.0             3.0
+  Heavy Thunderstorms and Rain                5.0             1.0             3.0             1.0
+  [total]                                  2683.0          2456.0          2930.0          3038.0
+
+
+
+Time taken to build model: 0.1 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        5570               50.5124 %
+Incorrectly Classified Instances      5457               49.4876 %
+Kappa statistic                          0.3381
+Mean absolute error                      0.2922
+Root mean squared error                  0.3921
+Relative absolute error                 78.0809 %
+Root relative squared error             90.6432 %
+Total Number of Instances            11027     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.562    0.131    0.578      0.562    0.570      0.435    0.808     0.591     Empty
+                 0.390    0.171    0.393      0.390    0.391      0.220    0.676     0.348     Not Busy
+                 0.346    0.177    0.412      0.346    0.376      0.180    0.688     0.404     Moderately Busy
+                 0.701    0.183    0.592      0.701    0.642      0.494    0.865     0.697     Busy
+Weighted Avg.    0.505    0.166    0.497      0.505    0.499      0.336    0.762     0.517     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 1496  752  271  144 |    a = Empty
+  516  950  603  367 |    b = Not Busy
+  351  601 1007  951 |    c = Moderately Busy
+  225  115  561 2117 |    d = Busy
+

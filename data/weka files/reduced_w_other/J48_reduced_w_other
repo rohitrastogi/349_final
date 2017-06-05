@@ -1,0 +1,360 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     w_other-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5
+Instances:    12633
+Attributes:   4
+              Time
+              Day
+              Quarter
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Time <= 730
+|   Time <= 0
+|   |   Quarter = Winter: Not Busy (62.0/21.0)
+|   |   Quarter = Spring: Not Busy (62.0/19.0)
+|   |   Quarter = Fall
+|   |   |   Day <= 5: Not Busy (66.0/28.0)
+|   |   |   Day > 5: Moderately Busy (2.0)
+|   |   Quarter = Other: Empty (7.0)
+|   |   Quarter = Summer: Not Busy (0.0)
+|   Time > 0: Empty (1591.0/80.0)
+Time > 730
+|   Quarter = Winter
+|   |   Time <= 2100
+|   |   |   Day <= 3
+|   |   |   |   Time <= 800: Not Busy (43.0/7.0)
+|   |   |   |   Time > 800
+|   |   |   |   |   Time <= 1530
+|   |   |   |   |   |   Time <= 1000
+|   |   |   |   |   |   |   Time <= 930: Busy (129.0/26.0)
+|   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   |   |   Day <= 0: Busy (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Day > 0: Moderately Busy (11.0/4.0)
+|   |   |   |   |   |   |   |   |   Day > 1: Busy (11.0/2.0)
+|   |   |   |   |   |   |   |   Day > 2: Moderately Busy (11.0/1.0)
+|   |   |   |   |   |   Time > 1000: Busy (468.0/12.0)
+|   |   |   |   |   Time > 1530
+|   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   Time <= 1700
+|   |   |   |   |   |   |   |   Time <= 1630
+|   |   |   |   |   |   |   |   |   Time <= 1600: Moderately Busy (33.0/14.0)
+|   |   |   |   |   |   |   |   |   Time > 1600: Busy (32.0/9.0)
+|   |   |   |   |   |   |   |   Time > 1630: Moderately Busy (32.0/11.0)
+|   |   |   |   |   |   |   Time > 1700
+|   |   |   |   |   |   |   |   Time <= 2000: Busy (192.0/45.0)
+|   |   |   |   |   |   |   |   Time > 2000
+|   |   |   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   |   |   Time <= 2030: Busy (21.0/7.0)
+|   |   |   |   |   |   |   |   |   |   Time > 2030: Moderately Busy (20.0/9.0)
+|   |   |   |   |   |   |   |   |   Day > 1: Moderately Busy (22.0/7.0)
+|   |   |   |   |   |   Day > 2: Moderately Busy (121.0/37.0)
+|   |   |   Day > 3
+|   |   |   |   Time <= 930
+|   |   |   |   |   Day <= 4
+|   |   |   |   |   |   Time <= 800: Not Busy (11.0/1.0)
+|   |   |   |   |   |   Time > 800
+|   |   |   |   |   |   |   Time <= 900
+|   |   |   |   |   |   |   |   Time <= 830: Busy (11.0/4.0)
+|   |   |   |   |   |   |   |   Time > 830: Moderately Busy (11.0)
+|   |   |   |   |   |   |   Time > 900: Busy (11.0/2.0)
+|   |   |   |   |   Day > 4
+|   |   |   |   |   |   Time <= 800: Empty (11.0)
+|   |   |   |   |   |   Time > 800
+|   |   |   |   |   |   |   Day <= 5: Not Busy (29.0/8.0)
+|   |   |   |   |   |   |   Day > 5: Empty (14.0/2.0)
+|   |   |   |   Time > 930
+|   |   |   |   |   Time <= 1600
+|   |   |   |   |   |   Day <= 4
+|   |   |   |   |   |   |   Time <= 1500: Busy (121.0/23.0)
+|   |   |   |   |   |   |   Time > 1500: Moderately Busy (22.0/5.0)
+|   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   Time <= 1130
+|   |   |   |   |   |   |   |   Time <= 1100
+|   |   |   |   |   |   |   |   |   Day <= 5: Not Busy (30.0/12.0)
+|   |   |   |   |   |   |   |   |   Day > 5
+|   |   |   |   |   |   |   |   |   |   Time <= 1000: Moderately Busy (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   Time > 1000
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1030: Not Busy (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1030: Moderately Busy (10.0/4.0)
+|   |   |   |   |   |   |   |   Time > 1100: Moderately Busy (20.0/7.0)
+|   |   |   |   |   |   |   Time > 1130
+|   |   |   |   |   |   |   |   Day <= 5: Moderately Busy (93.0/21.0)
+|   |   |   |   |   |   |   |   Day > 5
+|   |   |   |   |   |   |   |   |   Time <= 1200: Moderately Busy (10.0/2.0)
+|   |   |   |   |   |   |   |   |   Time > 1200: Busy (80.0/31.0)
+|   |   |   |   |   Time > 1600
+|   |   |   |   |   |   Day <= 5
+|   |   |   |   |   |   |   Time <= 1900
+|   |   |   |   |   |   |   |   Day <= 4
+|   |   |   |   |   |   |   |   |   Time <= 1630: Moderately Busy (11.0/3.0)
+|   |   |   |   |   |   |   |   |   Time > 1630: Not Busy (49.0/15.0)
+|   |   |   |   |   |   |   |   Day > 4: Moderately Busy (60.0/28.0)
+|   |   |   |   |   |   |   Time > 1900: Not Busy (76.0/28.0)
+|   |   |   |   |   |   Day > 5
+|   |   |   |   |   |   |   Time <= 1700: Moderately Busy (20.0/6.0)
+|   |   |   |   |   |   |   Time > 1700
+|   |   |   |   |   |   |   |   Time <= 2000: Busy (60.0/26.0)
+|   |   |   |   |   |   |   |   Time > 2000: Moderately Busy (20.0/8.0)
+|   |   Time > 2100
+|   |   |   Day <= 3
+|   |   |   |   Time <= 2200
+|   |   |   |   |   Day <= 2: Moderately Busy (62.0/10.0)
+|   |   |   |   |   Day > 2: Not Busy (22.0/8.0)
+|   |   |   |   Time > 2200: Not Busy (126.0/37.0)
+|   |   |   Day > 3
+|   |   |   |   Day <= 5: Empty (93.0/19.0)
+|   |   |   |   Day > 5
+|   |   |   |   |   Time <= 2200: Moderately Busy (20.0/6.0)
+|   |   |   |   |   Time > 2200: Not Busy (30.0/9.0)
+|   Quarter = Spring
+|   |   Time <= 2100
+|   |   |   Day <= 3
+|   |   |   |   Time <= 800: Not Busy (42.0/8.0)
+|   |   |   |   Time > 800
+|   |   |   |   |   Time <= 1530
+|   |   |   |   |   |   Time <= 1100
+|   |   |   |   |   |   |   Day <= 0
+|   |   |   |   |   |   |   |   Time <= 1030
+|   |   |   |   |   |   |   |   |   Time <= 1000
+|   |   |   |   |   |   |   |   |   |   Time <= 930
+|   |   |   |   |   |   |   |   |   |   |   Time <= 900
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 830: Busy (10.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 830: Moderately Busy (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 900: Busy (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Time > 930: Moderately Busy (10.0/2.0)
+|   |   |   |   |   |   |   |   |   Time > 1000: Busy (10.0/1.0)
+|   |   |   |   |   |   |   |   Time > 1030: Moderately Busy (10.0/1.0)
+|   |   |   |   |   |   |   Day > 0
+|   |   |   |   |   |   |   |   Time <= 1000
+|   |   |   |   |   |   |   |   |   Day <= 2
+|   |   |   |   |   |   |   |   |   |   Time <= 930
+|   |   |   |   |   |   |   |   |   |   |   Day <= 1: Moderately Busy (33.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   Day > 1
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 900
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 830: Busy (11.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 830: Moderately Busy (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 900: Busy (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Time > 930: Moderately Busy (22.0)
+|   |   |   |   |   |   |   |   |   Day > 2: Moderately Busy (44.0)
+|   |   |   |   |   |   |   |   Time > 1000
+|   |   |   |   |   |   |   |   |   Time <= 1030: Busy (29.0/5.0)
+|   |   |   |   |   |   |   |   |   Time > 1030: Moderately Busy (30.0/2.0)
+|   |   |   |   |   |   Time > 1100: Busy (379.0/53.0)
+|   |   |   |   |   Time > 1530
+|   |   |   |   |   |   Time <= 1730: Moderately Busy (172.0/21.0)
+|   |   |   |   |   |   Time > 1730
+|   |   |   |   |   |   |   Day <= 1
+|   |   |   |   |   |   |   |   Time <= 1930: Busy (84.0/24.0)
+|   |   |   |   |   |   |   |   Time > 1930: Moderately Busy (63.0/29.0)
+|   |   |   |   |   |   |   Day > 1: Moderately Busy (154.0/31.0)
+|   |   |   Day > 3
+|   |   |   |   Day <= 5
+|   |   |   |   |   Time <= 1600
+|   |   |   |   |   |   Day <= 4
+|   |   |   |   |   |   |   Time <= 800: Not Busy (11.0/2.0)
+|   |   |   |   |   |   |   Time > 800
+|   |   |   |   |   |   |   |   Time <= 900: Moderately Busy (22.0/2.0)
+|   |   |   |   |   |   |   |   Time > 900
+|   |   |   |   |   |   |   |   |   Time <= 1200
+|   |   |   |   |   |   |   |   |   |   Time <= 930: Busy (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   |   |   |   |   Time <= 1000: Moderately Busy (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Time > 1000
+|   |   |   |   |   |   |   |   |   |   |   |   Time <= 1030: Busy (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Time > 1030
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1100: Moderately Busy (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1100
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time <= 1130: Busy (11.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Time > 1130: Moderately Busy (11.0/4.0)
+|   |   |   |   |   |   |   |   |   Time > 1200
+|   |   |   |   |   |   |   |   |   |   Time <= 1330: Busy (33.0/4.0)
+|   |   |   |   |   |   |   |   |   |   Time > 1330: Moderately Busy (55.0/16.0)
+|   |   |   |   |   |   Day > 4
+|   |   |   |   |   |   |   Time <= 1130
+|   |   |   |   |   |   |   |   Time <= 900
+|   |   |   |   |   |   |   |   |   Time <= 830: Empty (20.0/5.0)
+|   |   |   |   |   |   |   |   |   Time > 830: Not Busy (10.0/4.0)
+|   |   |   |   |   |   |   |   Time > 900: Not Busy (55.0/10.0)
+|   |   |   |   |   |   |   Time > 1130
+|   |   |   |   |   |   |   |   Time <= 1200: Not Busy (11.0/4.0)
+|   |   |   |   |   |   |   |   Time > 1200: Moderately Busy (84.0/25.0)
+|   |   |   |   |   Time > 1600: Not Busy (205.0/57.0)
+|   |   |   |   Day > 5
+|   |   |   |   |   Time <= 1100
+|   |   |   |   |   |   Time <= 930: Empty (18.0/3.0)
+|   |   |   |   |   |   Time > 930
+|   |   |   |   |   |   |   Time <= 1000: Moderately Busy (10.0/3.0)
+|   |   |   |   |   |   |   Time > 1000: Not Busy (20.0/4.0)
+|   |   |   |   |   Time > 1100: Moderately Busy (200.0/54.0)
+|   |   Time > 2100
+|   |   |   Day <= 3
+|   |   |   |   Time <= 2200: Moderately Busy (86.0/23.0)
+|   |   |   |   Time > 2200: Not Busy (129.0/35.0)
+|   |   |   Day > 3
+|   |   |   |   Day <= 5: Empty (99.0/18.0)
+|   |   |   |   Day > 5
+|   |   |   |   |   Time <= 2200: Moderately Busy (20.0/7.0)
+|   |   |   |   |   Time > 2200: Not Busy (30.0/9.0)
+|   Quarter = Fall
+|   |   Time <= 2100
+|   |   |   Day <= 3
+|   |   |   |   Time <= 800: Not Busy (52.0/6.0)
+|   |   |   |   Time > 800
+|   |   |   |   |   Time <= 1530: Busy (759.0/99.0)
+|   |   |   |   |   Time > 1530
+|   |   |   |   |   |   Day <= 2: Busy (399.0/104.0)
+|   |   |   |   |   |   Day > 2
+|   |   |   |   |   |   |   Time <= 1630: Busy (24.0/10.0)
+|   |   |   |   |   |   |   Time > 1630: Moderately Busy (102.0/31.0)
+|   |   |   Day > 3
+|   |   |   |   Day <= 5
+|   |   |   |   |   Day <= 4
+|   |   |   |   |   |   Time <= 1500
+|   |   |   |   |   |   |   Time <= 800: Not Busy (13.0/2.0)
+|   |   |   |   |   |   |   Time > 800
+|   |   |   |   |   |   |   |   Time <= 900
+|   |   |   |   |   |   |   |   |   Time <= 830: Busy (13.0/4.0)
+|   |   |   |   |   |   |   |   |   Time > 830: Moderately Busy (13.0/3.0)
+|   |   |   |   |   |   |   |   Time > 900: Busy (157.0/46.0)
+|   |   |   |   |   |   Time > 1500
+|   |   |   |   |   |   |   Time <= 1700: Moderately Busy (50.0/17.0)
+|   |   |   |   |   |   |   Time > 1700: Not Busy (80.0/22.0)
+|   |   |   |   |   Day > 4
+|   |   |   |   |   |   Time <= 1100
+|   |   |   |   |   |   |   Time <= 900: Empty (33.0/11.0)
+|   |   |   |   |   |   |   Time > 900: Not Busy (56.0/21.0)
+|   |   |   |   |   |   Time > 1100
+|   |   |   |   |   |   |   Time <= 1600: Moderately Busy (127.0/53.0)
+|   |   |   |   |   |   |   Time > 1600: Not Busy (103.0/47.0)
+|   |   |   |   Day > 5
+|   |   |   |   |   Time <= 1130
+|   |   |   |   |   |   Time <= 930: Empty (22.0/3.0)
+|   |   |   |   |   |   Time > 930: Moderately Busy (48.0/13.0)
+|   |   |   |   |   Time > 1130
+|   |   |   |   |   |   Time <= 1730
+|   |   |   |   |   |   |   Time <= 1530
+|   |   |   |   |   |   |   |   Time <= 1230: Moderately Busy (24.0/9.0)
+|   |   |   |   |   |   |   |   Time > 1230: Busy (72.0/29.0)
+|   |   |   |   |   |   |   Time > 1530: Moderately Busy (48.0/16.0)
+|   |   |   |   |   |   Time > 1730
+|   |   |   |   |   |   |   Time <= 2000: Busy (55.0/11.0)
+|   |   |   |   |   |   |   Time > 2000: Moderately Busy (22.0/11.0)
+|   |   Time > 2100
+|   |   |   Day <= 3
+|   |   |   |   Time <= 2200
+|   |   |   |   |   Day <= 2: Moderately Busy (68.0/12.0)
+|   |   |   |   |   Day > 2
+|   |   |   |   |   |   Time <= 2130: Moderately Busy (11.0/4.0)
+|   |   |   |   |   |   Time > 2130: Not Busy (11.0/4.0)
+|   |   |   |   Time > 2200
+|   |   |   |   |   Time <= 2230
+|   |   |   |   |   |   Day <= 1: Moderately Busy (24.0/10.0)
+|   |   |   |   |   |   Day > 1: Not Busy (22.0/4.0)
+|   |   |   |   |   Time > 2230: Not Busy (92.0/23.0)
+|   |   |   Day > 3
+|   |   |   |   Day <= 5: Empty (90.0/19.0)
+|   |   |   |   Day > 5
+|   |   |   |   |   Time <= 2200: Moderately Busy (22.0/3.0)
+|   |   |   |   |   Time > 2200: Not Busy (31.0/8.0)
+|   Quarter = Other
+|   |   Time <= 1600
+|   |   |   Day <= 4
+|   |   |   |   Time <= 900
+|   |   |   |   |   Time <= 800: Not Busy (59.0/15.0)
+|   |   |   |   |   Time > 800
+|   |   |   |   |   |   Time <= 830: Moderately Busy (60.0/23.0)
+|   |   |   |   |   |   Time > 830
+|   |   |   |   |   |   |   Day <= 1: Not Busy (25.0/10.0)
+|   |   |   |   |   |   |   Day > 1: Moderately Busy (36.0/15.0)
+|   |   |   |   Time > 900: Not Busy (836.0/331.0)
+|   |   |   Day > 4: Empty (145.0/46.0)
+|   |   Time > 1600
+|   |   |   Time <= 2130
+|   |   |   |   Time <= 1730: Empty (126.0/49.0)
+|   |   |   |   Time > 1730
+|   |   |   |   |   Day <= 3
+|   |   |   |   |   |   Time <= 2000
+|   |   |   |   |   |   |   Day <= 0: Empty (21.0/10.0)
+|   |   |   |   |   |   |   Day > 0: Moderately Busy (48.0/21.0)
+|   |   |   |   |   |   Time > 2000
+|   |   |   |   |   |   |   Day <= 1: Empty (19.0/11.0)
+|   |   |   |   |   |   |   Day > 1: Not Busy (15.0/8.0)
+|   |   |   |   |   Day > 3
+|   |   |   |   |   |   Day <= 5
+|   |   |   |   |   |   |   Time <= 2030: Not Busy (20.0/4.0)
+|   |   |   |   |   |   |   Time > 2030: Empty (6.0/1.0)
+|   |   |   |   |   |   Day > 5
+|   |   |   |   |   |   |   Time <= 2100: Moderately Busy (7.0/1.0)
+|   |   |   |   |   |   |   Time > 2100: Empty (2.0/1.0)
+|   |   |   Time > 2130
+|   |   |   |   Time <= 2230
+|   |   |   |   |   Day <= 3: Not Busy (16.0/5.0)
+|   |   |   |   |   Day > 3
+|   |   |   |   |   |   Day <= 5: Empty (6.0)
+|   |   |   |   |   |   Day > 5: Not Busy (2.0)
+|   |   |   |   Time > 2230: Empty (24.0/5.0)
+|   Quarter = Summer
+|   |   Time <= 1630
+|   |   |   Day <= 4
+|   |   |   |   Time <= 1130
+|   |   |   |   |   Time <= 930
+|   |   |   |   |   |   Time <= 800: Not Busy (61.0/13.0)
+|   |   |   |   |   |   Time > 800: Moderately Busy (183.0/53.0)
+|   |   |   |   |   Time > 930: Not Busy (244.0/48.0)
+|   |   |   |   Time > 1130
+|   |   |   |   |   Time <= 1400: Moderately Busy (307.0/86.0)
+|   |   |   |   |   Time > 1400: Not Busy (310.0/53.0)
+|   |   |   Day > 4: Empty (414.0/203.0)
+|   |   Time > 1630
+|   |   |   Time <= 1830
+|   |   |   |   Day <= 3
+|   |   |   |   |   Time <= 1730: Not Busy (98.0/26.0)
+|   |   |   |   |   Time > 1730: Empty (97.0/35.0)
+|   |   |   |   Day > 3: Empty (63.0/7.0)
+|   |   |   Time > 1830: Empty (312.0/14.0)
+
+Number of Leaves  : 	157
+
+Size of the tree : 	307
+
+
+Time taken to build model: 0.12 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        9524               75.3899 %
+Incorrectly Classified Instances      3109               24.6101 %
+Kappa statistic                          0.6719
+Mean absolute error                      0.1776
+Root mean squared error                  0.3032
+Relative absolute error                 47.3711 %
+Root relative squared error             70.0157 %
+Total Number of Instances            12633     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.827    0.058    0.829      0.827    0.828      0.770    0.957     0.886     Empty
+                 0.735    0.114    0.680      0.735    0.706      0.606    0.885     0.679     Not Busy
+                 0.624    0.088    0.704      0.624    0.661      0.558    0.861     0.686     Moderately Busy
+                 0.830    0.068    0.801      0.830    0.816      0.753    0.950     0.844     Busy
+Weighted Avg.    0.754    0.082    0.754      0.754    0.753      0.672    0.913     0.774     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2637  426  105   22 |    a = Empty
+  398 2294  320  108 |    b = Not Busy
+  140  540 1985  516 |    c = Moderately Busy
+    7  116  411 2608 |    d = Busy
+
